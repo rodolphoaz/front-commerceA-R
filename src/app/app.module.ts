@@ -1,14 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TopMenuComponent } from './top-menu/top-menu.component';
-import { NavBarMenuComponent } from './nav-bar-menu/nav-bar-menu.component';
-import { SlideComponent } from './slide/slide.component';
-import { CardComponent } from './card/card.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
+import { TopMenuComponent } from './components/top-menu/top-menu.component';
+import { NavBarMenuComponent } from './components/nav-bar-menu/nav-bar-menu.component';
+import { SlideComponent } from './components/slide/slide.component';
+import { CardComponent } from './components/card/card.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { HomeComponent } from './home/home.component';
     SlideComponent,
     CardComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    CartComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
