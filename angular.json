@@ -28,9 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.css",
-              "src/styles.scss",
-              "./assets/styles/font-awesome.min.css"
+              "src/styles.scss"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
