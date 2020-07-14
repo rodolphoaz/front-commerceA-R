@@ -11,7 +11,7 @@
             <ul>
                 <li>
                     <p>
-                        <b>Para o uso do pgsql seguir os passos:<b>
+                        <b>Para o uso do pgsql seguir os passos:</b>
                         No php.ini ativar as extensoes pgsql e pdo_pgsql
                     </p>
                 </li>
