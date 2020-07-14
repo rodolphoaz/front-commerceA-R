@@ -1,27 +1,34 @@
-# EcommerceAngular
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<div style="text-align:justify">
+<h2>Requesitos</h2>
+<p>
+    <ul> 
+       <li>Acesso a internet</li>
+       <li>Composer instalado</li> 
+       <li>Git instalado</li>
+       <li>PHP instalado</li>
+       <li>Node js instalado</li>
+       <li>Postgres ou Mysql
+            <ul>
+                <li>
+                    <b>Para o uso do pgsql seguir os passos:</b>
+                    <br/>
+                    <p>No php.ini ativar as extensoes pgsql e pdo_pgsql</p>
+                    </li>
+            </ul>
+       </li>
+    </ul>
+</p>
+<h2>Instalacao do Projeto</h2>\
+<p>
+    Para instalar use o <b>git clone {url_do_repo}</b> senao possuir o aplicativo, se o possuir use um <b>git pull origin</b>, para <br/>atualizar seus componentes e codigo fonte com o do repositorio.
+</p> 
+<p>
+    Apos isso use <b>npm install</b> para baixar as biblioteca de node_modules na sequencia execute <b> npm run dev</b> para criar o script js e a folha css.
+</p>
+<p>
+    execute <code> composer install </code> para instalar todas as dependecias. para  executar o servidor  php embudido  do  laravel execute <code> php artisan serve</code>.
+</p>
+<p>
+    Para criar uma nova page favor ir na documentacao do laravel antes <a href='https://www.laravel.com'>Laravel framework</a>. Pois ele contem automatizador de codigo para  criar Controller e model
+</p>
+</div>
