@@ -30,6 +30,6 @@
     execute <code> composer install </code> para instalar todas as dependecias. para  executar o servidor  php embudido  do  laravel execute <code> php artisan serve</code>.
 </p>
 <p>
-    Para criar uma nova page favor ir na documentacao do laravel antes <a target='_blank' href='https://www.laravel.com'>Laravel framework</a>. Pois ele contem automatizador de codigo para  criar Controller e model
+    Para criar uma nova page favor ir na documentacao do laravel antes <a targert='__blank' href='https://www.laravel.com'>Laravel framework</a>. Pois ele contem automatizador de codigo para  criar Controller e model
 </p>
 </div>
