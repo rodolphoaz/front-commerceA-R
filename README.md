@@ -18,7 +18,7 @@
        </li>
     </ul>
 </p>
-<h2>Instalacao do Projeto</h2>\
+<h2>Instalacao do Projeto</h2>
 <p>
     Para instalar use o <b>git clone {url_do_repo}</b> senao possuir o aplicativo, se o possuir use um <b>git pull origin</b>, para <br/>atualizar seus componentes e codigo fonte com o do repositorio.
 </p> 
