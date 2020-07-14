@@ -31,6 +31,8 @@
       @yield('content')
   </div>
 
+  <a target="_">
+
     @include('layouts.components.footer.index')
     <script src="js/stellar.js"></script>
     <script src="js/theme.js"></script>
