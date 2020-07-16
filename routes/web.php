@@ -22,3 +22,16 @@ Route::get('/', function (){
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/email','EmailController@index')->name('email');
+
+Route::prefix('UAXEE112')->group( function(){
+	Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+	Route::put('profile/password', 'ProfileController@password')->name('profile.password');
+	Route::get('profile', 'ProfileController@edit')->name('profile.edit');
+	Route::put('profile', 'ProfileController@update')->name('profile.update');
+});
+
+Route::prefix('cliente')->middleware(['auth'])->group( function () {
+	Route::get('profile', 'ProfileController@edit')->name('profile.edit');
+	Route::put('profile', 'ProfileController@update')->name('profile.update');
+});
+

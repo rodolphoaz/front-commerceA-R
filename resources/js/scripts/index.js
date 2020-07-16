@@ -1,0 +1,15 @@
+'use strict';
+
+// const fs = require('fs');
+const path = require('path')
+const basename = path.basename(__filename);
+const scripts = {};
+
+fs.readdirSync(__dirname).filter( file =>{
+    return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
+} ).forEach(file => {
+    const s_cripts = require(path.join(__dirname, file))
+    scripts[file] = s_cripts; 
+})
+
+module.exports = scripts; 
