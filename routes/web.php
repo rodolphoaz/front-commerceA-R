@@ -23,7 +23,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/email','EmailController@index')->name('email');
 
-Route::prefix('UAXEE112')->group( function(){
+Route::get('/contact', 'ContactController@index')->name('contact');
+Route::post('/contact' , 'ContactController@store')->name('contact.store');
+
+Route::get('/about', 'AboutController@index')->name('about.index');
+
+Route::prefix('UAXEE112')->middleware(['auth'])->group( function(){
 	Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 	Route::put('profile/password', 'ProfileController@password')->name('profile.password');
 	Route::get('profile', 'ProfileController@edit')->name('profile.edit');

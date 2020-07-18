@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('loja.layouts.app' , ['title' => 'Home'])
 @section('content')
 <style>
     #section-banner{
@@ -30,9 +30,9 @@
 
     }
 </style>
-    @include('loja.pages.home.components.slide')
-    @include('loja.pages.home.components.card')
-    @include('loja.pages.home.components.offer')
-    @include('loja.pages.home.components.list-product')
+    @include('loja.pages.inicio.components.slide')
+    @include('loja.pages.inicio.components.card')
+    @include('loja.pages.inicio.components.offer')
+    @include('loja.pages.inicio.components.list-product')
 
 @endsection

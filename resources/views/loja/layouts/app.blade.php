@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>A&R - {{ $title }}</title>
 
     <!-- Scripts -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -21,10 +21,10 @@
     <!-- Styles -->
     </head>
 <body>
-  @include('loja.layouts.components.header.index')
+  @include('loja.layouts.components.header')
     <div class="app">
         @yield('content')
     </div>
-  @include('loja.layouts.components.footer.index')
+  @include('loja.layouts.components.footer')
 </body>
 </html>
