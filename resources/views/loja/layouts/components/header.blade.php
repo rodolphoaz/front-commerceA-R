@@ -97,7 +97,7 @@
                            
                         </ul>
                      </li>
-                     <li class='has-sub'><a href='#'><strong>Estúdio</a></strong>
+                     <li class='has-sub'><a href=''><strong>Estúdio</a></strong>
                       <ul>
                       <li><a href='{{route('about.index')}}'> A&R Como tudo começou</a></li>
                         
