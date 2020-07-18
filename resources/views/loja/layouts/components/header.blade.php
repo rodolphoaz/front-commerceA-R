@@ -18,7 +18,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="contact.html">
+                <a href="{{route('contact')}}">
                     Fazer Pedido
                   </a>
                 </li>
