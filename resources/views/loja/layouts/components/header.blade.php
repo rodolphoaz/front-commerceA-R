@@ -114,11 +114,14 @@
                 <i class="ti-search" aria-hidden="true"data-toggle="tooltip" data-placement="top" title="Buscar Produtos"></i>
                    </a>
             </li>
+            @guest()
             <li class="nav-item">
-              <a href="#" class="icons">
+              
+              <a href="{{route('login')}}" class="icons">
                 <i class="ti-user" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Fazer Login"></i>
               </a>
             </li>
+            @endguest
             <li class="nav-item">
               <a href="#" class="icons">
                 <i class="ti-heart" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Amei"></i>

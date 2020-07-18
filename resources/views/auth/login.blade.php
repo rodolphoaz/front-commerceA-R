@@ -1,7 +1,7 @@
-@if()
+@if(stripos(url()->previous(), 'UAXEE112')))
     @extends('admin.layouts.app', ['class' => 'bg-default'])
 @else 
-
+    @extends('loja.layouts.app', ['title' => 'login'])
 @endif
 @section('content')
     @include('admin.layouts.headers.guest')
