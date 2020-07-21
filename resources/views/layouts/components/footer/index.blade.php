@@ -37,14 +37,13 @@ nonce="LGVNyx41"></script>
       
       <div class="footer-bottom row align-items-center">
         <p class="footer-text m-0 col-lg-8 col-md-12">
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="" aria-hidden="true"></i> A&R CARICATURAS ONLINE by <a href="https://www.facebook.com/2TwoDev" target="_blank"> 2TWODEV - Consultoria de Sistemas</a>
+Copyright &copy;{{date('Y')}} All rights reserved <i class="" aria-hidden="true"></i> A&R CARICATURAS ONLINE By <a href="https://www.facebook.com/2TwoDev" target="_blank"> 2TWODEV - Consultoria de Sistemas</a>
         <div class="col-lg-4 col-md-12 footer-social">
           <a href="#"><i class="fa fa-facebook"></i></a>
           <a href="#"><i class="fa fa-behance"></i></a>
-         
-            <a href="#"><i class="fa fa-instagram"></i></a>
+           <a href="#"><i class="fa fa-instagram"></i></a>
         </div>
       </div>
     </div>
-                <a href="https://api.whatsapp.com/send?l=pt&amp;phone=5521981840572"><img src="chatw/whatsapp.png" style="height:80px; position:fixed; bottom: 25px; right: 25px; z-index:100;" data-selector="img"></a>
+                <a href="https://api.whatsapp.com/send?l=pt&amp;phone=5521981840572"><img src="public/img/whatsapp.png" style="height:80px; position:fixed; bottom: 25px; right: 25px; z-index:100;" data-selector="img"></a>
   </footer>

@@ -38,75 +38,83 @@
          
         <!-- menu  -->
         <div id='cssmenu'>
-          <ul>
-             <li><a href='index.html'><strong>Inicio</strong></a></li>
-             <li class='active has-sub'><a href='#'><strong>Caricaturas</strong></a>
-                <ul>
-                   <li class='has-sub'><a href='#'>Caricaturas na Caneca </a>
-                    
+            <ul>
+               <li><a href='index.html'>Inicio</a></li>
+               <li class='active has-sub'><a href='#'><strong>Caricaturas</strong></a>
+                  <ul>
+                     <li class='has-sub'><a href='#'>Caricaturas na Caneca </a>
+                      
                       <ul>
-                         <li><a href='canecas_tematica.html'>Caricatura Temática</a></li>
-                         <li><a href='canecas_corpinho.html'>Caricatura Corpinho </a></li>
-                         <li><a href='canecas_busto.html'>Caricatura Busto </a></li>
+                        <li><a href="{route{('layouts.components.product')}}">Caricatura individual</a></li>
+                        <li><a href='canecas_tematica.html'>Caricatura Temática</a></li>
+                        <li><a href='canecas_corpinho.html'>Caricatura Infantil </a></li>
                          <li><a href='canecas_casal.html'>Caricatura Casal</a></li>
                       </ul>
                    </li>
                    <li class='has-sub'><a href='#'>Caricaturas Digital</a>
                       <ul>
-                        <li><a href='cari_rb_digital.html'>Busto ou Rosto</a></li>
-                        <li><a href='cari_corpinho_digital.html'>Corpinho </a></li>
+                        <li><a href='cari_rb_digital.html'>Individual</a></li>
+                        <li><a href='cari_corpinho_digital.html'> Temáticas </a></li>
+                        <li><a href='cari_dtespecial_digital.html'>Infantil</a></li>
                         <li><a href='cari_casal_digital.html'>Casal </a></li>
                         <li><a href='cari_noivos_digital.html'>Noivos</a></li>
                         <li><a href='cari_aniver_digital.html'>Aniversários</a></li>
                         <li><a href='cari_format_digital.html'>Formaturas</a></li>
                         <li><a href='cari_eventos_digital.html'>Eventos</a></li>
-                        <li><a href='cari_dtespecial_digital.html'>Datas Especiais</a></li>
-                        <li><a href='cari_grupos_digital.html'>Grupos</a></li>
+                         <li><a href='cari_grupos_digital.html'>Grupos</a></li>
                         <li><a href='cari_pet_digital.html'>Pet's</a></li>
+                        </ul>
+                     </li>
+                     <li class='has-sub'><a href='#'>Caricaturas á lápis </a>
+                      <ul>
+                        <li><a href='cari_cobr_lapis.html'>Individual</a></li>
+                        <li><a href='cari_corp_lapis.html'>Temáticas </a></li>
+                        <li><a href='cari_dtesp_lapis.html'>Infantil</a></li>
+                        <li><a href='cari_casal_lapis.html'>Casal </a></li>
+                        <li><a href='cari_noivos_lapis.html'>Noivos</a></li>
+                        <li><a href='cari_aniver_lapis.html'>Aniversários</a></li>
+                        <li><a href='cari_format_lapis.html'>Formaturas</a></li>
+                        <li><a href='cari_event_lapis.html'>Eventos</a></li>
+                        <li><a href='cari_grupo_lapis.html'>Grupos</a></li>
+                        <li><a href='cari_pet_lapis.html'>Pet's</a></li>
                       </ul>
                    </li>
-                   <li class='has-sub'><a href='#'>Caricaturas á lápis </a>
+                   <li class='has-sub'><a href='#'>Caricaturas no quadro</a>
                     <ul>
-                      <li><a href='cari_cobr_lapis.html'>Busto ou Rosto</a></li>
-                      <li><a href='cari_corp_lapis.html'>Corpinho </a></li>
-                      <li><a href='cari_casal_lapis.html'>Casal </a></li>
-                      <li><a href='cari_noivos_lapis.html'>Noivos</a></li>
-                      <li><a href='cari_aniver_lapis.html'>Aniversários</a></li>
-                      <li><a href='cari_format_lapis.html'>Formaturas</a></li>
-                      <li><a href='cari_event_lapis.html'>Eventos</a></li>
-                      <li><a href='cari_dtesp_lapis.html'>Datas Especiais</a></li>
-                      <li><a href='cari_grupo_lapis.html'>Grupos</a></li>
-                      <li><a href='cari_pet_lapis.html'>Pet's</a></li>
+                      <li><a href='quadro_tematico.html'>Caricatura Temática</a></li>
+                      <li><a href='quadro_corpinho.html'>Caricatura Corpinho </a></li>
+                      <li><a href='quadro_busto.html'>Caricatura Busto </a></li>
+                      <li><a href='quadro_casal.html'>Caricatura Casal</a></li>
                     </ul>
                  </li>
-                 <li class='has-sub'><a href='#'>Caricaturas no quadro</a>
+                 <li class='has-sub'><a href='#'>Mascotes 2D </a>
                   <ul>
-                         <li><a href='quadro_tematico.html'>Caricatura Temática</a></li>
-                         <li><a href='quadro_corpinho.html'>Caricatura Corpinho </a></li>
-                         <li><a href='quadro_busto.html'>Caricatura Busto </a></li>
-                         <li><a href='quadro_casal.html'>Caricatura Casal</a></li>
+                    <li><a href='#'>Pessoas</a></li>
+                    <li><a href='#'>Personagens </a></li>
+                    <li><a href='#'>Animais </a></li>
+                    
+                 </ul>
+               </li>
                   </ul>
                </li>
-                </ul>
-             </li>
-                  <li class='has-sub'><a href='#'><strong>Loja</strong> </a>
+                    <li class='has-sub'><a href='#'>Loja </a>
+                        <ul>
+                          <li><a href='shopping.html'>Shopping A&R</a></li>
+                          <li><a href='cart.html'>Resumo de pedido</a></li>
+                          <li><a href='checkout.html'>Produtos checkout </a></li>
+                           
+                        </ul>
+                     </li>
+                     <li class='has-sub'><a href='#'>Estúdio</a>
                       <ul>
-                         <li><a href='shopping.html'>Shopping A&R</a></li>
-                         <li><a href='cart.html'>Resumo de pedido</a></li>
-                         <li><a href='checkout.html'>Produtos checkout </a></li>
-                         
+                        <li><a href='elements.html'> Como tudo começou</a></li>
+                        
                       </ul>
                    </li>
-                   <li class='has-sub'><a href='#'><strong>Estúdio</a></strong>
-                    <ul>
-                       <li><a href='elements.html'> A&R Como tudo começou</a></li>
-                      
-                    </ul>
-                 </li>
-            <li><a href='contact.html'><strong>Pedir Online</li></strong>
-          </ul>
-          </div>
-       <br>
+                   <li><a href='contact.html'>Pedir Online</li>
+            </ul>
+            </div>
+<br>
        <div class="col-lg-5 pr-0">
         <ul class="nav navbar-nav navbar-right right_nav pull-right">
           <li class="nav-item">

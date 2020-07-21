@@ -21,4 +21,14 @@ Route::get('/', function (){
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+/* Rodolpho- Teste de rota */
+/* Produtos - Canecas */
+
+/* Route::get('/product', function(){
+    return views(views. 'product.indmugs');
+})->name('product.indmugs');*/
+
+Route::get('/product','ProductController@index')->name('product');
+
 Route::get('/email','EmailController@index')->name('email');
