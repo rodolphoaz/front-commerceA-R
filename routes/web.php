@@ -22,6 +22,7 @@ Route::get('/', function (){
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/email','EmailController@index')->name('email');
+Route::get('support','SupportController@index')->name('suport.index');
 
 Route::get('/contact', 'ContactController@index')->name('contact');
 Route::post('/contact' , 'ContactController@store')->name('contact.store');
@@ -40,3 +41,6 @@ Route::prefix('cliente')->middleware(['auth'])->group( function () {
 	Route::put('profile/{id}', 'ProfileController@update')->name('profile.update');
 });
 
+Route::get('/product','ProductController@index')->name('product');
+
+Route::get('/email','EmailController@index')->name('email');

@@ -99,7 +99,13 @@
                      </li>
                      <li class='has-sub'><a href=''><strong>Estúdio</a></strong>
                       <ul>
-                      <li><a href='{{route('about.index')}}'> A&R Como tudo começou</a></li>
+                        {{-- 
+                          As rotas se criam seguinto o padrao  de funcao 
+                          dentro da funcao route(nomedarota) voce adiciona o 
+                          Route::get()->name('nomedarota') no arquivo web.php
+                        --}}
+                    
+                      <li><a href="{{route('about.index')}}"> A&R Como tudo começou</a></li>
                         
                       </ul>
                    </li>
