@@ -113,7 +113,7 @@
                            
                         </ul>
                      </li>
-                     <li class='has-sub'><a href=''> Estúdio </a>
+                     <li class='has-sub'><a href=''><strong> Estúdio </strong></a>
                       <ul>
                         {{-- 
                           As rotas se criam seguinto o padrao  de funcao 
@@ -132,7 +132,7 @@
          <div class="col-lg-5 pr-0">
           <ul class="nav navbar-nav navbar-right right_nav pull-right">
             <li class="nav-item">
-              <a href="#" class="icons">
+              <a href="" class="icons">
                 <i class="ti-search" aria-hidden="true"data-toggle="tooltip" data-placement="top" title="Buscar Produtos"></i>
                    </a>
             </li>
@@ -145,12 +145,12 @@
             </li>
             @endguest
             <li class="nav-item">
-              <a href="#" class="icons">
+              <a href="" class="icons">
                 <i class="ti-heart" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Amei"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="icons">
+              <a href="" class="icons">
                 <i class="ti-shopping-cart" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Carrinho de compras"></i>
                 <span class="badge badge-light">0</span>
               </a>

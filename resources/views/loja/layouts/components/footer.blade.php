@@ -45,5 +45,6 @@ Copyright &copy;{{date('Y')}} All rights reserved <i class="" aria-hidden="true"
         </div>
       </div>
     </div>
-                <a href="https://api.whatsapp.com/send?l=pt&amp;phone=5521981840572"><img src="public/img/whatsapp.png" style="height:80px; position:fixed; bottom: 25px; right: 25px; z-index:100;" data-selector="img"></a>
+                <a href="https://api.whatsapp.com/send?l=pt&amp;phone=5521981840572"><img src="{{ asset('img/whatsapp.png')}}"
+                 style="height:80px; position:fixed; bottom: 25px; right: 25px; z-index:100;" data-selector="img"></a>
   </footer>
