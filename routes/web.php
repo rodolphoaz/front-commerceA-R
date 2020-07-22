@@ -21,13 +21,25 @@ Route::get('/', function (){
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/email','EmailController@index')->name('email');
+Route::get('support','SupportController@index')->name('suport.index');
 
-/* Rodolpho- Teste de rota */
-/* Produtos - Canecas */
+Route::get('/contact', 'ContactController@index')->name('contact');
+Route::post('/contact' , 'ContactController@store')->name('contact.store');
 
-/* Route::get('/product', function(){
-    return views(views. 'product.indmugs');
-})->name('product.indmugs');*/
+Route::get('/about', 'AboutController@index')->name('about.index');
+
+Route::prefix('UAXEE112')->middleware(['auth'])->group( function(){
+	Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+	Route::put('profile/password', 'ProfileController@password')->name('profile.password');
+	Route::get('profile', 'ProfileController@edit')->name('profile.edit');
+	Route::put('profile', 'ProfileController@update')->name('profile.update');
+});
+
+Route::prefix('cliente')->middleware(['auth'])->group( function () {
+	Route::get('profile', 'ProfileController@edit')->name('profile.edit');
+	Route::put('profile', 'ProfileController@update')->name('profile.update');
+});
 
 Route::get('/product','ProductController@index')->name('product');
 

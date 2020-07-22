@@ -10,11 +10,11 @@ class ContactController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function index()
     {
-        //
+        return view('loja.pages.contato.index');
     }
 
     /**
@@ -35,7 +35,8 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Contact::create($request->all());
+        return back()->withStatus(__('Enviado com sucesso'));
     }
 
     /**
