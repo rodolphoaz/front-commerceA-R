@@ -1,3 +1,8 @@
+
+
+
+
+
 <!--================Header Menu Area =================-->
 <header class="header_area">
     <div class="top_menu">
@@ -12,11 +17,22 @@
           <div class="col-lg-5">
             <div class="float-right">
               <ul class="right_side">
+                @Auth()
                 <li>
                   <a href="tracking.html">
                     Acompanhar pedido
                   </a>
                 </li>
+                @endauth
+                
+                @guest()
+                <li>
+                  <a href="{{route('login')}}">
+                    login
+                  </a>
+                </li>
+                @endguest
+                
                 <li>
                 <a href="{{route('contact')}}">
                     Fazer Pedido
@@ -32,17 +48,17 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light w-500">
           <!-- Brand and toggle get grouped for better mobile display -->
-          <a class="navbar-brand logo_h" href="index.html">
+          <a class="navbar-brand logo_h" href="{{route ('home')}}">
             <img src="img/logo.png" alt="aer caricaturas online" />
           </a>
            
           <!-- menu  -->
           <div id='cssmenu'>
             <ul>
-               <li><a href='index.html'><strong>Inicio</strong></a></li>
-               <li class='active has-sub'><a href='#'><strong>Caricaturas</strong></a>
+               <li><a href="{{route ('home')}}"><strong>Inicio</strong></a></li>
+               <li class='active has-sub'><a href=''><strong>Caricaturas</strong></a>
                   <ul>
-                     <li class='has-sub'><a href='#'>Caricaturas na Caneca </a>
+                     <li class='has-sub'><a href=''>Caricaturas na Caneca </a>
                       
                         <ul>
                            <li><a href='canecas_tematica.html'>Caricatura Temática</a></li>
@@ -51,7 +67,7 @@
                            <li><a href='canecas_casal.html'>Caricatura Casal</a></li>
                         </ul>
                      </li>
-                     <li class='has-sub'><a href='#'>Caricaturas Digital</a>
+                     <li class='has-sub'><a href=''>Caricaturas Digital</a>
                         <ul>
                           <li><a href='cari_rb_digital.html'>Busto ou Rosto</a></li>
                           <li><a href='cari_corpinho_digital.html'>Corpinho </a></li>
@@ -65,7 +81,7 @@
                           <li><a href='cari_pet_digital.html'>Pet's</a></li>
                         </ul>
                      </li>
-                     <li class='has-sub'><a href='#'>Caricaturas á lápis </a>
+                     <li class='has-sub'><a href=''>Caricaturas á lápis </a>
                       <ul>
                         <li><a href='cari_cobr_lapis.html'>Busto ou Rosto</a></li>
                         <li><a href='cari_corp_lapis.html'>Corpinho </a></li>
@@ -79,7 +95,7 @@
                         <li><a href='cari_pet_lapis.html'>Pet's</a></li>
                       </ul>
                    </li>
-                   <li class='has-sub'><a href='#'>Caricaturas no quadro</a>
+                   <li class='has-sub'><a href=''>Caricaturas no quadro</a>
                     <ul>
                            <li><a href='quadro_tematico.html'>Caricatura Temática</a></li>
                            <li><a href='quadro_corpinho.html'>Caricatura Corpinho </a></li>
@@ -89,7 +105,7 @@
                  </li>
                   </ul>
                </li>
-                    <li class='has-sub'><a href='#'><strong>Loja</strong> </a>
+                    <li class='has-sub'><a href=''><strong>Loja</strong> </a>
                         <ul>
                            <li><a href='shopping.html'>Shopping A&R</a></li>
                            <li><a href='cart.html'>Resumo de pedido</a></li>
@@ -97,7 +113,7 @@
                            
                         </ul>
                      </li>
-                     <li class='has-sub'><a href=''><strong>Estúdio</a></strong>
+                     <li class='has-sub'><a href=''> Estúdio </a>
                       <ul>
                         {{-- 
                           As rotas se criam seguinto o padrao  de funcao 
@@ -105,11 +121,11 @@
                           Route::get()->name('nomedarota') no arquivo web.php
                         --}}
                     
-                      <li><a href="{{route('about.index')}}"> A&R Como tudo começou</a></li>
+                      <li><a href="{{route('about.index')}}">Como tudo começou</a></li>
                         
                       </ul>
                    </li>
-                  <li><a href='{{route('contact')}}'><strong>Pedir Online</li></strong>
+                  <li><a href="{{route('contact')}}"><strong>Pedir Online</strong></a></li>
             </ul>
             </div>
          <br>
