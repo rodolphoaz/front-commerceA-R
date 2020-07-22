@@ -37,8 +37,8 @@ Route::prefix('UAXEE112')->middleware(['auth'])->group( function(){
 });
 
 Route::prefix('cliente')->middleware(['auth'])->group( function () {
-	Route::get('profile', 'ProfileController@edit')->name('profile.edit');
-	Route::put('profile', 'ProfileController@update')->name('profile.update');
+	Route::get('profile/{id}', 'ProfileController@edit')->name('profile.edit');
+	Route::put('profile/{id}', 'ProfileController@update')->name('profile.update');
 });
 
 Route::get('/product','ProductController@index')->name('product');
