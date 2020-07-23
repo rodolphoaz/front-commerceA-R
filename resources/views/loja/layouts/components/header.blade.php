@@ -28,7 +28,7 @@
                 @guest()
                 <li>
                   <a href="{{route('login')}}">
-                    login
+                  Minha conta 
                   </a>
                 </li>
                 @endguest
@@ -61,46 +61,56 @@
                      <li class='has-sub'><a href=''>Caricaturas na Caneca </a>
                       
                         <ul>
-                           <li><a href='canecas_tematica.html'>Caricatura Temática</a></li>
-                           <li><a href='canecas_corpinho.html'>Caricatura Corpinho </a></li>
-                           <li><a href='canecas_busto.html'>Caricatura Busto </a></li>
-                           <li><a href='canecas_casal.html'>Caricatura Casal</a></li>
+                           <li><a href=''>Caricatura Individual</a></li>
+                           <li><a href=''>Caricatura Temática </a></li>
+                           <li><a href=''>Caricatura Infantil </a></li>
+                           <li><a href=''>Caricatura Casal</a></li>
                         </ul>
                      </li>
                      <li class='has-sub'><a href=''>Caricaturas Digital</a>
                         <ul>
-                          <li><a href='cari_rb_digital.html'>Busto ou Rosto</a></li>
-                          <li><a href='cari_corpinho_digital.html'>Corpinho </a></li>
-                          <li><a href='cari_casal_digital.html'>Casal </a></li>
-                          <li><a href='cari_noivos_digital.html'>Noivos</a></li>
-                          <li><a href='cari_aniver_digital.html'>Aniversários</a></li>
-                          <li><a href='cari_format_digital.html'>Formaturas</a></li>
-                          <li><a href='cari_eventos_digital.html'>Eventos</a></li>
-                          <li><a href='cari_dtespecial_digital.html'>Datas Especiais</a></li>
-                          <li><a href='cari_grupos_digital.html'>Grupos</a></li>
-                          <li><a href='cari_pet_digital.html'>Pet's</a></li>
+                          <li><a href=''>Individual</a></li>
+                          <li><a href=''>Temática </a></li>
+                          <li><a href=''>Casal </a></li>
+                          <li><a href=''>Infantil </a></li>
+                          <li><a href=''>Noivos</a></li>
+                          <li><a href=''>Aniversários</a></li>
+                          <li><a href=''>Formaturas</a></li>
+                          <li><a href=''>Eventos</a></li>
+                          <li><a href=''>Datas Especiais</a></li>
+                          <li><a href=''>Grupos</a></li>
+                          <li><a href=''>Pet's</a></li>
                         </ul>
                      </li>
                      <li class='has-sub'><a href=''>Caricaturas á lápis </a>
                       <ul>
-                        <li><a href='cari_cobr_lapis.html'>Busto ou Rosto</a></li>
-                        <li><a href='cari_corp_lapis.html'>Corpinho </a></li>
-                        <li><a href='cari_casal_lapis.html'>Casal </a></li>
-                        <li><a href='cari_noivos_lapis.html'>Noivos</a></li>
-                        <li><a href='cari_aniver_lapis.html'>Aniversários</a></li>
-                        <li><a href='cari_format_lapis.html'>Formaturas</a></li>
-                        <li><a href='cari_event_lapis.html'>Eventos</a></li>
-                        <li><a href='cari_dtesp_lapis.html'>Datas Especiais</a></li>
-                        <li><a href='cari_grupo_lapis.html'>Grupos</a></li>
-                        <li><a href='cari_pet_lapis.html'>Pet's</a></li>
+                      <li><a href=''>Individual</a></li>
+                          <li><a href=''>Temática </a></li>
+                          <li><a href=''>Casal </a></li>
+                          <li><a href=''>Infantil </a></li>
+                          <li><a href=''>Noivos</a></li>
+                          <li><a href=''>Aniversários</a></li>
+                          <li><a href=''>Formaturas</a></li>
+                          <li><a href=''>Eventos</a></li>
+                          <li><a href=''>Datas Especiais</a></li>
+                          <li><a href=''>Grupos</a></li>
+                          <li><a href=''>Pet's</a></li>
                       </ul>
                    </li>
                    <li class='has-sub'><a href=''>Caricaturas no quadro</a>
                     <ul>
-                           <li><a href='quadro_tematico.html'>Caricatura Temática</a></li>
-                           <li><a href='quadro_corpinho.html'>Caricatura Corpinho </a></li>
-                           <li><a href='quadro_busto.html'>Caricatura Busto </a></li>
-                           <li><a href='quadro_casal.html'>Caricatura Casal</a></li>
+                           <li><a href=''>Caricatura Individual</a></li>
+                           <li><a href=''>Caricatura Temática </a></li>
+                           <li><a href=''>Caricatura Infantil </a></li>
+                           <li><a href=''>Caricatura Casal</a></li>
+                    </ul>
+                 </li>
+                 <li class='has-sub'><a href=''>Mascotes 2D</a>
+                    <ul>
+                           <li><a href=''>Caricatura Individual</a></li>
+                           <li><a href=''>Caricatura Temática </a></li>
+                           <li><a href=''>Caricatura Infantil </a></li>
+                           <li><a href=''>Caricatura Casal</a></li>
                     </ul>
                  </li>
                   </ul>

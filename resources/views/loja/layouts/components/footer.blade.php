@@ -39,9 +39,9 @@ nonce="LGVNyx41"></script>
         <p class="footer-text m-0 col-lg-8 col-md-12">
 Copyright &copy;{{date('Y')}} All rights reserved <i class="" aria-hidden="true"></i> A&R CARICATURAS ONLINE By <a href="https://www.facebook.com/2TwoDev" target="_blank"> 2TWODEV - Consultoria de Sistemas</a>
         <div class="col-lg-4 col-md-12 footer-social">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-behance"></i></a>
-           <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href=""><i class="fa fa-facebook"></i></a>
+          <a href=""><i class="fa fa-behance"></i></a>
+           <a href=""><i class="fa fa-instagram"></i></a>
         </div>
       </div>
     </div>
