@@ -27,11 +27,11 @@
         <div class="col-lg-3 col-md-6">
           <div class="single-feature">
             <a href="#" class="title">
-              <i class="ti-signal"></i>
-
-              <h3>TUDO FEITO PELA INTERNET</h3>
+              <i class="fa fa-whatsapp"></i>
+              <h3>Compre pelo whatsapp</h3>
             </a>
-            <p> Rápido e prático! Encomende sua caricatura em poucos passos.tesesesesseseseseses</p>
+            <p> 
+              Escolha o jeito mais Rápido e prático! Encomende sua caricatura em poucos passos.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">

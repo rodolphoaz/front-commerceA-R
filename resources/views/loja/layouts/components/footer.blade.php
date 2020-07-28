@@ -5,16 +5,30 @@
         <div class="col-lg-50 col-md-8 single-footer-widget">
         
           <ul>
-         <div id="fb-root"></div>
+        <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" 
 src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0&appId=1131541973545208&autoLogAppEvents=1" 
 nonce="LGVNyx41"></script> 
 
-<div class="fb-page" data-href="https://www.facebook.com/aercaricaturasonline" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/aercaricaturasonline" class="fb-xfbml-parse-ignore">
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '71fabb70e3893aa6d70aeb75b586868521692f96';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+
+<div class="fb-page" data-href="https://www.facebook.com/aercaricaturasonline" data-tabs="" data-width="" 
+data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
+data-show-facepile="true"><blockquote cite="https://www.facebook.com/aercaricaturasonline" class="fb-xfbml-parse-ignore">
 <a href="https://www.facebook.com/aercaricaturasonline">A&amp;R Caricaturas Online</a></blockquote></div>
           </ul>
         </div>
-       
+      
      
         <div class="col-lg-4 col-md-6 single-footer-widget">
           <h4>A&R Newsletter</h4>
@@ -45,5 +59,6 @@ Copyright &copy;{{date('Y')}} All rights reserved <i class="" aria-hidden="true"
         </div>
       </div>
     </div>
-                 <a href="https://api.whatsapp.com/send?l=pt&amp;phone=5521981840572" target="__blank"><img src="{{asset('/img/whatsapp.png')}}" style="height:80px; position:fixed; bottom: 25px; right: 25px; z-index:100;" data-selector="img"></a>
+         <!--    <a href="https://api.whatsapp.com/send?l=pt&amp;phone=5521981840572" target="__blank"><img src="{{asset('/img/whatsapp.png')}}" style="height:80px; position:fixed; bottom: 25px; left: 25px; z-index:100;" data-selector="img"></a>
+            -->
   </footer>

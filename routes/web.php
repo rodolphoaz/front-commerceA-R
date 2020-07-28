@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', function (){
-    return redirect()->route('home');
+	return redirect()->route('home');
+	return redirect()->route('Individual.index');
+	
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -34,6 +36,7 @@ Route::get('/about', 'AboutController@index')->name('about.index');
 
 Route::get('/individual', 'IndividualController@index')->name('individual.index');
 Route::post('/individual' , 'IndividualController@store')->name('individual.store');
+
 
 Route::get('/infantil', 'InfantilController@index')->name('infantil.index');
 Route::post('/infantil' , 'InfantilController@store')->name('infantil.store');
@@ -74,8 +77,11 @@ Route::post('/Tematicas_digital' , 'Tematicas_digitalController@store')->name('T
 
 /*a lapis*/ 
 
+Route::get('/Individual_lapis', 'Individual_lapisController@index')->name('Individual_lapis.index');
+Route::post('/Individual_lapis' , 'Individual_lapisController@store')->name('Individual_lapis.store');
+
 Route::get('/Aniver_lapis', 'Aniver_lapisController@index')->name('Aniver_lapis.index');
-Route::post('/Aniver_lapis' , 'IndividualController@store')->name('Aniver_lapis.store');
+Route::post('/Aniver_lapis' , 'Aniver_lapisController@store')->name('Aniver_lapis.store');
 
 Route::get('/Casal_lapis', 'Casal_lapisController@index')->name('Casal_lapis.index');
 Route::post('/Casal_lapis' , 'Casal_lapisController@store')->name('Casal_lapisstore');
@@ -126,9 +132,7 @@ Route::get('/pessoas', 'PessoasController@index')->name('pessoas.index');
 Route::post('/pessoas' , 'PessoasController@store')->name('pessoas.store');
 
 
-Route::prefix('UAXEE112')->middleware(['auth'])->group( function(){
-
-	
+Route::prefix('UAXEE112')->middleware(['auth'])->group( function(){	
 	Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 	Route::put('profile/password', 'ProfileController@password')->name('profile.password');
 	Route::get('profile', 'ProfileController@edit')->name('profile.edit');
