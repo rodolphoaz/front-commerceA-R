@@ -10,8 +10,9 @@
         <div class="row">
           <div class="col-lg-7">
             <div class="float-left">
-              <p><strong> whatsapp: 021 981840572 / 974096349 </p>
-              <p> Email: aercaricaturasonline03@gmail.com</strong></p>
+           
+           <p><strong> compre pelo Whatsapp: 021 981840572 / 974096349</strong></p>
+              <p><strong> Email: aercaricaturasonline03@gmail.com</strong></p>
             </div>
           </div>
           <div class="col-lg-5">
@@ -20,7 +21,7 @@
                 @Auth()
                 <li>
                   <a href="tracking.html">
-                    Acompanhar pedido
+                   Acompanhe seu pedido
                   </a>
                 </li>
                 @endauth
@@ -28,14 +29,14 @@
                 @guest()
                 <li>
                   <a href="{{route('login')}}">
-                  Minha conta 
+                  Bem vindo , Logar
                   </a>
                 </li>
                 @endguest
                 
                 <li>
                 <a href="{{route('contact')}}">
-                    Fazer Pedido
+                    Fazer Pedido online
                   </a>
                 </li>
               </ul>
@@ -48,7 +49,7 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light w-500">
           <!-- Brand and toggle get grouped for better mobile display -->
-          <a class="navbar-brand logo_h" href="{{route ('home')}}">
+          <a class="navbar-brand logo_h" href="#">
             <img src="img/logo.png" alt="aer caricaturas online" />
           </a>
            
@@ -61,7 +62,7 @@
                      <li class='has-sub'><a href=''>Caricaturas na Caneca </a>
                       
                         <ul>
-                           <li><a href=''>Caricatura Individual</a></li>
+                           <li><a href="{{route ('Individual.index')}}">Caricatura Individual</a></li>
                            <li><a href=''>Caricatura Temática </a></li>
                            <li><a href=''>Caricatura Infantil </a></li>
                            <li><a href=''>Caricatura Casal</a></li>
@@ -84,7 +85,7 @@
                      </li>
                      <li class='has-sub'><a href=''>Caricaturas á lápis </a>
                       <ul>
-                      <li><a href=''>Individual</a></li>
+                      <li><a href="">Individual</a></li>
                           <li><a href=''>Temática </a></li>
                           <li><a href=''>Casal </a></li>
                           <li><a href=''>Infantil </a></li>
@@ -142,27 +143,23 @@
          <div class="col-lg-5 pr-0">
           <ul class="nav navbar-nav navbar-right right_nav pull-right">
             <li class="nav-item">
-              <a href="" class="icons">
-                <i class="ti-search" aria-hidden="true"data-toggle="tooltip" data-placement="top" title="Buscar Produtos"></i>
-                   </a>
-            </li>
+             <a href="" class="icons">
+       
+            <i class="ti-search" aria-hidden="true"data-toggle="tooltip" data-placement="top" title="Buscar Produtos"></i>
+                           </a>
+          </li>
             @guest()
             <li class="nav-item">
-              
               <a href="{{route('login')}}" class="icons">
-                <i class="ti-user" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Fazer Login"></i>
+                <i class="ti-user" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Minha conta"></i>
               </a>
             </li>
             @endguest
-            <li class="nav-item">
-              <a href="" class="icons">
-                <i class="ti-heart" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Amei"></i>
-              </a>
-            </li>
+           
             <li class="nav-item">
               <a href="" class="icons">
                 <i class="ti-shopping-cart" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Carrinho de compras"></i>
-                <span class="badge badge-light">0</span>
+                <span class="count_wishlist"> 0 </span>
               </a>
             </li>
           </ul>
