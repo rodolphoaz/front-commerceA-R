@@ -114,10 +114,10 @@ Route::post('/qtematica' , 'QtematicaController@store')->name('qtematica.store')
 Route::get('/qcasal', 'QcasalController@index')->name('qcasal.index');
 Route::post('/qcasal' , 'QcasalController@store')->name('qcasal.store');
 
-*Mascotes*/ 
+/*Mascotes*/ 
 
-Route::get('/animais', 'AnimaisContAoller@index')->name('animais.index');
-Route::post('/animais' ,'AnimaisContAoller@store')->name('animais.store');
+Route::get('/animais', 'AnimaisController@index')->name('animais.index');
+Route::post('/animais' ,'AnimaisController@store')->name('animais.store');
 
 Route::get('/personagens', 'PersonagensController@index')->name('personagens.index');
 Route::post('/personagens' , 'PersonagensController@store')->name('personagens.store');
@@ -126,17 +126,9 @@ Route::get('/pessoas', 'PessoasController@index')->name('pessoas.index');
 Route::post('/pessoas' , 'PessoasController@store')->name('pessoas.store');
 
 
-
-
-
-
-
-
-
-
-
-
 Route::prefix('UAXEE112')->middleware(['auth'])->group( function(){
+
+	
 	Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 	Route::put('profile/password', 'ProfileController@password')->name('profile.password');
 	Route::get('profile', 'ProfileController@edit')->name('profile.edit');
