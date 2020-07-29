@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Evento_LapisController;
+use App\QtematicaController;
 use Illuminate\Http\Request;
 
-class EventoLapisControllerController extends Controller
+class QtematicaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class EventoLapisControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Evento_LapisController  $evento_LapisController
+     * @param  \App\QtematicaController  $qtematicaController
      * @return \Illuminate\Http\Response
      */
-    public function show(Evento_LapisController $evento_LapisController)
+    public function show(QtematicaController $qtematicaController)
     {
         //
     }
@@ -52,10 +52,10 @@ class EventoLapisControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Evento_LapisController  $evento_LapisController
+     * @param  \App\QtematicaController  $qtematicaController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Evento_LapisController $evento_LapisController)
+    public function edit(QtematicaController $qtematicaController)
     {
         //
     }
@@ -64,10 +64,10 @@ class EventoLapisControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Evento_LapisController  $evento_LapisController
+     * @param  \App\QtematicaController  $qtematicaController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Evento_LapisController $evento_LapisController)
+    public function update(Request $request, QtematicaController $qtematicaController)
     {
         //
     }
@@ -75,10 +75,10 @@ class EventoLapisControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Evento_LapisController  $evento_LapisController
+     * @param  \App\QtematicaController  $qtematicaController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Evento_LapisController $evento_LapisController)
+    public function destroy(QtematicaController $qtematicaController)
     {
         //
     }

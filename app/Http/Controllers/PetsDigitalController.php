@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\QinfantilController;
+use App\Pets_digitalController;
 use Illuminate\Http\Request;
 
-class QinfantilControllerController extends Controller
+class PetsDigitalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class QinfantilControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\QinfantilController  $qinfantilController
+     * @param  \App\Pets_digitalController  $pets_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function show(QinfantilController $qinfantilController)
+    public function show(Pets_digitalController $pets_digitalController)
     {
         //
     }
@@ -52,10 +52,10 @@ class QinfantilControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\QinfantilController  $qinfantilController
+     * @param  \App\Pets_digitalController  $pets_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function edit(QinfantilController $qinfantilController)
+    public function edit(Pets_digitalController $pets_digitalController)
     {
         //
     }
@@ -64,10 +64,10 @@ class QinfantilControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\QinfantilController  $qinfantilController
+     * @param  \App\Pets_digitalController  $pets_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, QinfantilController $qinfantilController)
+    public function update(Request $request, Pets_digitalController $pets_digitalController)
     {
         //
     }
@@ -75,10 +75,10 @@ class QinfantilControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\QinfantilController  $qinfantilController
+     * @param  \App\Pets_digitalController  $pets_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(QinfantilController $qinfantilController)
+    public function destroy(Pets_digitalController $pets_digitalController)
     {
         //
     }

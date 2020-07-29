@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Individual_LapisController;
+use App\Infantil_digitalController;
 use Illuminate\Http\Request;
 
-class IndividualLapisControllerController extends Controller
+class InfantilDigitalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class IndividualLapisControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Individual_LapisController  $individual_LapisController
+     * @param  \App\Infantil_digitalController  $infantil_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function show(Individual_LapisController $individual_LapisController)
+    public function show(Infantil_digitalController $infantil_digitalController)
     {
         //
     }
@@ -52,10 +52,10 @@ class IndividualLapisControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Individual_LapisController  $individual_LapisController
+     * @param  \App\Infantil_digitalController  $infantil_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Individual_LapisController $individual_LapisController)
+    public function edit(Infantil_digitalController $infantil_digitalController)
     {
         //
     }
@@ -64,10 +64,10 @@ class IndividualLapisControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Individual_LapisController  $individual_LapisController
+     * @param  \App\Infantil_digitalController  $infantil_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Individual_LapisController $individual_LapisController)
+    public function update(Request $request, Infantil_digitalController $infantil_digitalController)
     {
         //
     }
@@ -75,10 +75,10 @@ class IndividualLapisControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Individual_LapisController  $individual_LapisController
+     * @param  \App\Infantil_digitalController  $infantil_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Individual_LapisController $individual_LapisController)
+    public function destroy(Infantil_digitalController $infantil_digitalController)
     {
         //
     }

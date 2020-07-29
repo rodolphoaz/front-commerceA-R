@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Pets_LapisController;
+use App\IndividualController;
 use Illuminate\Http\Request;
 
-class PetsLapisControllerController extends Controller
+class IndividualController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class PetsLapisControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Pets_LapisController  $pets_LapisController
+     * @param  \App\IndividualController  $individualController
      * @return \Illuminate\Http\Response
      */
-    public function show(Pets_LapisController $pets_LapisController)
+    public function show(IndividualController $individualController)
     {
         //
     }
@@ -52,10 +52,10 @@ class PetsLapisControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Pets_LapisController  $pets_LapisController
+     * @param  \App\IndividualController  $individualController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pets_LapisController $pets_LapisController)
+    public function edit(IndividualController $individualController)
     {
         //
     }
@@ -64,10 +64,10 @@ class PetsLapisControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Pets_LapisController  $pets_LapisController
+     * @param  \App\IndividualController  $individualController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pets_LapisController $pets_LapisController)
+    public function update(Request $request, IndividualController $individualController)
     {
         //
     }
@@ -75,10 +75,10 @@ class PetsLapisControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Pets_LapisController  $pets_LapisController
+     * @param  \App\IndividualController  $individualController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pets_LapisController $pets_LapisController)
+    public function destroy(IndividualController $individualController)
     {
         //
     }

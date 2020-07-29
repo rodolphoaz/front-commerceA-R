@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\InfantilController;
+use App\TematicaController;
 use Illuminate\Http\Request;
 
-class InfantilControllerController extends Controller
+class TematicaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class InfantilControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\InfantilController  $infantilController
+     * @param  \App\TematicaController  $tematicaController
      * @return \Illuminate\Http\Response
      */
-    public function show(InfantilController $infantilController)
+    public function show(TematicaController $tematicaController)
     {
         //
     }
@@ -52,10 +52,10 @@ class InfantilControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\InfantilController  $infantilController
+     * @param  \App\TematicaController  $tematicaController
      * @return \Illuminate\Http\Response
      */
-    public function edit(InfantilController $infantilController)
+    public function edit(TematicaController $tematicaController)
     {
         //
     }
@@ -64,10 +64,10 @@ class InfantilControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\InfantilController  $infantilController
+     * @param  \App\TematicaController  $tematicaController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, InfantilController $infantilController)
+    public function update(Request $request, TematicaController $tematicaController)
     {
         //
     }
@@ -75,10 +75,10 @@ class InfantilControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\InfantilController  $infantilController
+     * @param  \App\TematicaController  $tematicaController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(InfantilController $infantilController)
+    public function destroy(TematicaController $tematicaController)
     {
         //
     }

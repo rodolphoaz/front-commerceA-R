@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\PessoasController;
+use App\Evento_digitalController;
 use Illuminate\Http\Request;
 
-class PessoasControllerController extends Controller
+class EventoDigitalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class PessoasControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\PessoasController  $pessoasController
+     * @param  \App\Evento_digitalController  $evento_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function show(PessoasController $pessoasController)
+    public function show(Evento_digitalController $evento_digitalController)
     {
         //
     }
@@ -52,10 +52,10 @@ class PessoasControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\PessoasController  $pessoasController
+     * @param  \App\Evento_digitalController  $evento_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function edit(PessoasController $pessoasController)
+    public function edit(Evento_digitalController $evento_digitalController)
     {
         //
     }
@@ -64,10 +64,10 @@ class PessoasControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\PessoasController  $pessoasController
+     * @param  \App\Evento_digitalController  $evento_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PessoasController $pessoasController)
+    public function update(Request $request, Evento_digitalController $evento_digitalController)
     {
         //
     }
@@ -75,10 +75,10 @@ class PessoasControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\PessoasController  $pessoasController
+     * @param  \App\Evento_digitalController  $evento_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PessoasController $pessoasController)
+    public function destroy(Evento_digitalController $evento_digitalController)
     {
         //
     }

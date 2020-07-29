@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Formatura_LapisController;
+use App\Grupos_LapisController;
 use Illuminate\Http\Request;
 
-class FormaturaLapisControllerController extends Controller
+class GruposLapisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class FormaturaLapisControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Formatura_LapisController  $formatura_LapisController
+     * @param  \App\Grupos_LapisController  $grupos_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function show(Formatura_LapisController $formatura_LapisController)
+    public function show(Grupos_LapisController $grupos_LapisController)
     {
         //
     }
@@ -52,10 +52,10 @@ class FormaturaLapisControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Formatura_LapisController  $formatura_LapisController
+     * @param  \App\Grupos_LapisController  $grupos_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Formatura_LapisController $formatura_LapisController)
+    public function edit(Grupos_LapisController $grupos_LapisController)
     {
         //
     }
@@ -64,10 +64,10 @@ class FormaturaLapisControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Formatura_LapisController  $formatura_LapisController
+     * @param  \App\Grupos_LapisController  $grupos_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Formatura_LapisController $formatura_LapisController)
+    public function update(Request $request, Grupos_LapisController $grupos_LapisController)
     {
         //
     }
@@ -75,10 +75,10 @@ class FormaturaLapisControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Formatura_LapisController  $formatura_LapisController
+     * @param  \App\Grupos_LapisController  $grupos_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Formatura_LapisController $formatura_LapisController)
+    public function destroy(Grupos_LapisController $grupos_LapisController)
     {
         //
     }

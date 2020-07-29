@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Infantil_LapisController;
+use App\QinfantilController;
 use Illuminate\Http\Request;
 
-class InfantilLapisControllerController extends Controller
+class QinfantilController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class InfantilLapisControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Infantil_LapisController  $infantil_LapisController
+     * @param  \App\QinfantilController  $qinfantilController
      * @return \Illuminate\Http\Response
      */
-    public function show(Infantil_LapisController $infantil_LapisController)
+    public function show(QinfantilController $qinfantilController)
     {
         //
     }
@@ -52,10 +52,10 @@ class InfantilLapisControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Infantil_LapisController  $infantil_LapisController
+     * @param  \App\QinfantilController  $qinfantilController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Infantil_LapisController $infantil_LapisController)
+    public function edit(QinfantilController $qinfantilController)
     {
         //
     }
@@ -64,10 +64,10 @@ class InfantilLapisControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Infantil_LapisController  $infantil_LapisController
+     * @param  \App\QinfantilController  $qinfantilController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Infantil_LapisController $infantil_LapisController)
+    public function update(Request $request, QinfantilController $qinfantilController)
     {
         //
     }
@@ -75,10 +75,10 @@ class InfantilLapisControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Infantil_LapisController  $infantil_LapisController
+     * @param  \App\QinfantilController  $qinfantilController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Infantil_LapisController $infantil_LapisController)
+    public function destroy(QinfantilController $qinfantilController)
     {
         //
     }

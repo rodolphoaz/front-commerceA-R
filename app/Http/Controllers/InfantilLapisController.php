@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Casal_digitalController;
+use App\Infantil_LapisController;
 use Illuminate\Http\Request;
 
-class CasalDigitalControllerController extends Controller
+class InfantilLapisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class CasalDigitalControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Casal_digitalController  $casal_digitalController
+     * @param  \App\Infantil_LapisController  $infantil_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function show(Casal_digitalController $casal_digitalController)
+    public function show(Infantil_LapisController $infantil_LapisController)
     {
         //
     }
@@ -52,10 +52,10 @@ class CasalDigitalControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Casal_digitalController  $casal_digitalController
+     * @param  \App\Infantil_LapisController  $infantil_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Casal_digitalController $casal_digitalController)
+    public function edit(Infantil_LapisController $infantil_LapisController)
     {
         //
     }
@@ -64,10 +64,10 @@ class CasalDigitalControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Casal_digitalController  $casal_digitalController
+     * @param  \App\Infantil_LapisController  $infantil_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Casal_digitalController $casal_digitalController)
+    public function update(Request $request, Infantil_LapisController $infantil_LapisController)
     {
         //
     }
@@ -75,10 +75,10 @@ class CasalDigitalControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Casal_digitalController  $casal_digitalController
+     * @param  \App\Infantil_LapisController  $infantil_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Casal_digitalController $casal_digitalController)
+    public function destroy(Infantil_LapisController $infantil_LapisController)
     {
         //
     }

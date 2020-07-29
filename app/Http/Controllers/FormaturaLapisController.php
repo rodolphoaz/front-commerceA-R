@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Pets_digitalController;
+use App\Formatura_LapisController;
 use Illuminate\Http\Request;
 
-class PetsDigitalControllerController extends Controller
+class FormaturaLapisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class PetsDigitalControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Pets_digitalController  $pets_digitalController
+     * @param  \App\Formatura_LapisController  $formatura_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function show(Pets_digitalController $pets_digitalController)
+    public function show(Formatura_LapisController $formatura_LapisController)
     {
         //
     }
@@ -52,10 +52,10 @@ class PetsDigitalControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Pets_digitalController  $pets_digitalController
+     * @param  \App\Formatura_LapisController  $formatura_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pets_digitalController $pets_digitalController)
+    public function edit(Formatura_LapisController $formatura_LapisController)
     {
         //
     }
@@ -64,10 +64,10 @@ class PetsDigitalControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Pets_digitalController  $pets_digitalController
+     * @param  \App\Formatura_LapisController  $formatura_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pets_digitalController $pets_digitalController)
+    public function update(Request $request, Formatura_LapisController $formatura_LapisController)
     {
         //
     }
@@ -75,10 +75,10 @@ class PetsDigitalControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Pets_digitalController  $pets_digitalController
+     * @param  \App\Formatura_LapisController  $formatura_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pets_digitalController $pets_digitalController)
+    public function destroy(Formatura_LapisController $formatura_LapisController)
     {
         //
     }

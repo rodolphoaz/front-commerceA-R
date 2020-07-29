@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Grupos_digitalController;
 use Illuminate\Http\Request;
 
-class GruposDigitalControllerController extends Controller
+class GruposDigitalController extends Controller
 {
     /**
      * Display a listing of the resource.

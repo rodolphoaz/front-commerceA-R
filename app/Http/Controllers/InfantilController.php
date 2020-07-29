@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Tematicas_LapisController;
+use App\InfantilController;
 use Illuminate\Http\Request;
 
-class TematicasLapisControllerController extends Controller
+class InfantilController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class TematicasLapisControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Tematicas_LapisController  $tematicas_LapisController
+     * @param  \App\InfantilController  $infantilController
      * @return \Illuminate\Http\Response
      */
-    public function show(Tematicas_LapisController $tematicas_LapisController)
+    public function show(InfantilController $infantilController)
     {
         //
     }
@@ -52,10 +52,10 @@ class TematicasLapisControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Tematicas_LapisController  $tematicas_LapisController
+     * @param  \App\InfantilController  $infantilController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tematicas_LapisController $tematicas_LapisController)
+    public function edit(InfantilController $infantilController)
     {
         //
     }
@@ -64,10 +64,10 @@ class TematicasLapisControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Tematicas_LapisController  $tematicas_LapisController
+     * @param  \App\InfantilController  $infantilController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tematicas_LapisController $tematicas_LapisController)
+    public function update(Request $request, InfantilController $infantilController)
     {
         //
     }
@@ -75,10 +75,10 @@ class TematicasLapisControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Tematicas_LapisController  $tematicas_LapisController
+     * @param  \App\InfantilController  $infantilController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tematicas_LapisController $tematicas_LapisController)
+    public function destroy(InfantilController $infantilController)
     {
         //
     }

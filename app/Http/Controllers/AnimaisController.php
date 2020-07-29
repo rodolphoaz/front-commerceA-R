@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Aniver_LapisController;
+use App\AnimaisController;
 use Illuminate\Http\Request;
 
-class AniverLapisControllerController extends Controller
+class AnimaisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class AniverLapisControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Aniver_LapisController  $aniver_LapisController
+     * @param  \App\AnimaisController  $animaisController
      * @return \Illuminate\Http\Response
      */
-    public function show(Aniver_LapisController $aniver_LapisController)
+    public function show(AnimaisController $animaisController)
     {
         //
     }
@@ -52,10 +52,10 @@ class AniverLapisControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Aniver_LapisController  $aniver_LapisController
+     * @param  \App\AnimaisController  $animaisController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Aniver_LapisController $aniver_LapisController)
+    public function edit(AnimaisController $animaisController)
     {
         //
     }
@@ -64,10 +64,10 @@ class AniverLapisControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Aniver_LapisController  $aniver_LapisController
+     * @param  \App\AnimaisController  $animaisController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Aniver_LapisController $aniver_LapisController)
+    public function update(Request $request, AnimaisController $animaisController)
     {
         //
     }
@@ -75,10 +75,10 @@ class AniverLapisControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Aniver_LapisController  $aniver_LapisController
+     * @param  \App\AnimaisController  $animaisController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Aniver_LapisController $aniver_LapisController)
+    public function destroy(AnimaisController $animaisController)
     {
         //
     }

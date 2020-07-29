@@ -17,7 +17,7 @@ Auth::routes();
 
 Route::get('/', function (){
 	return redirect()->route('home');
-	return redirect()->route('Individual.index');
+	return redirect()->route('individual.index');
 	
 });
 

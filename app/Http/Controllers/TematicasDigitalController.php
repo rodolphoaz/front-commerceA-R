@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\IndividualController;
+use App\Tematicas_DigitalController;
 use Illuminate\Http\Request;
 
-class IndividualControllerController extends Controller
+class TematicasDigitalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class IndividualControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\IndividualController  $individualController
+     * @param  \App\Tematicas_DigitalController  $tematicas_DigitalController
      * @return \Illuminate\Http\Response
      */
-    public function show(IndividualController $individualController)
+    public function show(Tematicas_DigitalController $tematicas_DigitalController)
     {
         //
     }
@@ -52,10 +52,10 @@ class IndividualControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\IndividualController  $individualController
+     * @param  \App\Tematicas_DigitalController  $tematicas_DigitalController
      * @return \Illuminate\Http\Response
      */
-    public function edit(IndividualController $individualController)
+    public function edit(Tematicas_DigitalController $tematicas_DigitalController)
     {
         //
     }
@@ -64,10 +64,10 @@ class IndividualControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\IndividualController  $individualController
+     * @param  \App\Tematicas_DigitalController  $tematicas_DigitalController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, IndividualController $individualController)
+    public function update(Request $request, Tematicas_DigitalController $tematicas_DigitalController)
     {
         //
     }
@@ -75,10 +75,10 @@ class IndividualControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\IndividualController  $individualController
+     * @param  \App\Tematicas_DigitalController  $tematicas_DigitalController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(IndividualController $individualController)
+    public function destroy(Tematicas_DigitalController $tematicas_DigitalController)
     {
         //
     }

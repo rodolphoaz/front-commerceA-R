@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\TematicaController;
+use App\Individual_LapisController;
 use Illuminate\Http\Request;
 
-class TematicaControllerController extends Controller
+class IndividualLapisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class TematicaControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\TematicaController  $tematicaController
+     * @param  \App\Individual_LapisController  $individual_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function show(TematicaController $tematicaController)
+    public function show(Individual_LapisController $individual_LapisController)
     {
         //
     }
@@ -52,10 +52,10 @@ class TematicaControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\TematicaController  $tematicaController
+     * @param  \App\Individual_LapisController  $individual_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function edit(TematicaController $tematicaController)
+    public function edit(Individual_LapisController $individual_LapisController)
     {
         //
     }
@@ -64,10 +64,10 @@ class TematicaControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\TematicaController  $tematicaController
+     * @param  \App\Individual_LapisController  $individual_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TematicaController $tematicaController)
+    public function update(Request $request, Individual_LapisController $individual_LapisController)
     {
         //
     }
@@ -75,10 +75,10 @@ class TematicaControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\TematicaController  $tematicaController
+     * @param  \App\Individual_LapisController  $individual_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TematicaController $tematicaController)
+    public function destroy(Individual_LapisController $individual_LapisController)
     {
         //
     }

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Grupos_LapisController;
+use App\Formatura_digitalController;
 use Illuminate\Http\Request;
 
-class GruposLapisControllerController extends Controller
+class FormaturaDigitalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class GruposLapisControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Grupos_LapisController  $grupos_LapisController
+     * @param  \App\Formatura_digitalController  $formatura_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function show(Grupos_LapisController $grupos_LapisController)
+    public function show(Formatura_digitalController $formatura_digitalController)
     {
         //
     }
@@ -52,10 +52,10 @@ class GruposLapisControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Grupos_LapisController  $grupos_LapisController
+     * @param  \App\Formatura_digitalController  $formatura_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Grupos_LapisController $grupos_LapisController)
+    public function edit(Formatura_digitalController $formatura_digitalController)
     {
         //
     }
@@ -64,10 +64,10 @@ class GruposLapisControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Grupos_LapisController  $grupos_LapisController
+     * @param  \App\Formatura_digitalController  $formatura_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Grupos_LapisController $grupos_LapisController)
+    public function update(Request $request, Formatura_digitalController $formatura_digitalController)
     {
         //
     }
@@ -75,10 +75,10 @@ class GruposLapisControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Grupos_LapisController  $grupos_LapisController
+     * @param  \App\Formatura_digitalController  $formatura_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Grupos_LapisController $grupos_LapisController)
+    public function destroy(Formatura_digitalController $formatura_digitalController)
     {
         //
     }

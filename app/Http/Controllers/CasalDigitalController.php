@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Aniver_digitalController;
+use App\Casal_digitalController;
 use Illuminate\Http\Request;
 
-class AniverDigitalControllerController extends Controller
+class CasalDigitalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class AniverDigitalControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Aniver_digitalController  $aniver_digitalController
+     * @param  \App\Casal_digitalController  $casal_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function show(Aniver_digitalController $aniver_digitalController)
+    public function show(Casal_digitalController $casal_digitalController)
     {
         //
     }
@@ -52,10 +52,10 @@ class AniverDigitalControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Aniver_digitalController  $aniver_digitalController
+     * @param  \App\Casal_digitalController  $casal_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Aniver_digitalController $aniver_digitalController)
+    public function edit(Casal_digitalController $casal_digitalController)
     {
         //
     }
@@ -64,10 +64,10 @@ class AniverDigitalControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Aniver_digitalController  $aniver_digitalController
+     * @param  \App\Casal_digitalController  $casal_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Aniver_digitalController $aniver_digitalController)
+    public function update(Request $request, Casal_digitalController $casal_digitalController)
     {
         //
     }
@@ -75,10 +75,10 @@ class AniverDigitalControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Aniver_digitalController  $aniver_digitalController
+     * @param  \App\Casal_digitalController  $casal_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Aniver_digitalController $aniver_digitalController)
+    public function destroy(Casal_digitalController $casal_digitalController)
     {
         //
     }

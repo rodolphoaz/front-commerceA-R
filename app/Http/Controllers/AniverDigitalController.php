@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Noivos_LapisController;
+use App\Aniver_digitalController;
 use Illuminate\Http\Request;
 
-class NoivosLapisControllerController extends Controller
+class AniverDigitalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class NoivosLapisControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Noivos_LapisController  $noivos_LapisController
+     * @param  \App\Aniver_digitalController  $aniver_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function show(Noivos_LapisController $noivos_LapisController)
+    public function show(Aniver_digitalController $aniver_digitalController)
     {
         //
     }
@@ -52,10 +52,10 @@ class NoivosLapisControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Noivos_LapisController  $noivos_LapisController
+     * @param  \App\Aniver_digitalController  $aniver_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Noivos_LapisController $noivos_LapisController)
+    public function edit(Aniver_digitalController $aniver_digitalController)
     {
         //
     }
@@ -64,10 +64,10 @@ class NoivosLapisControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Noivos_LapisController  $noivos_LapisController
+     * @param  \App\Aniver_digitalController  $aniver_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Noivos_LapisController $noivos_LapisController)
+    public function update(Request $request, Aniver_digitalController $aniver_digitalController)
     {
         //
     }
@@ -75,10 +75,10 @@ class NoivosLapisControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Noivos_LapisController  $noivos_LapisController
+     * @param  \App\Aniver_digitalController  $aniver_digitalController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Noivos_LapisController $noivos_LapisController)
+    public function destroy(Aniver_digitalController $aniver_digitalController)
     {
         //
     }

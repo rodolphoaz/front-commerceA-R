@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Evento_digitalController;
+use App\Tematicas_LapisController;
 use Illuminate\Http\Request;
 
-class EventoDigitalControllerController extends Controller
+class TematicasLapisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class EventoDigitalControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Evento_digitalController  $evento_digitalController
+     * @param  \App\Tematicas_LapisController  $tematicas_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function show(Evento_digitalController $evento_digitalController)
+    public function show(Tematicas_LapisController $tematicas_LapisController)
     {
         //
     }
@@ -52,10 +52,10 @@ class EventoDigitalControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Evento_digitalController  $evento_digitalController
+     * @param  \App\Tematicas_LapisController  $tematicas_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Evento_digitalController $evento_digitalController)
+    public function edit(Tematicas_LapisController $tematicas_LapisController)
     {
         //
     }
@@ -64,10 +64,10 @@ class EventoDigitalControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Evento_digitalController  $evento_digitalController
+     * @param  \App\Tematicas_LapisController  $tematicas_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Evento_digitalController $evento_digitalController)
+    public function update(Request $request, Tematicas_LapisController $tematicas_LapisController)
     {
         //
     }
@@ -75,10 +75,10 @@ class EventoDigitalControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Evento_digitalController  $evento_digitalController
+     * @param  \App\Tematicas_LapisController  $tematicas_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Evento_digitalController $evento_digitalController)
+    public function destroy(Tematicas_LapisController $tematicas_LapisController)
     {
         //
     }

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Formatura_digitalController;
+use App\Evento_LapisController;
 use Illuminate\Http\Request;
 
-class FormaturaDigitalControllerController extends Controller
+class EventoLapisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class FormaturaDigitalControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Formatura_digitalController  $formatura_digitalController
+     * @param  \App\Evento_LapisController  $evento_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function show(Formatura_digitalController $formatura_digitalController)
+    public function show(Evento_LapisController $evento_LapisController)
     {
         //
     }
@@ -52,10 +52,10 @@ class FormaturaDigitalControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Formatura_digitalController  $formatura_digitalController
+     * @param  \App\Evento_LapisController  $evento_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Formatura_digitalController $formatura_digitalController)
+    public function edit(Evento_LapisController $evento_LapisController)
     {
         //
     }
@@ -64,10 +64,10 @@ class FormaturaDigitalControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Formatura_digitalController  $formatura_digitalController
+     * @param  \App\Evento_LapisController  $evento_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Formatura_digitalController $formatura_digitalController)
+    public function update(Request $request, Evento_LapisController $evento_LapisController)
     {
         //
     }
@@ -75,10 +75,10 @@ class FormaturaDigitalControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Formatura_digitalController  $formatura_digitalController
+     * @param  \App\Evento_LapisController  $evento_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Formatura_digitalController $formatura_digitalController)
+    public function destroy(Evento_LapisController $evento_LapisController)
     {
         //
     }

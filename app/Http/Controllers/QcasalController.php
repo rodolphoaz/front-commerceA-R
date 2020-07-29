@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\QcasalController;
 use Illuminate\Http\Request;
 
-class QcasalControllerController extends Controller
+class QcasalController extends Controller
 {
     /**
      * Display a listing of the resource.

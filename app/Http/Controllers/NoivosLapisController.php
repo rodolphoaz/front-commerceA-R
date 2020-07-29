@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\QtematicaController;
+use App\Noivos_LapisController;
 use Illuminate\Http\Request;
 
-class QtematicaControllerController extends Controller
+class NoivosLapisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class QtematicaControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\QtematicaController  $qtematicaController
+     * @param  \App\Noivos_LapisController  $noivos_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function show(QtematicaController $qtematicaController)
+    public function show(Noivos_LapisController $noivos_LapisController)
     {
         //
     }
@@ -52,10 +52,10 @@ class QtematicaControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\QtematicaController  $qtematicaController
+     * @param  \App\Noivos_LapisController  $noivos_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function edit(QtematicaController $qtematicaController)
+    public function edit(Noivos_LapisController $noivos_LapisController)
     {
         //
     }
@@ -64,10 +64,10 @@ class QtematicaControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\QtematicaController  $qtematicaController
+     * @param  \App\Noivos_LapisController  $noivos_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, QtematicaController $qtematicaController)
+    public function update(Request $request, Noivos_LapisController $noivos_LapisController)
     {
         //
     }
@@ -75,10 +75,10 @@ class QtematicaControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\QtematicaController  $qtematicaController
+     * @param  \App\Noivos_LapisController  $noivos_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(QtematicaController $qtematicaController)
+    public function destroy(Noivos_LapisController $noivos_LapisController)
     {
         //
     }

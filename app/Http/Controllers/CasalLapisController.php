@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\AnimaisController;
+use App\Casal_LapisController;
 use Illuminate\Http\Request;
 
-class AnimaisControllerController extends Controller
+class CasalLapisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class AnimaisControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\AnimaisController  $animaisController
+     * @param  \App\Casal_LapisController  $casal_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function show(AnimaisController $animaisController)
+    public function show(Casal_LapisController $casal_LapisController)
     {
         //
     }
@@ -52,10 +52,10 @@ class AnimaisControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\AnimaisController  $animaisController
+     * @param  \App\Casal_LapisController  $casal_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function edit(AnimaisController $animaisController)
+    public function edit(Casal_LapisController $casal_LapisController)
     {
         //
     }
@@ -64,10 +64,10 @@ class AnimaisControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\AnimaisController  $animaisController
+     * @param  \App\Casal_LapisController  $casal_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, AnimaisController $animaisController)
+    public function update(Request $request, Casal_LapisController $casal_LapisController)
     {
         //
     }
@@ -75,10 +75,10 @@ class AnimaisControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\AnimaisController  $animaisController
+     * @param  \App\Casal_LapisController  $casal_LapisController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AnimaisController $animaisController)
+    public function destroy(Casal_LapisController $casal_LapisController)
     {
         //
     }
