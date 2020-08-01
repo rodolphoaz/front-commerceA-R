@@ -20,7 +20,7 @@ Route::get('/', function (){
 	
 });
 
-Route::group(function () {
+Route::prefix('/')->group(function () {
 	Route::get('product', 'ProductController@index')->name('product.index');
 
 	Route::get('product/{category}/{subcategory?}','ProductController@show')
