@@ -6,17 +6,18 @@
           <div class="col-lg-7">
             <div class="float-left">
            
-           <p><strong> compre pelo Whatsapp: 021 981840572 / 974096349</strong></p>
+           <p><strong> Compre pelo Whatsapp: 021 981840572 / 974096349</strong></p>
               <p><strong> Email: aercaricaturasonline03@gmail.com</strong></p>
             </div>
           </div>
           <div class="col-lg-5">
             <div class="float-right">
               <ul class="right_side">
+               
                 @Auth()
                 <li>
                   <a href="tracking.html">
-                   Acompanhe seu pedido
+               Olá , Acompanhe seu pedido
                   </a>
                 </li>
                 @endauth
@@ -24,7 +25,7 @@
                 @guest()
                 <li>
                   <a href="{{route('login')}}">
-                  Bem vindo , Logar
+                Olá , Bem vindo , Logar
                   </a>
                 </li>
                 @endguest
@@ -80,7 +81,7 @@
                      </li>
                      <li class='has-sub'><a href=''>Caricaturas á lápis </a>
                       <ul>
-                      <li><a href="">Individual</a></li>
+                          <li><a href="">Individual</a></li>
                           <li><a href=''>Temática </a></li>
                           <li><a href=''>Casal </a></li>
                           <li><a href=''>Infantil </a></li>
@@ -93,7 +94,7 @@
                           <li><a href=''>Pet's</a></li>
                       </ul>
                    </li>
-                   <li class='has-sub'><a href=''>Caricaturas no quadro</a>
+                   <li class='has-sub'><a href=''>Caricaturas no Quadro</a>
                     <ul>
                            <li><a href=''>Caricatura Individual</a></li>
                            <li><a href=''>Caricatura Temática </a></li>
@@ -141,21 +142,63 @@
              <a href="" class="icons">
        
             <i class="ti-search" aria-hidden="true"data-toggle="tooltip" data-placement="top" title="Buscar Produtos"></i>
-                           </a>
+           </a>
           </li>
-            @guest()
-            <li class="nav-item">
-              <a href="{{route('login')}}" class="icons">
-                <i class="ti-user" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Minha conta"></i>
+          <!-- -->
+          @Auth()
+               
+               <li class="nav-item">
+               <a href="" class="icons">
+                 <i class="fa-user" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Olá bem vindo!"> Bem vindo </i>
+               </a>
+             </li>
+                 @endauth
+                 
+                 @guest()
+                 <li class="nav-item">
+               <a href="{{route('login')}}" class="icons">
+                 <i class="ti-user" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Faça o login para acessar"></i>
+               </a>
+             </li>
+                 @endguest
+ 
+             <!-- -->
+   
+           <!-- -->
+              @Auth()
+               
+              <li class="nav-item">
+              <a href="" class="icons">
+              <i class="ti-heart" aria-hidden="true" data-toggle="popover" title="Olá , você Amou :" data-content="Caricaturas"></i>
               </a>
             </li>
-            @endguest
-           
-            <li class="nav-item">
-              <a href="" class="icons">
-                <i class="ti-shopping-cart" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Carrinho de compras"></i>
-                <span class="count_wishlist"> 0 </span>
+            <script>
+                $(document).ready(function(){
+                $('[data-toggle="popover"]').popover();
+                });
+                 </script>
+                @endauth
+                
+                @guest()
+                <li class="nav-item">
+              <a href="{{route('login')}}" class="icons">
+              <i class="ti-heart" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Meus Favoritos"></i>
+
+                
+
+             
               </a>
+            </li>
+                @endguest
+
+            <!-- -->
+           
+                       <li class="nav-item">
+              <a href="" class="icons">
+                <i class="ti-shopping-cart" aria-hidden="true" data-toggle="popover" title="Seu carrinho esta vazio" data-content="0"></i>
+                <span class="count_wishlist"><sup><strong> 0 </strong></sup></span>
+              </a>
+              
             </li>
           </ul>
         </div>
@@ -164,3 +207,4 @@
     </div>
    </header>
   <!--================Header Menu Area =================-->
+  

@@ -17,7 +17,8 @@ Auth::routes();
 
 Route::get('/', function (){
 	return redirect()->route('home');
-	return redirect()->route('individual.index');
+	return redirect()->route('caricaturas/individual.index');
+
 	
 });
 
@@ -49,16 +50,16 @@ Route::post('/casal' , 'CasalController@store')->name('casal.store');
 
 /*digital*/ 
 
-Route::get('/Aniver_lapis', 'Aniver_lapisController@index')->name('Aniver_lapis.index');
-Route::post('/Aniver_lapis' , 'IndividualController@store')->name('Aniver_lapis.store');
+Route::get('/Aniver_digital', 'Aniver_digitalController@index')->name('Aniver_digital.index');
+Route::post('/Aniver_digital' , 'Aniver_digitalController@store')->name('Aniver_digital.store');
 
-Route::get('/Casal_lapis', 'Casal_lapisController@index')->name('Casal_lapis.index');
-Route::post('/Casal_lapis' , 'Casal_lapisController@store')->name('Casal_lapisstore');
+Route::get('/Casal_digital', 'Casal_digitalController@index')->name('Casal_digital.index');
+Route::post('/Casal_digital' , 'Casal_digitalController@store')->name('Casal_digital.store');
 
-Route::get('/Evento_lapis', 'Evento_lapisController@index')->name('Evento_digital.index');
+Route::get('/Evento_Digital', 'Evento_digitalController@index')->name('Evento_digital.index');
 
-Route::get('/Formatura_lapis', 'Formatura_lapisController@index')->name('Formatura_lapis.index');
-Route::post('/Formatura_lapis' , 'Formatura_digitalController@store')->name('Formatura_digital.store');
+Route::get('/Formatura_digital', 'Formatura_digitalController@index')->name('Formatura_digital.index');
+Route::post('/Formatura_digital' , 'Formatura_digitalController@store')->name('Formatura_digital.store');
 
 Route::get('/Grupo_digital', 'Grupo_digitalController@index')->name('Grupo_digital.index');
 Route::post('/Grupos_digital' , 'Grupo_digitalController@store')->name('Grupo_digital.store');

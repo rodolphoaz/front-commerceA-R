@@ -37,13 +37,13 @@
                       <i class="ti-heart"></i>
                     </a>
                     <a href="#">
-                      <i class="ti-shopping-cart"></i>
+                      <i class="ti-shopping-cart-full"></i>
                     </a>
                   </div>
                 </div>
                 <div class="product-btm">
                   <a href="#" class="d-block">
-                    <h4>Nike latest sneaker</h4>
+                    <h4>Caricaturas</h4>
                   </a>
                   <div class="mt-3">
                     <span class="mr-4">R$25.00</span>
@@ -65,7 +65,8 @@
                       <i class="ti-heart"></i>
                     </a>
                     <a href="#">
-                      <i class="ti-shopping-cart"></i>
+                      <i class="ti-shopping-cart-full"></i>
+                     
                     </a>
                   </div>
                 </div>
@@ -93,7 +94,7 @@
                       <i class="ti-heart"></i>
                     </a>
                     <a href="#">
-                      <i class="ti-shopping-cart"></i>
+                      <i class="ti-shopping-cart-full"></i>
                     </a>
                   </div>
                 </div>
