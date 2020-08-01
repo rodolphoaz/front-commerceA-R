@@ -12,17 +12,18 @@
             <p> Nossas caricaturas são 100% originais e feitas de forma exclusiva !</p>
           </div>
         </div>
-
+       
         <div class="col-lg-3 col-md-6">
           <div class="single-feature">
             <a href="#" class="title">
-              <i class="flaticon-truck"></i>
-
-              <h3> USE E ABUSE DA CRIATIVIDADE</h3>
+              <i class="fa fa-whatsapp"></i>
+              <h3>Compre pelo whatsapp</h3>
             </a>
-            <p>As caricaturas são enviadas em altíssima qualidade! Confira nossas ideias de como utiliza-lás.</p>
+            <p> 
+              Escolha o jeito mais Rápido e prático! Encomende sua caricatura em poucos passos.</p>
           </div>
         </div>
+        
 
         <div class="col-lg-3 col-md-6">
           <div class="single-feature">

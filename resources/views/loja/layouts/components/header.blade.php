@@ -172,25 +172,22 @@
               <i class="ti-heart" aria-hidden="true" data-toggle="popover" title="Olá , você Amou :" data-content="Caricaturas"></i>
               </a>
             </li>
-            <script>
-                $(document).ready(function(){
-                $('[data-toggle="popover"]').popover();
-                });
-                 </script>
+           
                 @endauth
                 
                 @guest()
                 <li class="nav-item">
               <a href="{{route('login')}}" class="icons">
               <i class="ti-heart" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Meus Favoritos"></i>
-
-                
-
-             
               </a>
             </li>
                 @endguest
 
+                <script>
+                $(document).ready(function(){
+                $('[data-toggle="popover"]').popover();
+                });
+                 </script>
             <!-- -->
            
                        <li class="nav-item">

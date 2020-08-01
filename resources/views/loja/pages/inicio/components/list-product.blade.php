@@ -122,7 +122,7 @@
                       <i class="ti-heart"></i>
                     </a>
                     <a href="#">
-                      <i class="ti-shopping-cart"></i>
+                      <i class="ti-shopping-cart-full"></i>
                     </a>
                   </div>
                 </div>
@@ -183,7 +183,7 @@
                       <i class="ti-heart"></i>
                     </a>
                     <a href="#">
-                      <i class="ti-shopping-cart"></i>
+                      <i class="ti-shopping-cart-full"></i>
                     </a>
                   </div>
                 </div>
@@ -211,7 +211,7 @@
                       <i class="ti-heart"></i>
                     </a>
                     <a href="#">
-                      <i class="ti-shopping-cart"></i>
+                      <i class="ti-shopping-cart-full"></i>
                     </a>
                   </div>
                 </div>
@@ -239,7 +239,7 @@
                       <i class="ti-heart"></i>
                     </a>
                     <a href="#">
-                      <i class="ti-shopping-cart"></i>
+                      <i class="ti-shopping-cart-full"></i>
                     </a>
                   </div>
                 </div>
@@ -267,7 +267,7 @@
                       <i class="ti-heart"></i>
                     </a>
                     <a href="#">
-                      <i class="ti-shopping-cart"></i>
+                      <i class="ti-shopping-cart-full"></i>
                     </a>
                   </div>
                 </div>
