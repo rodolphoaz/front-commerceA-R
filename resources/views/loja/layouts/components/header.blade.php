@@ -79,22 +79,7 @@
                           <li><a href=''>Pet's</a></li>
                         </ul>
                      </li>
-                     <li class='has-sub'><a href=''>Caricaturas á lápis </a>
-                      <ul>
-                          <li><a href="">Individual</a></li>
-                          <li><a href=''>Temática </a></li>
-                          <li><a href=''>Casal </a></li>
-                          <li><a href=''>Infantil </a></li>
-                          <li><a href=''>Noivos</a></li>
-                          <li><a href=''>Aniversários</a></li>
-                          <li><a href=''>Formaturas</a></li>
-                          <li><a href=''>Eventos</a></li>
-                          <li><a href=''>Datas Especiais</a></li>
-                          <li><a href=''>Grupos</a></li>
-                          <li><a href=''>Pet's</a></li>
-                      </ul>
-                   </li>
-                   <li class='has-sub'><a href=''>Caricaturas no Quadro</a>
+                    <li class='has-sub'><a href=''>Caricaturas na Moldura</a>
                     <ul>
                            <li><a href=''>Caricatura Individual</a></li>
                            <li><a href=''>Caricatura Temática </a></li>
