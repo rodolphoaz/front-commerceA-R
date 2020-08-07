@@ -12,6 +12,8 @@
     height: 100%;
   }
   </style>
+<!-- carousel slide carousel-fade z-depth-1-half-->
+
 
 <div id="demo1" class="carousel slide" data-ride="carousel">
 
@@ -43,3 +45,9 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
+
+
+
+
+
+

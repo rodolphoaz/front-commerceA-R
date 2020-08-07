@@ -9,7 +9,7 @@
               <i class="ti-tablet"></i>
               <h3> NADA DE APLICATIVOS</h3>
             </a>
-            <p> Nossas caricaturas são 100% originais e feitas de forma exclusiva !</p>
+            Nossas caricaturas são 100% originais e feitas de forma exclusiva!
           </div>
         </div>
        
@@ -17,10 +17,11 @@
           <div class="single-feature">
             <a href="#" class="title">
               <i class="fa fa-whatsapp"></i>
-              <h3>Compre pelo whatsapp</h3>
+              <h3>Compre pelo Whatsapp</h3>
             </a>
-            <p> 
-              Escolha o jeito mais Rápido e prático! Encomende sua caricatura em poucos passos.</p>
+         
+            Rápido e fácil , só chamar no no zap e fazer sua encomenda online.
+    
           </div>
         </div>
         
@@ -28,11 +29,11 @@
         <div class="col-lg-3 col-md-6">
           <div class="single-feature">
             <a href="#" class="title">
-              <i class="fa fa-whatsapp"></i>
-              <h3>Compre pelo whatsapp</h3>
+              <i class="ti-truck"></i>
+              <h3>Caricatura Express</h3>
             </a>
             <p> 
-              Escolha o jeito mais Rápido e prático! Encomende sua caricatura em poucos passos.</p>
+             Precisa da sua caricatura rapidamente !? você pode contratar o serviço Express.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">

@@ -58,10 +58,10 @@
                      <li class='has-sub'><a href=''>Caricaturas na Caneca </a>
                       
                         <ul>
-                           <li><a href="{{route ('individual.index')}}">Caricatura Individual</a></li>
-                           <li><a href=''>Caricatura Temática </a></li>
-                           <li><a href=''>Caricatura Infantil </a></li>
-                           <li><a href=''>Caricatura Casal</a></li>
+                           <li><a href="{{route ('product.index')}}">Caricatura Individual</a></li>
+                           <li><a href="{{route ('Mugtema.index')}}">Caricatura Temática </a></li>
+                           <li><a href="{{route ('Muginfantil.index')}}">Caricatura Infantil </a></li>
+                           <li><a href="{{route ('Casal.index')}}">Caricatura Casal</a></li>
                         </ul>
                      </li>
                      <li class='has-sub'><a href=''>Caricaturas Digital</a>
