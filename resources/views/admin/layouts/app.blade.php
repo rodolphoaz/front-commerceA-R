@@ -28,15 +28,13 @@
             @include('admin.layouts.navbars.navbar')
             @yield('content')
         </div>
-
-        @guest()
+        {{-- @auth
+                @include('admin.layouts.footers.auth')
+            @endauth --}}
+        {{-- @guest()
             @include('admin.layouts.footers.guest')
         @endguest
-
-        @auth
-            @include('admin.layouts.footers.auth')   
-        @endauth
-        
+         --}}
         <script src="{{ asset('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
         <script src="{{ asset('argon') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         

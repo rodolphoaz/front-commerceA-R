@@ -1,9 +1,11 @@
-@if(stripos(url()->previous(), 'UAXEE112')))
+@if(stripos(url()->previous(), 'RDAN')))
     @extends('admin.layouts.app', ['class' => 'bg-default'])
+  
 @else 
-    @extends('loja.layouts.app', ['title' => 'login'])
+    {{-- @extends('loja.layouts.app', ['title' => 'login']) --}}
 @endif
-@section('content')
+@section('content')  
+{{stripos(url()->previous(), 'RDAN')}}
     @include('admin.layouts.headers.guest')
     <div class="container mt--8 pb-5">
         <div class="row justify-content-center">
