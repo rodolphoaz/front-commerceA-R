@@ -17,7 +17,7 @@ Auth::routes();
 
 Route::get('/', function (){
 	return redirect()->route('home');
-	return redirect()->route('caricaturas/individual.index');
+	
 
 	
 });
@@ -43,73 +43,43 @@ Route::get('/individual', 'IndividualController@index')->name('individual.index'
 Route::post('/individual' , 'IndividualController@store')->name('individual.store');
 
 
-Route::get('/infantil', 'InfantilController@index')->name('infantil.index');
-Route::post('/infantil' , 'InfantilController@store')->name('infantil.store');
+Route::get('/Muginfantil', 'MuginfantilController@index')->name('Muginfantil.index');
+Route::post('/Muginfantil' , 'MuginfantilController@store')->name('Muginfantil.store');
 
-Route::get('/tematica', 'TematicaController@index')->name('tematica.index');
-Route::post('/tematica' , 'TematicaController@store')->name('tematica.store');
+Route::get('/Mugtema', 'MugtemaController@index')->name('Mugtema.index');
+Route::post('/Mugtema' , 'MugtemaController@store')->name('Mugtema.store');
 
-Route::get('/casal', 'CasalController@index')->name('casal.index');
-Route::post('/casal' , 'CasalController@store')->name('casal.store');
+Route::get('/Casal', 'CasalController@index')->name('Casal.index');
+Route::post('/Casal' , 'CasalController@store')->name('Casal.store');
 
 /*digital*/ 
 
-Route::get('/Aniver_digital', 'Aniver_digitalController@index')->name('Aniver_digital.index');
-Route::post('/Aniver_digital' , 'Aniver_digitalController@store')->name('Aniver_digital.store');
+Route::get('/AniverDigital', 'AniverDigitalController@index')->name('AniverDigital.index');
+Route::post('/AniverDigital' , 'AniverDigitalController@store')->name('AniverDigital.store');
 
-Route::get('/Casal_digital', 'Casal_digitalController@index')->name('Casal_digital.index');
-Route::post('/Casal_digital' , 'Casal_digitalController@store')->name('Casal_digital.store');
+Route::get('/CasalDigital', 'Casal_DigitalController@index')->name('Casal_Digital.index');
+Route::post('/CasalDigital' , 'Casal_DigitalController@store')->name('Casal_Digital.store');
 
-Route::get('/Evento_Digital', 'Evento_digitalController@index')->name('Evento_digital.index');
+Route::get('/EventoDigital', 'EventoDigitalController@index')->name('Evento_Digital.index');
 
-Route::get('/Formatura_digital', 'Formatura_digitalController@index')->name('Formatura_digital.index');
-Route::post('/Formatura_digital' , 'Formatura_digitalController@store')->name('Formatura_digital.store');
+Route::get('/FormaturaDigital', 'FormaturaDigitalController@index')->name('FormaturaDigital.index');
+Route::post('/FormaturaDigital' , 'FormaturaDigitalController@store')->name('FormaturaDigital.store');
 
-Route::get('/Grupo_digital', 'Grupo_digitalController@index')->name('Grupo_digital.index');
-Route::post('/Grupos_digital' , 'Grupo_digitalController@store')->name('Grupo_digital.store');
+Route::get('/GrupoDigital', 'GrupoDigitalController@index')->name('GrupoDigital.index');
+Route::post('/GruposDigital' , 'GrupoDigitalController@store')->name('Grupo_Digital.store');
 
-Route::get('/Infantil_digital', 'Infantil_digitalController@index')->name('Infantil_digital.index');
-Route::post('/Infantil_digital' , 'Infantil_digitalController@store')->name('Infantil_digital.store');
+Route::get('/InfantilDigital', 'InfantilDigitalController@index')->name('InfantilDigital.index');
+Route::post('/InfantilDigital' , 'InfantilDigitalController@store')->name('InfantilDigital.store');
 
-Route::get('/Noivos_digital', 'Noivos_digitalController@index')->name('Noivos_digital.index');
-Route::post('/Noivos_digital' , 'Noivos_digitalController@store')->name('Noivos_digital.store');
+Route::get('/NoivosDigital', 'NoivosDigitalController@index')->name('NoivosDigital.index');
+Route::post('/NoivosDigital' , 'NoivosDigitalController@store')->name('NoivosDigital.store');
 
-Route::get('/Pets_digital', 'Pets_digitalController@index')->name('Pets_digital.index');
-Route::post('/Pets_digital' , 'Pets_digitalController@store')->name('Pets_digital.store');
+Route::get('/PetsDigital', 'PetsDigitalController@index')->name('PetsDigital.index');
+Route::post('/PetsDigital' , 'PetsDigitalController@store')->name('PetsDigital.store');
 
-Route::get('/Tematicas_digital', 'Tematicas_digitalController@index')->name('Tematicas_digital.index');
-Route::post('/Tematicas_digital' , 'Tematicas_digitalController@store')->name('Tematicas_digital.store');
+Route::get('/TematicasDigital', 'TematicasDigitalController@index')->name('TematicasDigital.index');
+Route::post('/TematicasDigital' , 'TematicasDigitalController@store')->name('TematicasDigital.store');
 
-/*a lapis*/ 
-
-Route::get('/Individual_lapis', 'Individual_lapisController@index')->name('Individual_lapis.index');
-Route::post('/Individual_lapis' , 'Individual_lapisController@store')->name('Individual_lapis.store');
-
-Route::get('/Aniver_lapis', 'Aniver_lapisController@index')->name('Aniver_lapis.index');
-Route::post('/Aniver_lapis' , 'Aniver_lapisController@store')->name('Aniver_lapis.store');
-
-Route::get('/Casal_lapis', 'Casal_lapisController@index')->name('Casal_lapis.index');
-Route::post('/Casal_lapis' , 'Casal_lapisController@store')->name('Casal_lapisstore');
-
-Route::get('/Evento_digital', 'Evento_lapisController@index')->name('Evento_lapis.index');
-
-Route::get('/Formatura_lapis', 'Formatura_lapisController@index')->name('Formatura_lapis.index');
-Route::post('/Formatura_lapis' , 'Formatura_digitalController@store')->name('Formatura_digital.store');
-
-Route::get('/Grupos_lapis', 'Grupos_lapisController@index')->name('Grupos_lapis.index');
-Route::post('/Grupos_lapis' , 'Grupos_lapisController@store')->name('Grupos_lapis.store');
-
-Route::get('/Infantil_lapis', 'Infantil_lapisController@index')->name('Infantil_lapis.index');
-Route::post('/Infantil_lapis' , 'Infantil_lapisController@store')->name('Infantil_lapis.store');
-
-Route::get('/Noivos_lapis', 'Noivos_lapisController@index')->name('Noivos_lapis.index');
-Route::post('/Noivos_lapis' , 'Noivos_lapisController@store')->name('Noivos_lapis.store');
-
-Route::get('/Pets_lapis', 'Pets_lapisController@index')->name('Pets_lapis.index');
-Route::post('/Pets_lapis' , 'Pets_lapisController@store')->name('Pets_lapis.store');
-
-Route::get('/Tematicas_lapis', 'Tematicas_lapisController@index')->name('Tematicas_lapis.index');
-Route::post('/Tematicas_lapis' , 'Tematicas_lapisController@store')->name('Tematicas_lapis.store');
 
 /*quadros*/ 
 
@@ -135,6 +105,10 @@ Route::post('/personagens' , 'PersonagensController@store')->name('personagens.s
 
 Route::get('/pessoas', 'PessoasController@index')->name('pessoas.index');
 Route::post('/pessoas' , 'PessoasController@store')->name('pessoas.store');
+
+
+
+
 	Route::get('contact', 'ContactController@index')->name('contact');
 	Route::post('contact' , 'ContactController@store')->name('contact.store');
 

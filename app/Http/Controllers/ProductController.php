@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+       return view('loja.pages.caricaturas.Mug.individual.index');
     }
 
     /**

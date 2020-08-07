@@ -5,7 +5,7 @@
         <div class="col-lg-12">
           <div class="main_title">
             <h1><span>Projetos Recentes</span></h1>
-            <p>A galeria da fama das caricaturas</p>
+            A galeria da fama das caricaturas</p>
           </div>
         </div>
       </div>
@@ -17,10 +17,10 @@
             <div class="product-img">
               <img class="img-fluid" src="{{asset('/img/product/new-product/teste.jpeg')}}" alt="Caricatura" />
             </div>
-            <h5 class="text">Caricaturas Digital </h5>
-            <h3 class="text">Corpinho</h3>
-            <h4>R$100.00</h4>
-            <a href="#" class="main_btn">Add Carrinho</a>
+            <h4 class="text"><strong>Caricaturas de DIA dos PAIS</strong></h4>
+            <h6 class="text">Especial : Meu PAI é SHOW</h6>
+            <h5>R$100.00</h5>
+            <a href="#" class="main_btn">Comprar agora </a>
           </div>
         </div>
 
@@ -58,7 +58,7 @@
             <div class="col-lg-6 col-md-6">
               <div class="single-product">
                 <div class="product-img"> 
-                  <img class="img-fluid w-100" src="{{asset('img/product/new-product/n3.jpeg')}}" alt="" />
+                  <img class="img-fluid w-100" src="{{asset('img/product/new-product/n3.png')}}" alt="" />
                   <div class="p_icon">
                     <a href="#">
                       <i class="ti-eye"></i>
@@ -92,7 +92,7 @@
                     <a href="#">
                       <i class="ti-eye"></i>
                     </a>
-                    <a href="#">
+                      <a href="#">
                       <i class="ti-heart"></i>
                     </a>
                     <a href="#">
@@ -168,7 +168,7 @@
           <div class="single-product">
             
             <div class="product-img"> 
-              <img class="img-fluid w-100" src="{{asset('img/product/galeria/i1.jpg')}}" alt="" />
+              <img class="img-fluid w-100" src="{{asset('img/product/galeria/i1.jpeg')}}" alt="" />
               <div class="p_icon">
                 <a href="#">
                   <i class="ti-eye"></i>
@@ -196,7 +196,7 @@
         <div class="col-lg-3 col-md-6">
           <div class="single-product">
             <div class="product-img">  
-              <img class="img-fluid w-100" src="{{asset('img/product/galeria/i2.jpg')}}" alt="" />
+              <img class="img-fluid w-100" src="{{asset('img/product/galeria/i2.jpeg')}}" alt="" />
               <div class="p_icon">
                 <a href="#">
                   <i class="ti-eye"></i>
@@ -224,7 +224,7 @@
         <div class="col-lg-3 col-md-6">
           <div class="single-product">
             <div class="product-img">         
-              <img class="img-fluid w-100" src="{{asset('img/product/galeria/i3.jpg')}}" alt="" />
+              <img class="img-fluid w-100" src="{{asset('img/product/galeria/i3.jpeg')}}" alt="" />
               <div class="p_icon">
                 <a href="#">
                   <i class="ti-eye"></i>
@@ -252,7 +252,7 @@
         <div class="col-lg-3 col-md-6">
           <div class="single-product">
             <div class="product-img">   
-              <img class="img-fluid w-100" src="{{asset('img/product/galeria/i4.jpg')}}" alt="" />
+              <img class="img-fluid w-100" src="{{asset('img/product/galeria/i4.jpeg')}}" alt="" />
               <div class="p_icon">
                 <a href="#">
                   <i class="ti-eye"></i>
@@ -391,3 +391,4 @@
       </div>
     </div>
   </section>
+  
