@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('admin.pages.caricatura.partials.header', [
+    @include('admin.pages.partials.header', [
         'title' => __('Criar ') . ' '. 'Lista de Caricatura',
         'description' => __('This is your profile page. You can see the progress you\'ve 
         made with your work and manage your projects or assigned tasks'),

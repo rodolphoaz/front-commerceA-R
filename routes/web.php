@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/RDAN/login', function (){
-	return redirect()->route('login');
+	return view('auth.admin_login');
 });
 
 Route::get('/', function (){
@@ -108,10 +108,6 @@ Route::post('/personagens' , 'PersonagensController@store')->name('personagens.s
 
 Route::get('/pessoas', 'PessoasController@index')->name('pessoas.index');
 Route::post('/pessoas' , 'PessoasController@store')->name('pessoas.store');
-
-
-
-
 	Route::get('contact', 'ContactController@index')->name('contact');
 	Route::post('contact' , 'ContactController@store')->name('contact.store');
 
@@ -119,9 +115,12 @@ Route::post('/pessoas' , 'PessoasController@store')->name('pessoas.store');
 });
 
 Route::prefix('RDAN')->middleware(['auth'])->group( function(){	
-	Route::get('/RDAN', function (){
+	
+	Route::get('', function (){
 		return redirect()->route('dashboard');
 	});
+
+
 	Route::get('list-caricatura', 'CaricaturaController@index')->name('caricatura.index');
 	Route::get('caricatura', 'CaricaturaController@create')->name('caricatura.create');
 	Route::get('caricatura/{id?}', 'CaricaturaController@edit')->name('caricatura.edit');
@@ -135,6 +134,20 @@ Route::prefix('RDAN')->middleware(['auth'])->group( function(){
 	
 	Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 	Route::resource('user', 'UserController');
+
+	//rotas itens_adicionais
+	Route::group(['prefix' => 'itens-adicionais' , 'as' => 'itens-adicionais.' ] , function() {
+		Route::get('','ItemAdicionalController@index')->name('index');		
+		Route::get('data-table', 'ItemAdicionalController@DataTable')->name('data-table');
+		Route::get('create', 'ItemAdicionalController@create')->name('create');
+		Route::post('save', 'ItemAdicionalController@save')->name('save');
+		Route::get('edit/{id}','ItemAdicionalController@edit')->name('edit');
+		Route::get('update'.'ItemAdicionalController@update')->name('update');
+		Route::get('delete','ItemAdicionalController@delete')->name('delete');
+	});
+
+
+
 	Route::put('profile/password', 'ProfileController@password')->name('profile.password');
 	Route::get('profile', 'ProfileController@edit')->name('profile.edit');
 	Route::put('profile/{id}', 'ProfileController@update')->name('profile.update');
