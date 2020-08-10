@@ -1,5 +1,5 @@
 <div class="col-12 container">
-    {!! Form::open()->route('item_type.'.$type)->fill($model)->autocomplete(false) !!}
+    {!! Form::open()->route('item-type.'.$type)->fill($model)->autocomplete(false) !!}
         @if($type=='update') 
             {!! Form::hidden('id',null) !!}
         @endif
