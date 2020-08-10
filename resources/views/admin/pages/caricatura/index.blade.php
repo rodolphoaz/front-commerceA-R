@@ -3,13 +3,12 @@
 @section('content')
 
     @include('admin.pages.partials.header', [
-        'title' => __('Criar ') . ' '. 'Lista de Caricatura',
-        'description' => __('This is your profile page. You can see the progress you\'ve 
-        made with your work and manage your projects or assigned tasks'),
-        'class' => 'col-lg-7'
+        'title' =>'Lista de caricaturas',
+        'description' => 'Exibindo todos os tipos de caricaturas cadastradas',
     ])
 
-    <div class="container mt-4 text-center">
+    <div class="container mt-3">
+        <h1 class="text-center">Listagem de Caricaturas</h1>
         <div class="panel-body">
             <table class="table table-bordered table-striped dataTable"></table>
         </div>
@@ -21,34 +20,18 @@
 <script type="text/javascript">
 $(document).ready(function () {
     $('.dataTable').dataTable({
-        'ajax': '{{ route("caricatura.data_table") }}',
+        'ajax': '{{ route("caricature.data-table") }}',
         columns: [
             {   data: null,
                 render: function (index, row, data) {
-                    return '<input type="checkbox" class="chk-del" data-uuid="'+data.uuid+'">';
+                    return '<input type="checkbox" class="chk-del" data-uuid="'+data.id+'">';
                 },
                 width: 3
             },
-            { data: "name", title: "Nome" },
-            { data: null, title: "Nota Fiscal", render: function (index, row, data){
-                
-                if (data.document_file == ""){
-                    return "Nao possui cadastro de Nota fiscal" ;
-                }else {
-                    return '<a href="/patrimony/download/'+data.document_file+'" class="btn btn-primary btn-sm" >Download Nota Fiscal</a>';
-                }
-            } },
-            { data: null , title:"Imagens", render: function (index, row, data){
-               
-                if (data.photos.length == 0 ){ 
-                    console.log(data.photos)
-                    return "Nao possui cadastro de Imagem";
-                }else{
-                    return '<a href="/patrimony/image/'+data.uuid+'" target="_blank" class="btn btn-warning btn-sm">Visualizar Imagens</a>';
-                }
-            }},
+            { data: "sort", title: "Tipo" },
+            { data: "template", title: "Modelo"},
             {data: null, title: "Opções", render: function (index, row, data) {
-                return '<a class="btn btn-xs btn-warning" href="{{ route('caricatura.edit') }}/'+data.uuid+'"><span class="fa fa-edit"></span></a>';
+                return '<a class="btn btn-sm btn-warning" href="{{ route('caricature.edit') }}/'+data.id+'"><span class="fa fa-edit"></span></a>';
             }}
         ]
     });
@@ -69,7 +52,7 @@ $(".btn-dele0wp").click(function () {
         });
         $.ajax({
             type:'POST',
-            url: '{{ route("caricatura.edit") }}',
+            url: '{{ route("caricature.delete") }}',
             data: {uuids: $arr},
             success: function () {
                 $('.dataTable').DataTable().ajax.reload();

@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <link rel="manifest" href="./manifest.json">
     <title>A&R - {{ $title }}</title>
 
     <!-- Scripts -->

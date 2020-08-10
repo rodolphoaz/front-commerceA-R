@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateItemAdicionalsTable extends Migration
+class CreateCartsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateItemAdicionalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('item_adicionals', function (Blueprint $table) {
+        Schema::create('carts', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id'); // user
-            $table->string('description')->nullable(); // desricao
-            $table->integer('item_type_id'); // tipo do adicional
+            $table->integer('user_id');
+            $table->integer('caracture_id');
+            $table->integer('item_adicional_id');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateItemAdicionalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('item_adicionals');
+        Schema::dropIfExists('carts');
     }
 }

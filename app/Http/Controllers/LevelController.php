@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\ItemAdicional;
+use App\Level;
 use Illuminate\Http\Request;
 
-class ItemAdicionalController extends Controller
+class LevelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ItemAdicionalController extends Controller
      */
     public function index()
     {
-        return view('admin/pages/itens_adicionais/index');
+        //
     }
 
     /**
@@ -24,8 +24,7 @@ class ItemAdicionalController extends Controller
      */
     public function create()
     {
-      
-       // return view('admin/pages/itens_adicionais/create');
+        //
     }
 
     /**
@@ -34,18 +33,18 @@ class ItemAdicionalController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function save(Request $request)
+    public function store(Request $request)
     {
-        
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\ItemAdicional  $itemAdicional
+     * @param  \App\Level  $level
      * @return \Illuminate\Http\Response
      */
-    public function show(ItemAdicional $itemAdicional)
+    public function show(Level $level)
     {
         //
     }
@@ -53,22 +52,22 @@ class ItemAdicionalController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\ItemAdicional  $itemAdicional
+     * @param  \App\Level  $level
      * @return \Illuminate\Http\Response
      */
-    public function edit(ItemAdicional $itemAdicional)
+    public function edit(Level $level)
     {
-       // return view('');
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ItemAdicional  $itemAdicional
+     * @param  \App\Level  $level
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ItemAdicional $itemAdicional)
+    public function update(Request $request, Level $level)
     {
         //
     }
@@ -76,15 +75,11 @@ class ItemAdicionalController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\ItemAdicional  $itemAdicional
+     * @param  \App\Level  $level
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ItemAdicional $itemAdicional)
+    public function destroy(Level $level)
     {
         //
-    }
-
-    function DataTable() {
-        return datatables()->of(ItemAdicional::all())->toJson();
     }
 }

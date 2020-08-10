@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\ItemAdicional;
+use App\ItemType;
 use Illuminate\Http\Request;
 
-class ItemAdicionalController extends Controller
+class ItemTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ItemAdicionalController extends Controller
      */
     public function index()
     {
-        return view('admin/pages/itens_adicionais/index');
+        return  view('admin.pages.item_type.index');
     }
 
     /**
@@ -24,8 +24,7 @@ class ItemAdicionalController extends Controller
      */
     public function create()
     {
-      
-       // return view('admin/pages/itens_adicionais/create');
+        return  view('admin.pages.item_type.create');
     }
 
     /**
@@ -36,16 +35,21 @@ class ItemAdicionalController extends Controller
      */
     public function save(Request $request)
     {
-        
+        try {
+            $create = ItemType::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\ItemAdicional  $itemAdicional
+     * @param  \App\ItemType  $itemType
      * @return \Illuminate\Http\Response
      */
-    public function show(ItemAdicional $itemAdicional)
+    public function show(ItemType $itemType)
     {
         //
     }
@@ -53,22 +57,22 @@ class ItemAdicionalController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\ItemAdicional  $itemAdicional
+     * @param  \App\ItemType  $itemType
      * @return \Illuminate\Http\Response
      */
-    public function edit(ItemAdicional $itemAdicional)
+    public function edit(ItemType $itemType)
     {
-       // return view('');
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ItemAdicional  $itemAdicional
+     * @param  \App\ItemType  $itemType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ItemAdicional $itemAdicional)
+    public function update(Request $request, ItemType $itemType)
     {
         //
     }
@@ -76,15 +80,15 @@ class ItemAdicionalController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\ItemAdicional  $itemAdicional
+     * @param  \App\ItemType  $itemType
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ItemAdicional $itemAdicional)
+    public function destroy(ItemType $itemType)
     {
         //
     }
 
     function DataTable() {
-        return datatables()->of(ItemAdicional::all())->toJson();
+        return datatables()->of(ItemType::all())->toJson();
     }
 }
