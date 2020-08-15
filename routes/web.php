@@ -106,7 +106,7 @@ Route::post('/personagens' , 'PersonagensController@store')->name('personagens.s
 Route::get('/pessoas', 'PessoasController@index')->name('pessoas.index');
 Route::post('/pessoas' , 'PessoasController@store')->name('pessoas.store');
 
-
+/* end Mascotes*/ 
 
 
 	Route::get('contact', 'ContactController@index')->name('contact');

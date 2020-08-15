@@ -10,17 +10,15 @@
 src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0&appId=1131541973545208&autoLogAppEvents=1" 
 nonce="LGVNyx41"></script> 
 
-<!-- Smartsupp Live Chat script -->
-<script type="text/javascript">
-var _smartsupp = _smartsupp || {};
-_smartsupp.key = '71fabb70e3893aa6d70aeb75b586868521692f96';
-window.smartsupp||(function(d) {
-  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-  c.type='text/javascript';c.charset='utf-8';c.async=true;
-  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-})(document);
-</script>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  chat-icon="https://storage.googleapis.com/cloudprod-apiai/91da6b06-0c75-461d-978b-e2f13f869012_x.png"
+  intent="WELCOME"
+  chat-title="Bobgit pull
+  "
+  agent-id="b3b1c972-2153-452d-a53f-0a6f999bb511"
+  language-code="pt-br"
+></df-messenger>
 
 <div class="fb-page" data-href="https://www.facebook.com/aercaricaturasonline" data-tabs="" data-width="" 
 data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
