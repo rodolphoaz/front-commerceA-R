@@ -1,20 +1,29 @@
 @extends('admin.layouts.app', ['title' => 'Lista de Caricatura'])
 
 @section('content')
-
     @include('admin.pages.partials.header', [
         'title' =>'Lista de caricaturas',
         'description' => 'Exibindo todos os tipos de caricaturas cadastradas',
     ])
 
     <div class="container mt-3">
-        <h1 class="text-center">Listagem de Caricaturas</h1>
-        <div class="panel-body">
-            <table class="table table-bordered table-striped dataTable"></table>
+        <div class="card shadow">
+            <div class="card-header border-0">  
+                <div class="row align-items-center">
+                    <div class="col-8">
+                        <h3 class="mb-0">{{ __('Listagem do Tipo de Caricaturas') }}</h3>
+                    </div>
+                    <div class="col-4 text-right">
+                        <a href="{{ route('caricatures.create') }}" class="btn btn-sm btn-primary">{{ __('Novo tipo de Caricatura') }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped dataTable"></table>
+            </div>
         </div>
     </div>
 @endsection
-
 
 @push('scripts')
 <script type="text/javascript">
@@ -29,8 +38,9 @@ $(document).ready(function () {
                 width: 3
             },
             { data: "sort", title: "Tipo" },
-            { data: "template", title: "Modelo"},
-            {data: null, title: "Opções", render: function (index, row, data) {
+            { data: "template", title: "Modelo" },
+            { data:"price" , title: "Preco" },
+            { data: null, title: "Opções", render: function (index, row, data) {
                 return '<a class="btn btn-sm btn-warning" href="{{ route('caricature.edit') }}/'+data.id+'"><span class="fa fa-edit"></span></a>';
             }}
         ]
