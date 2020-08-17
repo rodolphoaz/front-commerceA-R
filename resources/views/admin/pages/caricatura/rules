@@ -1,0 +1,13 @@
+rotas
+prefixo RDAN | Cliente
+url  /caricatura
+metodo index | store | delete
+verbo get | post | Put | delete
+
+rules acesso
+group_id
+rotas_id
+acesso true | false 
+
+group
+group Funcionario | Cliente | admin

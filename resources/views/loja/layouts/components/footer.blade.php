@@ -12,13 +12,13 @@ nonce="LGVNyx41"></script>
 
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 <df-messenger
-  chat-icon="https://storage.googleapis.com/cloudprod-apiai/91da6b06-0c75-461d-978b-e2f13f869012_x.png"
+  chat-icon="https://storage.googleapis.com/cloudprod-apiai/3d1690a4-995a-4acf-a901-dea8bc1318ec_x.png"
   intent="WELCOME"
-  chat-title="Bobgit pull
-  "
+  chat-title="Bob🤖"
   agent-id="b3b1c972-2153-452d-a53f-0a6f999bb511"
   language-code="pt-br"
 ></df-messenger>
+
 
 <div class="fb-page" data-href="https://www.facebook.com/aercaricaturasonline" data-tabs="" data-width="" 
 data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 

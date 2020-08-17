@@ -15,14 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', function (){
-	return redirect()->route('home');
-	
+Route::get('/RDAN/login', function (){
+	return view('auth.admin_login');
+});
 
-	
+Route::get('/', function (){
+	return redirect()->route('home');	
 });
 
 Route::prefix('/')->group(function () {
+
+
 	Route::get('product', 'ProductController@index')->name('product.index');
 
 	Route::get('product/{category}/{subcategory?}','ProductController@show')
@@ -115,20 +118,58 @@ Route::post('/pessoas' , 'PessoasController@store')->name('pessoas.store');
 	Route::get('about', 'AboutController@index')->name('about.index');
 });
 
-Route::prefix('UAXEE112')->middleware(['auth'])->group( function(){	
+Route::prefix('RDAN')->middleware(['auth'])->group( function(){	
 	
+	Route::get('', function (){
+		return redirect()->route('dashboard');
+	});
+
+
 	Route::get('funcionario','EmployeeController@index')->name('employee.index');
 	
 	Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-	
+	Route::resource('user', 'UserController');
+	//rotas caricatura 
+	Route::group(['prefix' => 'caricatura' , 'as' => 'caricature.' ] , function() {
+		Route::get('', 'CaricatureController@index')->name('index');
+		Route::get('create', 'CaricatureController@create')->name('create');
+		Route::get('edit/{id?}', 'CaricatureController@edit')->name('edit');
+		Route::get('datatable','CaricatureController@DataTable')->name('data-table');
+		Route::post('save' , 'CaricatureController@save')->name('save');
+		Route::post('update' , 'CaricatureController@update')->name('update');
+		Route::post('delete' , 'CaricatureController@delete')->name('delete');
+	});
+
+	//rotas itens_adicionais
+	Route::group(['prefix' => 'itens-adicionais' , 'as' => 'itens-adicionais.' ] , function() {
+		Route::get('','ItemAdicionalController@index')->name('index');		
+		Route::get('data-table', 'ItemAdicionalController@DataTable')->name('data-table');
+		Route::get('create', 'ItemAdicionalController@create')->name('create');
+		Route::post('save', 'ItemAdicionalController@save')->name('save');
+		Route::get('edit/{id?}','ItemAdicionalController@edit')->name('edit');
+		Route::post('update'.'ItemAdicionalController@update')->name('update');
+		Route::post('delete','ItemAdicionalController@delete')->name('delete');
+	});
+	//rotas itens_adicionais
+	Route::group(['prefix' => 'item-type' , 'as' => 'item-type.' ] , function() {
+		Route::get('','ItemTypeController@index')->name('index');		
+		Route::get('data-table', 'ItemTypeController@DataTable')->name('data-table');
+		Route::get('create', 'ItemTypeController@create')->name('create');
+		Route::post('save', 'ItemTypeController@save')->name('save');
+		Route::get('edit/{id?}','ItemTypeController@edit')->name('edit');
+		Route::post('update'.'ItemTypeController@update')->name('update');
+		Route::post('delete','ItemTypeController@delete')->name('delete');
+	});
+
+
 	Route::put('profile/password', 'ProfileController@password')->name('profile.password');
 	Route::get('profile', 'ProfileController@edit')->name('profile.edit');
-	Route::put('profile', 'ProfileController@update')->name('profile.update');
+	Route::put('profile/{id}', 'ProfileController@update')->name('profile.update');
 });
 
 Route::prefix('cliente')->middleware(['auth'])->group( function () {
 	
-	Route::get('profile/{id}', 'ProfileController@edit')->name('profile.edit');
+	Route::get('profile', 'ProfileController@edit')->name('profile.edit');
 	Route::put('profile/{id}', 'ProfileController@update')->name('profile.update');
 	
 	Route::get('checkout', 'CheckoutController@index')->name('checkout.index');

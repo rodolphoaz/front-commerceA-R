@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ config('app.name', 'Argon Dashboard') }}</title>
+        <title>{{ $title ?? '' }}</title>
         <!-- Favicon -->
         <link href="{{ asset('argon') }}/img/brand/favicon.png" rel="icon" type="image/png">
         <!-- Fonts -->
@@ -28,21 +28,21 @@
             @include('admin.layouts.navbars.navbar')
             @yield('content')
         </div>
-
-        @guest()
+        {{-- @auth
+                @include('admin.layouts.footers.auth')
+            @endauth --}}
+        {{-- @guest()
             @include('admin.layouts.footers.guest')
         @endguest
-
-        @auth
-            @include('admin.layouts.footers.auth')   
-        @endauth
-        
+         --}}
         <script src="{{ asset('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
         <script src="{{ asset('argon') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        
+        <link  rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
+        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" ></script>
         @stack('js')
         
         <!-- Argon JS -->
         <script src="{{ asset('argon') }}/js/argon.js?v=1.0.0"></script>
+        @stack('scripts')
     </body>
 </html>
