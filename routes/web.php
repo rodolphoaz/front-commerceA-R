@@ -129,6 +129,7 @@ Route::prefix('RDAN')->middleware(['auth'])->group( function(){
 	
 	Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 	Route::resource('user', 'UserController');
+
 	//rotas caricatura 
 	Route::group(['prefix' => 'caricatura' , 'as' => 'caricature.' ] , function() {
 		Route::get('', 'CaricatureController@index')->name('index');
