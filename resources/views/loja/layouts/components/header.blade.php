@@ -6,7 +6,7 @@
           <div class="col-lg-7">
             <div class="float-left">
            
-           <p><strong> Compre pelo Whatsapp: 021 981840572 / 974096349</strong></p>
+           <p><strong> compre com o Bob -> 021 981840572 </strong></p>
               <p><strong> Email: aercaricaturasonline03@gmail.com</strong></p>
             </div>
           </div>

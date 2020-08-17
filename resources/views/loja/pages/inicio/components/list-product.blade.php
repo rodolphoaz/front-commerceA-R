@@ -224,12 +224,12 @@
         <div class="col-lg-3 col-md-6">
           <div class="single-product">
             <div class="product-img">         
-              <img class="img-fluid w-100" src="{{asset('img/product/galeria/i3.jpeg')}}" alt="" />
+              <img class="img-fluid w-100" src="{{asset('img/product/galeria/infantil.jpeg')}}" alt="" />
               <div class="p_icon">
-                <a href="#">
+                <a href="{{route ('Muginfantil.index')}}">
                   <i class="ti-eye"></i>
                 </a>
-                <a href="#">
+                <a href="{{route('login')}}">
                   <i class="ti-heart"></i>
                 </a>
                 <a href="#">
@@ -238,12 +238,13 @@
               </div>
             </div>
             <div class="product-btm">
-              <a href="#" class="d-block">
-                <h4>Latest men’s sneaker</h4>
-              </a>
-              <div class="mt-3">
-                <span class="mr-4">$25.00</span>
-                <del>$35.00</del>
+              <a href="{{route ('Muginfantil.index')}}" class="d-block">
+              <h4>Canecas com caricatura infantil </h4>
+                    <h4>3x sem juros </h4>
+                  </a>
+                  <div class="mt-1">
+                    <span class="mr-4"> De R$77.00</span>
+                    
               </div>
             </div>
           </div>
