@@ -14,7 +14,7 @@
                         <h3 class="mb-0">{{ __('Listagem do Tipo de Caricaturas') }}</h3>
                     </div>
                     <div class="col-4 text-right">
-                        <a href="{{ route('caricatures.create') }}" class="btn btn-sm btn-primary">{{ __('Novo tipo de Caricatura') }}</a>
+                        <a href="{{ route('caricature.create') }}" class="btn btn-sm btn-primary">{{ __('Novo tipo de Caricatura') }}</a>
                     </div>
                 </div>
             </div>

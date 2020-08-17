@@ -6,7 +6,7 @@
           <div class="col-lg-7">
             <div class="float-left">
            
-           <p><strong> compre com o Bob -> 021 981840572 </strong></p>
+           <p><strong>Fale com o bob -> 021 981840572 </strong></p>
               <p><strong> Email: aercaricaturasonline03@gmail.com</strong></p>
             </div>
           </div>
@@ -16,7 +16,7 @@
                
                 @Auth()
                 <li>
-                  <a href="tracking.html">
+                  <a href="{{route('login')}}">
                Olá , Acompanhe seu pedido
                   </a>
                 </li>
