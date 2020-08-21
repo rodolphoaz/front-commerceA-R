@@ -6,7 +6,7 @@
           <div class="col-lg-7">
             <div class="float-left">
            
-           <p><strong>Fale com o bob -> 021 981840572 </strong></p>
+           <p><strong>🤖Fale com o bob 021 981840572</strong></p>
               <p><strong> Email: aercaricaturasonline03@gmail.com</strong></p>
             </div>
           </div>
@@ -14,18 +14,26 @@
             <div class="float-right">
               <ul class="right_side">
                
-                @Auth()
-                <li>
-                  <a href="{{route('login')}}">
-               Olá , Acompanhe seu pedido
-                  </a>
-                </li>
-                @endauth
+              @Auth()
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="{{route('login')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+🙂 Bem vindo , {{ auth()->user()->name }}
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="{{route('login')}}"> Acompanhar Pedido</a>
+<a class="dropdown-item" href="{{route('login')}}"> Hostórico de Compra</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="{{route('login')}}">Encerrar Sessão logoff</a>
+</div>
+</li>
+
+@endauth
                 
                 @guest()
                 <li>
                   <a href="{{route('login')}}">
-                Olá , Bem vindo , Logar
+                  👤 Olá , Faça seu login ou cadastre-se   
                   </a>
                 </li>
                 @endguest
@@ -123,31 +131,15 @@
          <br>
          <div class="col-lg-5 pr-0">
           <ul class="nav navbar-nav navbar-right right_nav pull-right">
+  
+
             <li class="nav-item">
              <a href="" class="icons">
        
             <i class="ti-search" aria-hidden="true"data-toggle="tooltip" data-placement="top" title="Buscar Produtos"></i>
            </a>
           </li>
-          <!-- -->
-          @Auth()
-               
-               <li class="nav-item">
-               <a href="" class="icons">
-                 <i class="fa-user" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Olá bem vindo!"> Bem vindo </i>
-               </a>
-             </li>
-                 @endauth
-                 
-                 @guest()
-                 <li class="nav-item">
-               <a href="{{route('login')}}" class="icons">
-                 <i class="ti-user" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Faça o login para acessar"></i>
-               </a>
-             </li>
-                 @endguest
- 
-             <!-- -->
+         
    
            <!-- -->
               @Auth()
