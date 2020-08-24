@@ -15,6 +15,10 @@ class CreateDemandedsTable extends Migration
     {
         Schema::create('demandeds', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
+            $table->integer('caricature_id');
+            $table->integer('custom_id');
+            $table->string('status')->nullable()->default('pendente');
             $table->timestamps();
         });
     }
