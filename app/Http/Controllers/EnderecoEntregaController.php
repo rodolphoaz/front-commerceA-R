@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\EnderecoEntrega;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class DashboardController extends Controller
+class EnderecoEntregaController extends Controller
 {
- 
-    public function __construct(){
-       
-    }
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +14,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.dashboard');
+        //
     }
 
     /**
@@ -45,10 +41,10 @@ class DashboardController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\EnderecoEntrega  $enderecoEntrega
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(EnderecoEntrega $enderecoEntrega)
     {
         //
     }
@@ -56,10 +52,10 @@ class DashboardController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\EnderecoEntrega  $enderecoEntrega
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(EnderecoEntrega $enderecoEntrega)
     {
         //
     }
@@ -68,10 +64,10 @@ class DashboardController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\EnderecoEntrega  $enderecoEntrega
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, EnderecoEntrega $enderecoEntrega)
     {
         //
     }
@@ -79,10 +75,10 @@ class DashboardController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\EnderecoEntrega  $enderecoEntrega
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(EnderecoEntrega $enderecoEntrega)
     {
         //
     }

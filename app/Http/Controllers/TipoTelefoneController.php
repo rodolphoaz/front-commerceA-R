@@ -3,14 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class DashboardController extends Controller
+class TipoTelefoneController extends Controller
 {
- 
-    public function __construct(){
-       
-    }
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +13,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.dashboard');
+        //
     }
 
     /**

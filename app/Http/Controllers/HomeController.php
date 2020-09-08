@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+
+
 class HomeController extends Controller
 {
     /**
@@ -22,6 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('loja.pages.inicio.index');
+
+        if (Auth::check()){
+            if (Auth::user()->registration === null ){
+                return  view('loja.pages.inicio.index');
+            }else {
+                return redirect()->route('dashboard');
+            }
+        }else{
+            return view('loja.pages.inicio.index');
+        }
     }
 }
