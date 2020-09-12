@@ -20,7 +20,7 @@ class CreateEnderecoCobrancasTable extends Migration
             $table->string('complemento');
             $table->string('rua');
             $table->string('numero');
-            $table->string(2,'uf');
+            $table->string('uf');
             $table->string('cidade');
             $table->string('bairro');
             $table->string('pais');

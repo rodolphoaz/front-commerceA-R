@@ -73,7 +73,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{ route('profile.update') }}" autocomplete="off">
+                        <form method="post" action="{{ route('profile.update',['id' => $auth] ) }}" autocomplete="off">
                             @csrf
                             @method('put')
 
@@ -167,6 +167,6 @@
             </div>
         </div>
         
-        @include('layouts.footers.auth')
+        @include('admin.layouts.footers.auth')
     </div>
 @endsection
