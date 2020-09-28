@@ -12,9 +12,8 @@ class EnderecoEntregaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('admin.pages.caricatura.index');
     }
 
     /**
@@ -22,9 +21,17 @@ class EnderecoEntregaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.caricatura.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = EnderecoEntrega::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -67,9 +74,14 @@ class EnderecoEntregaController extends Controller
      * @param  \App\EnderecoEntrega  $enderecoEntrega
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, EnderecoEntrega $enderecoEntrega)
+    public function update(Request $request)
     {
-        //
+        try{
+            EnderecoEntrega::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'atualizado com sucesso']); 
+        }catch (Exception $ex) {
+            return response()->json($ex);
+        }
     }
 
     /**
@@ -81,5 +93,10 @@ class EnderecoEntregaController extends Controller
     public function destroy(EnderecoEntrega $enderecoEntrega)
     {
         //
+    }
+
+    
+    function DataTable () {
+        return datatables()->of(EnderecoEntrega::all())->toJson();
     }
 }

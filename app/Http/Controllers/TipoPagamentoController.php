@@ -7,14 +7,13 @@ use Illuminate\Http\Request;
 
 class TipoPagamentoController extends Controller
 {
-    /**
+   /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('admin.pages.caricatura.index');
     }
 
     /**
@@ -22,9 +21,17 @@ class TipoPagamentoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.caricatura.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = TipoPagamento::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -81,5 +88,9 @@ class TipoPagamentoController extends Controller
     public function destroy(TipoPagamento $tipoPagamento)
     {
         //
+    }
+
+    function DataTable () {
+        return datatables()->of(TipoPagamento::all())->toJson();
     }
 }

@@ -14,7 +14,8 @@ class CreateTelefonesTable extends Migration
     public function up()
     {
         Schema::create('telefones', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements();
+            $table->uuid('uuid');
             $table->integer('contato_user_id');
             $table->integer('tipo_telefone_id');
             $table->integer('codigo_pais');

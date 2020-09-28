@@ -17,7 +17,7 @@ class CaricatureController extends Controller
     public function index()
     {
         
-            return view('admin.pages.caricatura.index');
+        return view('admin.pages.caricatura.index');
        
     }
 

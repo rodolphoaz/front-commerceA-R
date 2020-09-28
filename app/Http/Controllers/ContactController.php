@@ -22,21 +22,17 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.caricatura.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        Contact::create($request->all());
-        return back()->withStatus(__('Enviado com sucesso'));
+    function save(Request $request) {
+        try {
+            $create = Contact::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -68,9 +64,14 @@ class ContactController extends Controller
      * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contact $contact)
+    public function update(Request $request)
     {
-        //
+        try{
+            Contact::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'atualizado com sucesso']); 
+        }catch (Exception $ex) {
+            return response()->json($ex);
+        }
     }
 
     /**

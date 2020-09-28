@@ -14,7 +14,8 @@ class CreateGaleriaProdutos extends Migration
     public function up()
     {
         Schema::create('galeria_produtos', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements();
+            $table->uuid('uuid');
             $table->integer('produto_id');
             $table->string('caminho');
             $table->string('nome_imagem');

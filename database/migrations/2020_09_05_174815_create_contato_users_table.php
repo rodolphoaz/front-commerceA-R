@@ -14,7 +14,8 @@ class CreateContatoUsersTable extends Migration
     public function up()
     {
         Schema::create('contato_users', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements();
+            $table->uuid('uuid');
             $table->integer('user_id'); // cliente / funcionrio
             $table->string('tipo')->default('pessoal'); // pessoal / comercial / profissional
             $table->timestamps();

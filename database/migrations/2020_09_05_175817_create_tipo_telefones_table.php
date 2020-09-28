@@ -14,7 +14,8 @@ class CreateTipoTelefonesTable extends Migration
     public function up()
     {
         Schema::create('tipo_telefones', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements();
+            $table->uuid('uuid');
             $table->string('tipo'); //celular / fixo / fax 
             $table->timestamps();
         });

@@ -7,14 +7,13 @@ use Illuminate\Http\Request;
 
 class WhatsappUserController extends Controller
 {
-    /**
+   /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('admin.pages.caricatura.index');
     }
 
     /**
@@ -22,9 +21,17 @@ class WhatsappUserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.caricatura.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = WhatsappUser::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -81,5 +88,9 @@ class WhatsappUserController extends Controller
     public function destroy(WhatsappUser $whatsappUser)
     {
         //
+    }
+
+    function DataTable () {
+        return datatables()->of(WhatsappUser::all())->toJson();
     }
 }

@@ -12,9 +12,8 @@ class EnderecoCobrancaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('admin.pages.caricatura.index');
     }
 
     /**
@@ -22,9 +21,17 @@ class EnderecoCobrancaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.caricatura.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = EnderecoCobranca::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -67,11 +74,15 @@ class EnderecoCobrancaController extends Controller
      * @param  \App\EnderecoCobranca  $enderecoCobranca
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, EnderecoCobranca $enderecoCobranca)
+    public function update(Request $request)
     {
-        //
+        try{
+            EnderecoCobranca::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'atualizado com sucesso']); 
+        }catch (Exception $ex) {
+            return response()->json($ex);
+        }
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -81,5 +92,10 @@ class EnderecoCobrancaController extends Controller
     public function destroy(EnderecoCobranca $enderecoCobranca)
     {
         //
+    }
+
+    
+    function DataTable () {
+        return datatables()->of(EnderecoCobranca::all())->toJson();
     }
 }

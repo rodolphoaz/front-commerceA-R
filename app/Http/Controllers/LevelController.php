@@ -12,9 +12,8 @@ class LevelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('admin.pages.caricatura.index');
     }
 
     /**
@@ -22,9 +21,17 @@ class LevelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.caricatura.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = Level::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -66,12 +73,7 @@ class LevelController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Level  $level
      * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Level $level)
-    {
-        //
-    }
-
+    
     /**
      * Remove the specified resource from storage.
      *
@@ -81,5 +83,10 @@ class LevelController extends Controller
     public function destroy(Level $level)
     {
         //
+    }
+
+    
+    function DataTable () {
+        return datatables()->of(Level::all())->toJson();
     }
 }

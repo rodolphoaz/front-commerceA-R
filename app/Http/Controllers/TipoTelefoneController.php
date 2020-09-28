@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\TipoTelefone;
 use Illuminate\Http\Request;
 
 class TipoTelefoneController extends Controller
 {
-    /**
+  /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('admin.pages.caricatura.index');
     }
 
     /**
@@ -21,9 +21,17 @@ class TipoTelefoneController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.caricatura.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = TipoPagamento::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -80,5 +88,9 @@ class TipoTelefoneController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    function DataTable () {
+        return datatables()->of(TipoTelefone::all())->toJson();
     }
 }
