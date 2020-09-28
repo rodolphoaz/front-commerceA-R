@@ -16,7 +16,7 @@ class CreateCaricaturesTable extends Migration
         Schema::create('caricatures', function (Blueprint $table) {
             $table->id();
             $table->string('sort'); //tipo
-            //$table->string('slide'); caminho pro slide exemplo
+            $table->string('slide'); //caminho pro slide exemplo
             $table->string('template'); // modelo
             $table->float('price'); // preco
             $table->timestamps();

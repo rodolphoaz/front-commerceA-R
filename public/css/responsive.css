@@ -92,7 +92,7 @@
 	.header_area .navbar .right_nav hr {
 		display: none;
 	}
-    .navbar-toggler[aria-expanded="false"] span:nth-child(2) {
+    .navbar-toggler[aria-expanded="true"] span:nth-child(2) {
 		opacity: 1;
 	}
 	.navbar-toggler[aria-expanded="true"] span:nth-child(2) {
@@ -548,3 +548,4 @@
 .shadow-textarea textarea.form-control {
     padding-left: 0.8rem;
 }
+

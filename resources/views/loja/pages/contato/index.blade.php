@@ -3,7 +3,7 @@
 @section('content')
 
 @include('loja.layouts.components.banner', [
-  'title' => 'Faça seu orçamento online.', 
+  'title' => 'Faça seu orçamento Personalizado aqui.', 
   'description'=> 'Se você está sem ideia, nós envie uma mensagem que ajudaremos a dar vida ao seu projeto. Personalizamos do seu jeito!'
   ])
  
@@ -19,10 +19,10 @@
       </div>
      @endif
       <div class="col-8">
-        <h2 class="contact-title text-center"> Envie-nos uma mensagem </h2>
+        <h4 class="contact-title text-left">Envie uma mensagem</h4>
       </div>
       <div class="col-4">
-        <h2  class="contact-title text-center">Contados</h2>
+        <h2 class="contact-title text-center">Contatos</h2>
       </div>
     </div>
     <div class="col-lg-8 mb-2">
@@ -83,7 +83,7 @@
       <div class="media contact-info">
         <span class="contact-info__icon"><i class="ti-home"></i></span>
         <div class="media-body">
-          <h3>Rio de janeiro.</h3>
+          <h3>Nosso escritório fica no Rio de janeiro.</h3>
            <p> Aceitamos pedidos 24 horas</p>
          
         </div>
@@ -91,9 +91,8 @@
       <div class="media contact-info">
         <span class="contact-info__icon"><i class="ti-tablet"></i></span>
         <div class="media-body">
-          <h3><a href="tel:454545654">(21)981840572 / 974096349 </a></h3>
-          <p> Atendimento de segunda à sexta 
-           de 10:00 Am ate 22:00Pm</p>
+          <h3><a href="tel:454545654"> 021 97657-9430 </a></h3>
+          <p>Fale com o bob , sempre que precisar !</p>
           
         </div>
       </div>

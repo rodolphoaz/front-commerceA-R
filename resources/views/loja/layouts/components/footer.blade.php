@@ -10,14 +10,17 @@
 src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0&appId=1131541973545208&autoLogAppEvents=1" 
 nonce="LGVNyx41"></script> 
 
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  chat-icon="https://storage.googleapis.com/cloudprod-apiai/3d1690a4-995a-4acf-a901-dea8bc1318ec_x.png"
-  intent="WELCOME"
-  chat-title="Bob🤖"
-  agent-id="b3b1c972-2153-452d-a53f-0a6f999bb511"
-  language-code="pt-br"
-></df-messenger>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div class="fb-page" data-href="https://www.facebook.com/aercaricaturasonline" data-tabs="" data-width="" 
