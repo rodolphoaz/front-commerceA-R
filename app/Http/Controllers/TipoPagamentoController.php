@@ -7,14 +7,13 @@ use Illuminate\Http\Request;
 
 class TipoPagamentoController extends Controller
 {
-    /**
+   /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('admin.pages.tipo_pagamento.index');
     }
 
     /**
@@ -22,9 +21,17 @@ class TipoPagamentoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.tipo_pagamento.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = TipoPagamento::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -57,7 +64,7 @@ class TipoPagamentoController extends Controller
      */
     public function edit(TipoPagamento $tipoPagamento)
     {
-        //
+        return view('admin.pages.tipo_pagamento.edit');
     }
 
     /**
@@ -69,7 +76,12 @@ class TipoPagamentoController extends Controller
      */
     public function update(Request $request, TipoPagamento $tipoPagamento)
     {
-        //
+        try{
+            TipoPagamento::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'atualizado com sucesso']); 
+        }catch (Exception $ex) {
+            return response()->json($ex);
+        } 
     }
 
     /**
@@ -81,5 +93,17 @@ class TipoPagamentoController extends Controller
     public function destroy(TipoPagamento $tipoPagamento)
     {
         //
+
+    }
+
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = TipoPagamento::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+    function DataTable () {
+        return datatables()->of(TipoPagamento::all())->toJson();
     }
 }

@@ -12,9 +12,8 @@ class EnderecoEntregaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('loja.pages.endereco_entrega.index');
     }
 
     /**
@@ -22,9 +21,17 @@ class EnderecoEntregaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('loja.pages.endereco_entrega.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = EnderecoEntrega::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -57,7 +64,7 @@ class EnderecoEntregaController extends Controller
      */
     public function edit(EnderecoEntrega $enderecoEntrega)
     {
-        //
+        return  view('loja.pages.endereco_entrega.edit');
     }
 
     /**
@@ -67,9 +74,14 @@ class EnderecoEntregaController extends Controller
      * @param  \App\EnderecoEntrega  $enderecoEntrega
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, EnderecoEntrega $enderecoEntrega)
+    public function update(Request $request)
     {
-        //
+        try{
+            EnderecoEntrega::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'atualizado com sucesso']); 
+        }catch (Exception $ex) {
+            return response()->json($ex);
+        }
     }
 
     /**
@@ -81,5 +93,25 @@ class EnderecoEntregaController extends Controller
     public function destroy(EnderecoEntrega $enderecoEntrega)
     {
         //
+    }
+
+    
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param Request $request
+     * @return void
+     */
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = EnderecoEntrega::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+
+
+    function DataTable () {
+        return datatables()->of(EnderecoEntrega::all())->toJson();
     }
 }

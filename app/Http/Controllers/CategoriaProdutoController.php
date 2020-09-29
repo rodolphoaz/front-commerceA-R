@@ -12,9 +12,8 @@ class CategoriaProdutoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('admin.pages.caricatura.index');
     }
 
     /**
@@ -22,9 +21,17 @@ class CategoriaProdutoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.categoria.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = CategoriaProduto::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -33,7 +40,7 @@ class CategoriaProdutoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+     function store(Request $request)
     {
         //
     }
@@ -44,7 +51,7 @@ class CategoriaProdutoController extends Controller
      * @param  \App\CategoriaProduto  $categoriaProduto
      * @return \Illuminate\Http\Response
      */
-    public function show(CategoriaProduto $categoriaProduto)
+     function show(CategoriaProduto $categoriaProduto)
     {
         //
     }
@@ -55,9 +62,9 @@ class CategoriaProdutoController extends Controller
      * @param  \App\CategoriaProduto  $categoriaProduto
      * @return \Illuminate\Http\Response
      */
-    public function edit(CategoriaProduto $categoriaProduto)
+     function edit(CategoriaProduto $categoriaProduto)
     {
-        //
+        return  view('admin.pages.categoria.edit');
     }
 
     /**
@@ -67,9 +74,14 @@ class CategoriaProdutoController extends Controller
      * @param  \App\CategoriaProduto  $categoriaProduto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CategoriaProduto $categoriaProduto)
+    public function update(Request $request)
     {
-        //
+        try{
+            CategoriaProduto::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'atualizado com sucesso']); 
+        }catch (Exception $ex) {
+            return response()->json($ex);
+        }
     }
 
     /**
@@ -78,8 +90,29 @@ class CategoriaProdutoController extends Controller
      * @param  \App\CategoriaProduto  $categoriaProduto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CategoriaProduto $categoriaProduto)
+     function destroy(CategoriaProduto $categoriaProduto)
     {
         //
     }
+    
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = CategoriaProduto::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+
+
+
+    function DataTable () {
+        return datatables()->of(CategoriaProduto::all())->toJson();
+    }
+
 }

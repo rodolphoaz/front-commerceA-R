@@ -14,7 +14,8 @@ class CreateTipoPagamentosTable extends Migration
     public function up()
     {
         Schema::create('tipo_pagamentos', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements();
+            $table->uuid('uuid');
             $table->string('descricao');
             $table->boolean('status')->default(true);
             $table->timestamps();

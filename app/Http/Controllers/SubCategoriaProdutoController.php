@@ -12,9 +12,8 @@ class SubCategoriaProdutoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('admin.pages.sub_categoria_produto.index');
     }
 
     /**
@@ -22,9 +21,17 @@ class SubCategoriaProdutoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.sub_categoria_produto.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = SubCategoriaProduto::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -57,7 +64,7 @@ class SubCategoriaProdutoController extends Controller
      */
     public function edit(SubCategoriaProduto $subCategoriaProduto)
     {
-        //
+        return  view('admin.pages.sub_categoria_produto.edit');
     }
 
     /**
@@ -67,10 +74,17 @@ class SubCategoriaProdutoController extends Controller
      * @param  \App\SubCategoriaProduto  $subCategoriaProduto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SubCategoriaProduto $subCategoriaProduto)
+
+    public function update(Request $request)
     {
-        //
+        try{
+            SubCategoriaProduto::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'atualizado com sucesso']); 
+        }catch (Exception $ex) {
+            return response()->json($ex);
+        }
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -81,5 +95,18 @@ class SubCategoriaProdutoController extends Controller
     public function destroy(SubCategoriaProduto $subCategoriaProduto)
     {
         //
+    }
+
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = SubCategoriaProduto::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+
+
+    function DataTable () {
+        return datatables()->of(SubCategoriaProduto::all())->toJson();
     }
 }

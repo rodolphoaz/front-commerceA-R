@@ -14,7 +14,8 @@ class CreateEnderecoCobrancasTable extends Migration
     public function up()
     {
         Schema::create('endereco_cobrancas', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements();
+            $table->uuid('uuid');
             $table->integer('user_id');
             $table->string('cep');
             $table->string('complemento');

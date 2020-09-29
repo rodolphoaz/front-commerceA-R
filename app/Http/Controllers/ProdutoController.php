@@ -7,14 +7,13 @@ use Illuminate\Http\Request;
 
 class ProdutoController extends Controller
 {
-    /**
+   /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('admin.pages.produto.index');
     }
 
     /**
@@ -22,10 +21,29 @@ class ProdutoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.produto.create');
     }
+
+    function save(Request $request) {
+        try {
+            $create = Produto::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
+    }
+
+    public function update(Request $request)
+    {
+        try{
+            Produto::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'atualizado com sucesso']); 
+        }catch (Exception $ex) {
+            return response()->json($ex);
+        }
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -57,19 +75,7 @@ class ProdutoController extends Controller
      */
     public function edit(Produto $produto)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Produto  $produto
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Produto $produto)
-    {
-        //
+        return view('admin.pages.produto.edit');
     }
 
     /**
@@ -81,5 +87,17 @@ class ProdutoController extends Controller
     public function destroy(Produto $produto)
     {
         //
+    }
+
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = Produto::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+    
+    function DataTable () {
+        return datatables()->of(Produto::all())->toJson();
     }
 }

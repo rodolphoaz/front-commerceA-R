@@ -12,9 +12,8 @@ class LevelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('admin.pages.caricatura.index');
     }
 
     /**
@@ -22,9 +21,17 @@ class LevelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.caricatura.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = Level::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -39,17 +46,6 @@ class LevelController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Level  $level
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Level $level)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Level  $level
@@ -57,29 +53,22 @@ class LevelController extends Controller
      */
     public function edit(Level $level)
     {
-        //
+        return view('loja.pages.endereco_cobranca.edit');
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Level  $level
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Level $level)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Level  $level
-     * @return \Illuminate\Http\Response
-     */
+	
     public function destroy(Level $level)
     {
         //
+    }
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = EnderecoCobraca::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+    
+    function DataTable () {
+        return datatables()->of(Level::all())->toJson();
     }
 }

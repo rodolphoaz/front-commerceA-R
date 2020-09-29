@@ -12,9 +12,8 @@ class PedidoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('loja.pages.pedido.index');
     }
 
     /**
@@ -22,9 +21,19 @@ class PedidoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    function create() {
+        return view('loja.pages.pedido.create');
+    }
+
+    
+    public function update(Request $request)
     {
-        //
+        try{
+            Pedido::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'atualizado com sucesso']); 
+        }catch (Exception $ex) {
+            return response()->json($ex);
+        }
     }
 
     /**
@@ -57,7 +66,7 @@ class PedidoController extends Controller
      */
     public function edit(Pedido $pedido)
     {
-        //
+        return view('loja.pages.pedido.edit');
     }
 
     /**
@@ -67,10 +76,8 @@ class PedidoController extends Controller
      * @param  \App\Pedido  $pedido
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pedido $pedido)
-    {
-        //
-    }
+    
+
 
     /**
      * Remove the specified resource from storage.
@@ -82,4 +89,18 @@ class PedidoController extends Controller
     {
         //
     }
+
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = Pedido::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+    
+    function DataTable () {
+        return datatables()->of(Pedido::all())->toJson();
+    }
+
+    
 }

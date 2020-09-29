@@ -6,15 +6,13 @@ use App\ContatoUser;
 use Illuminate\Http\Request;
 
 class ContatoUserController extends Controller
-{
-    /**
+{/**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('admin.pages.contato_user.index');
     }
 
     /**
@@ -22,9 +20,17 @@ class ContatoUserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.contato_user.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = ContatoUser::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -55,9 +61,9 @@ class ContatoUserController extends Controller
      * @param  \App\ContatoUser  $contatoUser
      * @return \Illuminate\Http\Response
      */
-    public function edit(ContatoUser $contatoUser)
+    function edit(ContatoUser $contatoUser)
     {
-        //
+        return  view('admin.pages.contato_user.edit');
     }
 
     /**
@@ -67,9 +73,14 @@ class ContatoUserController extends Controller
      * @param  \App\ContatoUser  $contatoUser
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ContatoUser $contatoUser)
+    function update(Request $request)
     {
-        //
+        try{
+            ContatoUser::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'atualizado com sucesso']); 
+        }catch (Exception $ex) {
+            return response()->json($ex);
+        }
     }
 
     /**
@@ -81,5 +92,25 @@ class ContatoUserController extends Controller
     public function destroy(ContatoUser $contatoUser)
     {
         //
+    }
+    
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = ContatoUser::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+
+
+
+    function DataTable () {
+        return datatables()->of(ContatoUser::all())->toJson();
     }
 }

@@ -12,9 +12,8 @@ class EnderecoCobrancaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('loja.pages.endereco_cobranca.index');
     }
 
     /**
@@ -22,9 +21,17 @@ class EnderecoCobrancaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('loja.pages.endereco_cobranca.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = EnderecoCobranca::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -57,7 +64,7 @@ class EnderecoCobrancaController extends Controller
      */
     public function edit(EnderecoCobranca $enderecoCobranca)
     {
-        //
+        return view('loja.pages.endereco_cobranca.edit');
     }
 
     /**
@@ -67,11 +74,15 @@ class EnderecoCobrancaController extends Controller
      * @param  \App\EnderecoCobranca  $enderecoCobranca
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, EnderecoCobranca $enderecoCobranca)
+    function update(Request $request)
     {
-        //
+        try{
+            EnderecoCobranca::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'atualizado com sucesso']); 
+        }catch (Exception $ex) {
+            return response()->json($ex);
+        }
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -81,5 +92,25 @@ class EnderecoCobrancaController extends Controller
     public function destroy(EnderecoCobranca $enderecoCobranca)
     {
         //
+    }
+
+    
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param Request $request
+     * @return void
+     */
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = EnderecoCobraca::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+
+
+    function DataTable () {
+        return datatables()->of(EnderecoCobranca::all())->toJson();
     }
 }

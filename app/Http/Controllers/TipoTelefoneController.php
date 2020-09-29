@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\TipoTelefone;
 use Illuminate\Http\Request;
 
 class TipoTelefoneController extends Controller
 {
-    /**
+  /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    function index() {
+        return view('admin.pages.tipo_telefone.index');
     }
 
     /**
@@ -21,9 +21,17 @@ class TipoTelefoneController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    function create() {
+        return view('admin.pages.tipo_telefone.create');
+    }
+
+    function save(Request $request) {
+        try {
+            $create = TipoTelefone::create($request->input());
+            return back()->with(['status' => 'cadastrado']);
+        }catch (Exception $ex){
+            return  response()->json(['msg' => $ex->error]);
+        }
     }
 
     /**
@@ -56,7 +64,7 @@ class TipoTelefoneController extends Controller
      */
     public function edit($id)
     {
-        //
+        return  view('admin.pages.tipo_telefone.edit');
     }
 
     /**
@@ -68,7 +76,12 @@ class TipoTelefoneController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try{
+            TipoTelefone::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'atualizado com sucesso']); 
+        }catch (Exception $ex) {
+            return response()->json($ex);
+        }
     }
 
     /**
@@ -80,5 +93,16 @@ class TipoTelefoneController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    function delete(Request $request){
+        foreach ( $request->uuids as $uuid) :
+            $x = TipoTelefone::where('uuid', '=', $uuid)->first();
+            $x->delete();
+        endforeach;
+    }
+
+    function DataTable () {
+        return datatables()->of(TipoTelefone::all())->toJson();
     }
 }
