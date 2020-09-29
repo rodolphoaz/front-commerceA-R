@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateItemTypesTable extends Migration
+class CreateTelefonesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateItemTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('item_types', function (Blueprint $table) {
+        Schema::create('telefones', function (Blueprint $table) {
             $table->id();
-            $table->string('description');
-            $table->float('price');
+            $table->integer('contato_user_id');
+            $table->integer('tipo_telefone_id');
+            $table->integer('codigo_pais');
+            $table->integer('ddd');
+            $table->integer('numero');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreateItemTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('item_types');
+        Schema::dropIfExists('telefones');
     }
 }

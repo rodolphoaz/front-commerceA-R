@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateItemTypesTable extends Migration
+class CreateContatoUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateItemTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('item_types', function (Blueprint $table) {
+        Schema::create('contato_users', function (Blueprint $table) {
             $table->id();
-            $table->string('description');
-            $table->float('price');
+            $table->integer('user_id'); // cliente / funcionrio
+            $table->string('tipo')->default('pessoal'); // pessoal / comercial / profissional
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateItemTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('item_types');
+        Schema::dropIfExists('contato_users');
     }
 }
