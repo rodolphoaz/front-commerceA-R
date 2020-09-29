@@ -13,7 +13,7 @@ class WhatsappUserController extends Controller
      * @return \Illuminate\Http\Response
      */
     function index() {
-        return view('admin.pages.caricatura.index');
+        return view('loja.pages.whatsapp_user.index');
     }
 
     /**
@@ -22,7 +22,7 @@ class WhatsappUserController extends Controller
      * @return \Illuminate\Http\Response
      */
     function create() {
-        return view('admin.pages.caricatura.create');
+        return view('loja.pages.whatsapp_user.create');
     }
 
     function save(Request $request) {
@@ -64,7 +64,7 @@ class WhatsappUserController extends Controller
      */
     public function edit(WhatsappUser $whatsappUser)
     {
-        //
+        return view('loja.pages.whatsapp_user.edit');
     }
 
     /**
@@ -76,7 +76,12 @@ class WhatsappUserController extends Controller
      */
     public function update(Request $request, WhatsappUser $whatsappUser)
     {
-        //
+        try {
+            WhatsappUser::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'Atualizado com sucesso']);
+        }catch(Exception $ex){
+            return response()->json($ex);
+        }
     }
 
     /**
@@ -88,6 +93,13 @@ class WhatsappUserController extends Controller
     public function destroy(WhatsappUser $whatsappUser)
     {
         //
+    }
+
+    function delete(Request $request){
+        foreach ($request->uuids as $uuid):
+            $x = WhatsappUser::where('uuid', '=' , $uuid)->first();
+            $x-> delete();
+        endforeach;
     }
 
     function DataTable () {

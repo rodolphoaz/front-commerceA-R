@@ -54,7 +54,7 @@ class ContactController extends Controller
      */
     public function edit(Contact $contact)
     {
-        //
+        return view('admin.pages.contact.edit');
     }
 
     /**
@@ -84,4 +84,21 @@ class ContactController extends Controller
     {
         //
     }
+
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = Contact::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+
+
 }

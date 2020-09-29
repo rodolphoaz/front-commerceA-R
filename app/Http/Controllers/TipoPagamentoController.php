@@ -13,7 +13,7 @@ class TipoPagamentoController extends Controller
      * @return \Illuminate\Http\Response
      */
     function index() {
-        return view('admin.pages.caricatura.index');
+        return view('admin.pages.tipo_pagamento.index');
     }
 
     /**
@@ -22,7 +22,7 @@ class TipoPagamentoController extends Controller
      * @return \Illuminate\Http\Response
      */
     function create() {
-        return view('admin.pages.caricatura.create');
+        return view('admin.pages.tipo_pagamento.create');
     }
 
     function save(Request $request) {
@@ -64,7 +64,7 @@ class TipoPagamentoController extends Controller
      */
     public function edit(TipoPagamento $tipoPagamento)
     {
-        //
+        return view('admin.pages.tipo_pagamento.edit');
     }
 
     /**
@@ -76,7 +76,12 @@ class TipoPagamentoController extends Controller
      */
     public function update(Request $request, TipoPagamento $tipoPagamento)
     {
-        //
+        try{
+            TipoPagamento::where(['id' => $id])->update($request->input());
+            return response()->json(['status' => 'atualizado com sucesso']); 
+        }catch (Exception $ex) {
+            return response()->json($ex);
+        } 
     }
 
     /**
@@ -88,8 +93,16 @@ class TipoPagamentoController extends Controller
     public function destroy(TipoPagamento $tipoPagamento)
     {
         //
+
     }
 
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = TipoPagamento::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
     function DataTable () {
         return datatables()->of(TipoPagamento::all())->toJson();
     }

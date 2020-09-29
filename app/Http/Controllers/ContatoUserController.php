@@ -12,7 +12,7 @@ class ContatoUserController extends Controller
      * @return \Illuminate\Http\Response
      */
     function index() {
-        return view('admin.pages.caricatura.index');
+        return view('admin.pages.contato_user.index');
     }
 
     /**
@@ -21,7 +21,7 @@ class ContatoUserController extends Controller
      * @return \Illuminate\Http\Response
      */
     function create() {
-        return view('admin.pages.caricatura.create');
+        return view('admin.pages.contato_user.create');
     }
 
     function save(Request $request) {
@@ -61,9 +61,9 @@ class ContatoUserController extends Controller
      * @param  \App\ContatoUser  $contatoUser
      * @return \Illuminate\Http\Response
      */
-    public function edit(ContatoUser $contatoUser)
+    function edit(ContatoUser $contatoUser)
     {
-        //
+        return  view('admin.pages.contato_user.edit');
     }
 
     /**
@@ -73,7 +73,7 @@ class ContatoUserController extends Controller
      * @param  \App\ContatoUser  $contatoUser
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    function update(Request $request)
     {
         try{
             ContatoUser::where(['id' => $id])->update($request->input());
@@ -93,6 +93,22 @@ class ContatoUserController extends Controller
     {
         //
     }
+    
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = ContatoUser::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+
+
 
     function DataTable () {
         return datatables()->of(ContatoUser::all())->toJson();

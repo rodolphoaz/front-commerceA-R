@@ -22,7 +22,7 @@ class CategoriaProdutoController extends Controller
      * @return \Illuminate\Http\Response
      */
     function create() {
-        return view('admin.pages.caricatura.create');
+        return view('admin.pages.categoria.create');
     }
 
     function save(Request $request) {
@@ -64,7 +64,7 @@ class CategoriaProdutoController extends Controller
      */
      function edit(CategoriaProduto $categoriaProduto)
     {
-        //
+        return  view('admin.pages.categoria.edit');
     }
 
     /**
@@ -94,6 +94,22 @@ class CategoriaProdutoController extends Controller
     {
         //
     }
+    
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = CategoriaProduto::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+
+
 
     function DataTable () {
         return datatables()->of(CategoriaProduto::all())->toJson();

@@ -46,17 +46,6 @@ class LevelController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Level  $level
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Level $level)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Level  $level
@@ -64,27 +53,20 @@ class LevelController extends Controller
      */
     public function edit(Level $level)
     {
-        //
+        return view('loja.pages.endereco_cobranca.edit');
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Level  $level
-     * @return \Illuminate\Http\Response
-    
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Level  $level
-     * @return \Illuminate\Http\Response
-     */
+	
     public function destroy(Level $level)
     {
         //
     }
-
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = EnderecoCobraca::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
     
     function DataTable () {
         return datatables()->of(Level::all())->toJson();

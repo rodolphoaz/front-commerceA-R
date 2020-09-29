@@ -13,7 +13,7 @@ class PedidoController extends Controller
      * @return \Illuminate\Http\Response
      */
     function index() {
-        return view('admin.pages.caricatura.index');
+        return view('loja.pages.pedido.index');
     }
 
     /**
@@ -22,7 +22,7 @@ class PedidoController extends Controller
      * @return \Illuminate\Http\Response
      */
     function create() {
-        return view('admin.pages.caricatura.create');
+        return view('loja.pages.pedido.create');
     }
 
     
@@ -66,7 +66,7 @@ class PedidoController extends Controller
      */
     public function edit(Pedido $pedido)
     {
-        //
+        return view('loja.pages.pedido.edit');
     }
 
     /**
@@ -90,6 +90,13 @@ class PedidoController extends Controller
         //
     }
 
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = Pedido::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
     
     function DataTable () {
         return datatables()->of(Pedido::all())->toJson();

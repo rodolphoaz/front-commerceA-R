@@ -13,7 +13,7 @@ class ProdutoController extends Controller
      * @return \Illuminate\Http\Response
      */
     function index() {
-        return view('admin.pages.caricatura.index');
+        return view('admin.pages.produto.index');
     }
 
     /**
@@ -22,7 +22,7 @@ class ProdutoController extends Controller
      * @return \Illuminate\Http\Response
      */
     function create() {
-        return view('admin.pages.caricatura.create');
+        return view('admin.pages.produto.create');
     }
 
     function save(Request $request) {
@@ -37,7 +37,7 @@ class ProdutoController extends Controller
     public function update(Request $request)
     {
         try{
-            PRoduto::where(['id' => $id])->update($request->input());
+            Produto::where(['id' => $id])->update($request->input());
             return response()->json(['status' => 'atualizado com sucesso']); 
         }catch (Exception $ex) {
             return response()->json($ex);
@@ -75,18 +75,8 @@ class ProdutoController extends Controller
      */
     public function edit(Produto $produto)
     {
-        //
+        return view('admin.pages.produto.edit');
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Produto  $produto
-     * @return \Illuminate\Http\Response
-     */
-
-
 
     /**
      * Remove the specified resource from storage.
@@ -99,6 +89,13 @@ class ProdutoController extends Controller
         //
     }
 
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = Produto::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
     
     function DataTable () {
         return datatables()->of(Produto::all())->toJson();

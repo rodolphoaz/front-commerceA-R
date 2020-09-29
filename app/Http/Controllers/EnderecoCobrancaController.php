@@ -13,7 +13,7 @@ class EnderecoCobrancaController extends Controller
      * @return \Illuminate\Http\Response
      */
     function index() {
-        return view('admin.pages.caricatura.index');
+        return view('loja.pages.endereco_cobranca.index');
     }
 
     /**
@@ -22,7 +22,7 @@ class EnderecoCobrancaController extends Controller
      * @return \Illuminate\Http\Response
      */
     function create() {
-        return view('admin.pages.caricatura.create');
+        return view('loja.pages.endereco_cobranca.create');
     }
 
     function save(Request $request) {
@@ -64,7 +64,7 @@ class EnderecoCobrancaController extends Controller
      */
     public function edit(EnderecoCobranca $enderecoCobranca)
     {
-        //
+        return view('loja.pages.endereco_cobranca.edit');
     }
 
     /**
@@ -74,7 +74,7 @@ class EnderecoCobrancaController extends Controller
      * @param  \App\EnderecoCobranca  $enderecoCobranca
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    function update(Request $request)
     {
         try{
             EnderecoCobranca::where(['id' => $id])->update($request->input());
@@ -95,6 +95,21 @@ class EnderecoCobrancaController extends Controller
     }
 
     
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param Request $request
+     * @return void
+     */
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = EnderecoCobraca::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+
+
     function DataTable () {
         return datatables()->of(EnderecoCobranca::all())->toJson();
     }

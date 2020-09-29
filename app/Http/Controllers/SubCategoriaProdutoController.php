@@ -13,7 +13,7 @@ class SubCategoriaProdutoController extends Controller
      * @return \Illuminate\Http\Response
      */
     function index() {
-        return view('admin.pages.caricatura.index');
+        return view('admin.pages.sub_categoria_produto.index');
     }
 
     /**
@@ -22,7 +22,7 @@ class SubCategoriaProdutoController extends Controller
      * @return \Illuminate\Http\Response
      */
     function create() {
-        return view('admin.pages.caricatura.create');
+        return view('admin.pages.sub_categoria_produto.create');
     }
 
     function save(Request $request) {
@@ -64,7 +64,7 @@ class SubCategoriaProdutoController extends Controller
      */
     public function edit(SubCategoriaProduto $subCategoriaProduto)
     {
-        //
+        return  view('admin.pages.sub_categoria_produto.edit');
     }
 
     /**
@@ -97,7 +97,15 @@ class SubCategoriaProdutoController extends Controller
         //
     }
 
-    
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = SubCategoriaProduto::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+
+
     function DataTable () {
         return datatables()->of(SubCategoriaProduto::all())->toJson();
     }

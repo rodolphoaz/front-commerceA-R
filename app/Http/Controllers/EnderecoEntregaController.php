@@ -13,7 +13,7 @@ class EnderecoEntregaController extends Controller
      * @return \Illuminate\Http\Response
      */
     function index() {
-        return view('admin.pages.caricatura.index');
+        return view('loja.pages.endereco_entrega.index');
     }
 
     /**
@@ -22,7 +22,7 @@ class EnderecoEntregaController extends Controller
      * @return \Illuminate\Http\Response
      */
     function create() {
-        return view('admin.pages.caricatura.create');
+        return view('loja.pages.endereco_entrega.create');
     }
 
     function save(Request $request) {
@@ -64,7 +64,7 @@ class EnderecoEntregaController extends Controller
      */
     public function edit(EnderecoEntrega $enderecoEntrega)
     {
-        //
+        return  view('loja.pages.endereco_entrega.edit');
     }
 
     /**
@@ -96,6 +96,21 @@ class EnderecoEntregaController extends Controller
     }
 
     
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param Request $request
+     * @return void
+     */
+    function delete(Request $request)
+    {
+        foreach($request->uuids as $uuid){
+            $x = EnderecoEntrega::where('uuid','=',$uuid)->first();
+            $x->delete();
+        }
+    }
+
+
     function DataTable () {
         return datatables()->of(EnderecoEntrega::all())->toJson();
     }
