@@ -8,8 +8,11 @@ use Illuminate\Support\Str;
 
 class Telefone extends Model
 {
+    protected $table='public.telefones';
     
-    protected $fillable = ['uuid'];
+    protected $fillable = [
+        'uuid','contato_user_id','tipo_telefone_id','codigo_pais','ddd','numero'
+    ];
     
     protected static function boot(){
         parent::boot();

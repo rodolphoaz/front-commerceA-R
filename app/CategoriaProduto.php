@@ -8,6 +8,13 @@ use Illuminate\Support\Str;
 
 class CategoriaProduto extends Model
 {
+
+    protected $table = 'public.categoria_produtos';
+
+    protected $fillable = [
+        'uuid','descricao'
+    ];
+
     protected static function boot(){
         parent::boot();
         static::creating(function ($post){

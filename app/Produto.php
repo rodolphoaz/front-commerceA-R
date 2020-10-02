@@ -10,7 +10,9 @@ class Produto extends Model
 {
     protected $table= 'public.produtos';
     
-    protected  $fillable = ['descricao' , 'preco' , 'status' , 'nome_produto', 'categoria_produto_id'];
+    protected  $fillable = [
+        'descricao' , 'preco' , 'status' , 'nome_produto', 'categoria_produto_id'
+    ];
 
     protected static function boot(){
         parent::boot();

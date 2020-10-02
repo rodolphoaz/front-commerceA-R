@@ -8,8 +8,11 @@ use Illuminate\Support\Str;
 
 class GaleriaProduto extends Model
 {
-    
-    protected $fillable = ['uuid'];
+    protected $table = 'public.galeria_produtos';
+
+    protected $fillable = [
+        'uuid','produto_id','caminho','nome_imagem'
+    ];
 
     protected static function boot(){
         parent::boot();

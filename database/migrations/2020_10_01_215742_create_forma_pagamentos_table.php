@@ -14,7 +14,10 @@ class CreateFormaPagamentosTable extends Migration
     public function up()
     {
         Schema::create('forma_pagamentos', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->uuid('uuid');
+            $table->integer('tipo_pagamento_id');
+            $table->string('descricao');
             $table->timestamps();
         });
     }

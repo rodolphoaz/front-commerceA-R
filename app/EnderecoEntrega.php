@@ -9,6 +9,8 @@ use Illuminate\Support\Str;
 
 class EnderecoEntrega extends Model
 {
+    protected $table = 'public.endereco_entrega';
+    
     protected $fillable = [
         'uuid','user_id','cep','complemento','rua','numero','uf','cidade','bairro','pais'
     ];
