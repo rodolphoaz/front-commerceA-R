@@ -22,5 +22,8 @@ class ContatoUser extends Model
     function users(){
         return  $this->hasMany(User::class);
     }
-    
+
+    function telefone(){
+        return $this->belongsTo(Telefone::class);
+    }
 }

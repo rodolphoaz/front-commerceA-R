@@ -18,4 +18,9 @@ class TipoTelefone extends Model
         });
     }
 
+    function telefone()
+    {
+        return $this->belongsTo(Telefone::class);
+    }
+
 }

@@ -18,4 +18,12 @@ class Telefone extends Model
         });
     }
 
+    function tipoTelefones()
+    {
+        return $this->hasMany(TipoTelefone::class);
+    }
+
+    function contatoUser(){
+        return $this->hasMany(ContatoUser::class);
+    }
 }
