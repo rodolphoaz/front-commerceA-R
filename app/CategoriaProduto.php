@@ -15,4 +15,11 @@ class CategoriaProduto extends Model
         });
     }
 
+    function produto(){
+        return $this->belongsTo(Produto::class);
+    }
+
+    function subCategoriaProduto(){
+        return $this->belongsTo(SubCategoriaProduto::class);
+    } 
 }

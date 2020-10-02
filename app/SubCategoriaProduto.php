@@ -18,4 +18,8 @@ class SubCategoriaProduto extends Model
         });
     }
 
+    function categoriaProduto()
+    {
+        return $this->hasMany(CategoriaProduto::class);
+    }
 }

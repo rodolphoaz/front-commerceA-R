@@ -8,11 +8,22 @@ class FormaPagamento extends Model
 {
     protected $fillable = ['uuid' , 'tipo'];
 
-    protected $with = ['tipoPagamento'];
+    protected $with = ['tipoPagamento' ,'pedido'];
 
-    public function tipoPagamento()
+    protected static function boot() {
+        parent::boot();
+        static::creating(function ($post){
+            $post->uuid = (string) Str::uuid();
+        });
+    }
+
+    function tipoPagamento()
     {
         return $this->belongsTo(TipoPagamento::class);
+    }
+    
+    function pedido(){
+        return $this->belongsTo(Pedido::class);
     }
 
 }

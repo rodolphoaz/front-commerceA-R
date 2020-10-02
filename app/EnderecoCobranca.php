@@ -26,4 +26,8 @@ class EnderecoCobranca extends Model
     function users(){
         return $this->hasMany(User::class);
     }
+
+    function pedido(){
+        return $this->belongsTo(Pedido::class);
+    }
 }

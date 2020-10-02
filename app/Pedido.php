@@ -17,5 +17,21 @@ class Pedido extends Model
             $post->uuid = (string) Str::uuid();
         });
     }
+    
+    function enderecoCobranca(){
+        return $this->hasOne(EnderecoCobranca::class);
+    }
 
+    function enderecoEntrega(){
+        return $this->hasOne(EnderecoEntrega::class);
+    }
+
+    function formaPagamento() {
+        return $this->hasOne(FormaPagamento::class);
+    }
+
+    function users(){
+        return $this->hasMany(User::class);
+    }
 }
+

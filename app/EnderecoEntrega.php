@@ -21,8 +21,11 @@ class EnderecoEntrega extends Model
     }
 
     function users(){
-        return  $this->hasMany(User);
+        return  $this->hasMany(User::class);
     }
-
+    
+    function pedido () {
+        return $this->belongsTo(Pedido::class);
+    }
 
 }
