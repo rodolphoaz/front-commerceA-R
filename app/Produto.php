@@ -19,4 +19,17 @@ class Produto extends Model
         });
     }
 
+    function galeriaProduto() {
+        return $this->belongsTo(GaleriaProduto::class);
+    }
+
+    function categoriaProdutos(){
+        return $this->hasMany(CategoriaProduto::class);
+    }
+
+    function tipoTags(){
+        return $this->hasMany(TipoTag::class);
+    }
 }
+
+

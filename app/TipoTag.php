@@ -3,13 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Str;
 
-class GaleriaProduto extends Model
+class TipoTag extends Model
 {
-    
-    protected $fillable = ['uuid'];
+    protected $fillable = ['uuid', 'tipo'];
 
     protected static function boot(){
         parent::boot();
@@ -17,8 +14,8 @@ class GaleriaProduto extends Model
             $post->uuid = (string) Str::uuid();
         });
     }
-    
-    function produtos() {
-        return $this->hasMany(Produto::class);
+
+    function produto(){
+        return $this->belongsTo(Produto::class);
     }
 }

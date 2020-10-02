@@ -8,9 +8,13 @@ use Illuminate\Support\Str;
 
 class EnderecoCobranca extends Model
 {
-    protected $table = 'Endereco_cobrancas';
+    protected $table = 'public.endereco_cobrancas';
 
-    protected $fillable = ['uuid'];
+    protected $with = ['users'];
+
+    protected $fillable = [
+        'uuid','user_id','cep','complemento','rua','numero','uf','cidade','bairro','pais'
+    ];
 
     protected static function boot(){
         parent::boot();
@@ -19,4 +23,7 @@ class EnderecoCobranca extends Model
         });
     }
 
+    function users(){
+        return $this->hasMany(User::class);
+    }
 }

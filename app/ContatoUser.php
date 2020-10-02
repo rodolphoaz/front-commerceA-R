@@ -19,4 +19,8 @@ class ContatoUser extends Model
         });
     }
 
+    function users(){
+        return  $this->hasMany(User::class);
+    }
+
 }

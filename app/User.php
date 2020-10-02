@@ -16,9 +16,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','cpf', 'surmane', 'level_id','registration'
     ];
 
+    protected $with = ['contatoUser', 'enderecoCobranca','enderecoEntrega'];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -36,4 +37,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    function contatoUser() {
+        return $this->belongsTo(ContatoUser::class);
+    } 
+
+    function enderecoCobranca(){
+        return $this->belongsTo(EnderecoCobranca::class);
+    }
+
+    function enderecoEntrega()
+    {
+        return $this->belongsTo(EnderecoEntrega::class);
+    }
 }

@@ -9,7 +9,9 @@ use Illuminate\Support\Str;
 class TipoPagamento extends Model
 {
     
-    protected $fillable = ['uuid'];
+    Protected $with = ['formaPagamentos'];
+
+    protected $fillable = ['uuid','tipo'];//credito, debito e especie
     
     protected static function boot(){
         parent::boot();
@@ -18,4 +20,8 @@ class TipoPagamento extends Model
         });
     }
 
+    function formaPagamentos()
+    {
+        return $this->hasMany(FormaPagamento::class);
+    }
 }

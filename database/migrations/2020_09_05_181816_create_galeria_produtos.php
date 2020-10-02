@@ -14,7 +14,7 @@ class CreateGaleriaProdutos extends Migration
     public function up()
     {
         Schema::create('galeria_produtos', function (Blueprint $table) {
-            $table->bigIncrements();
+            $table->bigIncrements('id');
             $table->uuid('uuid');
             $table->integer('produto_id');
             $table->string('caminho');
@@ -30,6 +30,6 @@ class CreateGaleriaProdutos extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('galeria_produto');
+        Schema::dropIfExists('galeria_produtos');
     }
 }
