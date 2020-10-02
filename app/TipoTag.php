@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class TipoTag extends Model
 {
+    protected $table = 'public.tipo_tags';
+    
     protected $fillable = ['uuid', 'tipo'];
 
     protected static function boot(){

@@ -8,8 +8,13 @@ use Illuminate\Support\Str;
 
 class Pedido extends Model
 {
-    
-    protected $fillable = ['uuid'];
+    protected $table = 'public.pedidos';
+
+    protected $fillable = [
+        'uuid','user_id','endereco_cobranca_id',
+        'endereco_entrega_id','total','forma_pagamento_id',
+        'status'
+    ];
     
     protected static function boot(){
         parent::boot();

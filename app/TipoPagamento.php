@@ -8,7 +8,8 @@ use Illuminate\Support\Str;
 
 class TipoPagamento extends Model
 {
-    
+    protected  $table='public.tipo_pagamentos';
+     
     Protected $with = ['formaPagamentos'];
 
     protected $fillable = ['uuid','tipo'];//credito, debito e especie
@@ -20,8 +21,8 @@ class TipoPagamento extends Model
         });
     }
 
-    function formaPagamentos()
+    function formaPagamento()
     {
-        return $this->hasMany(FormaPagamento::class);
+        return $this->belongsTo(FormaPagamento::class);
     }
 }

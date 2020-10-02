@@ -6,7 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class FormaPagamento extends Model
 {
-    protected $fillable = ['uuid' , 'tipo'];
+    
+    protected $table = 'public.forma_pagamentos';
+    
+    protected $fillable = [
+        'uuid','tipo_pagamento_id','descricao'
+    ];
 
     protected $with = ['tipoPagamento' ,'pedido'];
 
@@ -19,7 +24,7 @@ class FormaPagamento extends Model
 
     function tipoPagamento()
     {
-        return $this->belongsTo(TipoPagamento::class);
+        return $this->hasMany(TipoPagamento::class);
     }
     
     function pedido(){
