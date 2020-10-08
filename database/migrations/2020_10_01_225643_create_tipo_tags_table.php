@@ -16,7 +16,7 @@ class CreateTipoTagsTable extends Migration
         Schema::create('tipo_tags', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->uuid('uuid');
-            $table->string('tipo', 100); // item adicional ou caricatura
+            $table->string('tipo'); // item adicional ou caricatura
             $table->timestamps();
         });
     }

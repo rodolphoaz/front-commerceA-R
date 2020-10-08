@@ -1,6 +1,6 @@
 {!! Form::open()->route('sub_categoria_produto.'.$type)->fill($model)->autoComplete(false) !!}
     @if($type=='update') 
-        {!! Form::hidden('id',null) !!}
+        {!! Form::hidden('uuid',null) !!}
     @endif
 <div class="container">
     <div class="row">
