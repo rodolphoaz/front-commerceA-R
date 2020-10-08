@@ -3,7 +3,7 @@
 @section('content')
     @include('admin.pages.partials.header', [
         'title' =>'categoria produto',
-        'description' => 'Exibindo todos os tipos de caricaturas cadastradas',
+        'description' => 'Exibindo todas  as categoria  de  produto cadastradas',
     ])
 
     <div class="container mt-3">
@@ -11,10 +11,10 @@
             <div class="card-header border-0">  
                 <div class="row align-items-center">
                     <div class="col-8">
-                        <h3 class="mb-0">{{ __('Listagem do Tipo de Caricaturas') }}</h3>
+                        <h3 class="mb-0">{{ __('Listagem das Categoria de produtos ') }}</h3>
                     </div>
                     <div class="col-4 text-right">
-                        <a href="{{ route('caricature.create') }}" class="btn btn-sm btn-primary">{{ __('Novo tipo de Caricatura') }}</a>
+                        <a href="{{ route('caricature.create') }}" class="btn btn-sm btn-primary">{{ __('Nova categoria de produtos') }}</a>
                     </div>
                 </div>
             </div>
