@@ -10,7 +10,7 @@ class ContatoUser extends Model
 {
     protected $table = 'public.contato_users';
     
-    protected $fillable = ['tipo', 'user_id','uuid']; 
+    protected $fillable = ['tipo','uuid']; 
 
     protected static function boot(){
         parent::boot();
@@ -19,11 +19,11 @@ class ContatoUser extends Model
         });
     }
 
-    function users(){
-        return  $this->hasMany(User::class);
-    }
-
     function telefone(){
         return $this->belongsTo(Telefone::class);
+    }
+
+    function enderecoCobranca(){
+        return $this->belongsTo(EnderecoCobranca::class);
     }
 }

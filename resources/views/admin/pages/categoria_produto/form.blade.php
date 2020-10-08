@@ -1,18 +1,17 @@
 {!! Form::open()->route('categoria_produto.'.$type)->fill($model)->autoComplete(false) !!}
     @if($type=='update') 
-        {!! Form::hidden('id',null) !!}
+        {!! Form::hidden('uuid',null) !!}
     @endif
 <div class="container">
     <div class="row">
-        <div class="col-6">
-          
-        </div>
-        <div class="col-6">
-         
-        </div>
+        {!! Form::fieldsetopen('Caricatura') !!}
+            <div class="col-6">
+               {!! Form::text('descricao' , 'Descricao') !!}
+            </div>
+        {!!Form::fieldsetclose()!!}
     </div>
     <div class="row justify-content-center">
-        {!! Form::submit("Salvar")->attrs(['class' => 'btn btn-primary col-1']) !!}
+        {!! Form::submit("Gravar")->attrs(['class' => 'btn btn-primary col-1']) !!}
     </div>
 </div>
 {!! Form::close() !!}

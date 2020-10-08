@@ -4,12 +4,9 @@
     @endif
 <div class="container">
     <div class="row">
-        <div class="col-6">
-            
-        </div>
-        <div class="col-6">
-          
-        </div>
+     {!! Form::fieldsetopen('Contato') !!}
+        {!! Form::text("tipo","Tipo de contato") !!}
+     {!! Form::fieldsetclose() !!}
     </div>
     <div class="row justify-content-center">
         {!! Form::submit("Salvar")->attrs(['class' => 'btn btn-primary col-1']) !!}

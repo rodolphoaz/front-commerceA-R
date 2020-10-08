@@ -30,4 +30,8 @@ class EnderecoCobranca extends Model
     function pedido(){
         return $this->belongsTo(Pedido::class);
     }
+
+    function contatoUser(){
+        return $this->hasMany(ContatoUser::class);
+    }
 }

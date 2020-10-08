@@ -16,6 +16,7 @@ class CreateEnderecoEntregasTable extends Migration
         Schema::create('endereco_entregas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->uuid('uuid');
+            $table->integer('contato_user_id');
             $table->integer('user_id');
             $table->string('cep');
             $table->string('complemento');
