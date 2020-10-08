@@ -1,9 +1,9 @@
-@extends('admin.layouts.app', ['title' => 'Lista de Caricatura'])
+@extends('admin.layouts.app', ['title' => 'Lista de Galeria de Produto'])
 
 @section('content')
     @include('admin.pages.partials.header', [
-        'title' =>'Lista de caricaturas',
-        'description' => 'Exibindo todos os tipos de caricaturas cadastradas',
+        'title' =>'Lista de Galeria de Produtos',
+        'description' => 'Exibindo todos os tipos de Galeria de Produtos cadastradas',
     ])
 
     <div class="container mt-3">
@@ -11,10 +11,10 @@
             <div class="card-header border-0">  
                 <div class="row align-items-center">
                     <div class="col-8">
-                        <h3 class="mb-0">{{ __('Listagem do Tipo de Caricaturas') }}</h3>
+                        <h3 class="mb-0">{{ __('Listagem do Tipo de Galeria de Produtos') }}</h3>
                     </div>
                     <div class="col-4 text-right">
-                        <a href="{{ route('caricature.create') }}" class="btn btn-sm btn-primary">{{ __('Novo tipo de Caricatura') }}</a>
+                        <a href="{{ route('caricature.create') }}" class="btn btn-sm btn-primary">{{ __('Novo tipo de Galeria de Produto') }}</a>
                     </div>
                 </div>
             </div>
