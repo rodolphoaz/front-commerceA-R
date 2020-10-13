@@ -40,7 +40,6 @@ Route::prefix('/')->group(function () {
 	Route::post('contact' , 'ContactController@store')->name('contact.store');
 
 	Route::get('about', 'AboutController@index')->name('about.index');
-	Route::get('shopp', 'ProdutoController@show')->name('produto.show');
 });
 
 Route::prefix('RDAN')->middleware(['auth'])->group( function(){	
@@ -53,7 +52,6 @@ Route::prefix('RDAN')->middleware(['auth'])->group( function(){
 	Route::get('funcionario','EmployeeController@index')->name('employee.index');
 	
 	Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-	
 	Route::resource('user', 'UserController');
 
 	//rotas caricatura 
@@ -67,60 +65,6 @@ Route::prefix('RDAN')->middleware(['auth'])->group( function(){
 		Route::post('delete' , 'CaricatureController@delete')->name('delete');
 	});
 
-	//rotas tipo tag 
-	Route::group(['prefix' => 'tipo_tag' , 'as' => 'tipo-tag.' ] , function() {
-		Route::get('', 'TipoTagController@index')->name('index');
-		Route::get('create', 'TipoTagController@create')->name('create');
-		Route::get('edit/{id?}', 'TipoTagController@edit')->name('edit');
-		Route::get('datatable','TipoTagController@DataTable')->name('data-table');
-		Route::post('save' , 'TipoTagController@save')->name('save');
-		Route::post('update' , 'TipoTagController@update')->name('update');
-		Route::post('delete' , 'TipoTagController@delete')->name('delete');
-	});
-
-		//rotas telefone 
-		Route::group(['prefix' => 'telefone' , 'as' => 'telefone.' ] , function() {
-			Route::get('', 'TelefoneController@index')->name('index');
-			Route::get('create', 'TelefoneController@create')->name('create');
-			Route::get('edit/{id?}', 'TelefoneController@edit')->name('edit');
-			Route::get('datatable','TelefoneController@DataTable')->name('data-table');
-			Route::post('save' , 'TelefoneController@save')->name('save');
-			Route::post('update' , 'TelefoneController@update')->name('update');
-			Route::post('delete' , 'TelefoneController@delete')->name('delete');
-		});
-
-	//rotas Tipo Telefone 
-	Route::group(['prefix' => 'tipo_telefone' , 'as' => 'tipo-telefone.' ] , function() {
-		Route::get('', 'TipoTelefoneController@index')->name('index');
-		Route::get('create', 'TipoTelefoneController@create')->name('create');
-		Route::get('edit/{id?}', 'TipoTelefoneController@edit')->name('edit');
-		Route::get('datatable','TipoTelefoneController@DataTable')->name('data-table');
-		Route::post('save' , 'TipoTelefoneController@save')->name('save');
-		Route::post('update' , 'TipoTelefoneController@update')->name('update');
-		Route::post('delete' , 'TipoTelefoneController@delete')->name('delete');
-	});
-
-	//rotas Tipo pagamento 
-	Route::group(['prefix' => 'tipo_pagamento' , 'as' => 'tipo-pagamento.' ] , function() {
-		Route::get('', 'TipoPagamentoController@index')->name('index');
-		Route::get('create', 'TipoPagamentoController@create')->name('create');
-		Route::get('edit/{id?}', 'TipoPagamentoController@edit')->name('edit');
-		Route::get('datatable','TipoPagamentoController@DataTable')->name('data-table');
-		Route::post('save' , 'TipoPagamentoController@save')->name('save');
-		Route::post('update' , 'TipoPagamentoController@update')->name('update');
-		Route::post('delete' , 'TipoPagamentoController@delete')->name('delete');
-	});
-
-		//rotas subCategoria produto
-		Route::group(['prefix' => 'subcategoria' , 'as' => 'subcategoria.' ] , function() {
-			Route::get('', 'SubCategoriaController@index')->name('index');
-			Route::get('create', 'SubCategoriaController@create')->name('create');
-			Route::get('edit/{id?}', 'SubCategoriaController@edit')->name('edit');
-			Route::get('datatable','SubCategoriaController@DataTable')->name('data-table');
-			Route::post('save' , 'SubCategoriaController@save')->name('save');
-			Route::post('update' , 'SubCategoriaController@update')->name('update');
-			Route::post('delete' , 'SubCategoriaController@delete')->name('delete');
-		});
 
 
 	//rotas itens_adicionais
@@ -177,7 +121,7 @@ Route::group(['prefix' => 'categoriaproduto' , 'as' => 'categoriaproduto.' ] , f
 	Route::post('delete' , 'CategoriaProdutoController@delete')->name('delete');
 });
 
-//routes  Contato usuario
+//routes  
 
 Route::group(['prefix' => 'contatousuario' , 'as' => 'contatousuario.' ] , function() {
 	Route::get('', 'ContatoUsuarioController@index')->name('index');
