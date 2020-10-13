@@ -16,7 +16,7 @@ class CreateProdutosTable extends Migration
         Schema::create('produtos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->uuid('uuid');
-            $table->integer('tipo_tag_id'); //1 ou 2
+            // $table->integer('tipo_tag_id'); //1 ou 2
             $table->float('preco'); //preco do produto
             $table->integer('categoria_produto_id'); // infatil / adulto / mascote 
             $table->string('nome_produto');

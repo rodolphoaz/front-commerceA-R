@@ -61,7 +61,7 @@
           <div id='cssmenu'>
 <ul>
    <li><a href="{{route ('home')}}"><strong>Inicio</strong></a></li>
-   <li class='active has-sub'><a href=''><strong>Caricaturas</strong></a>
+   <li class='active has-sub'><a href='{{route('produto.show')}}'><strong>Loja A&R</strong></a>
       <ul>
          <li class='has-sub'><a href=''>Caricaturas Digitais</a>
             <ul>
@@ -88,7 +88,7 @@
          </li>
       </ul>
    </li>
-   <li><a href="{{route('about.index')}}"><strong>loja A&R </strong></a></li>
+   {{-- <li><a href="{{route('about.index')}}"><strong>loja A&R </strong></a></li> --}}
    <li><a href="{{route('about.index')}}"><strong>Estúdio</strong></a></li>
    <li><a href="{{route('contact')}}"><strong>Contatos</strong></a></li>
 </ul>

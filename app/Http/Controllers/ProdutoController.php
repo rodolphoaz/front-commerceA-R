@@ -13,7 +13,7 @@ class ProdutoController extends Controller
      * @return \Illuminate\Http\Response
      */
     function index() {
-        return view('admin.pages.produto.index');
+       return view('admin.pages.produto.index');
     }
 
     /**
@@ -62,9 +62,9 @@ class ProdutoController extends Controller
      * @param  \App\Produto  $produto
      * @return \Illuminate\Http\Response
      */
-    public function show(Produto $produto)
+    public function show(Request $request)
     {
-        //
+        return view('loja.pages.produto.show');
     }
 
     /**

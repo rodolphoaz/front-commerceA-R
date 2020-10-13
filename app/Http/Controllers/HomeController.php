@@ -28,7 +28,7 @@ class HomeController extends Controller
 
         if (Auth::check()){
             if (Auth::user()->registration === null ){
-                return  view('loja.pages.inicio.index');
+                return view('loja.pages.inicio.index');
             }else {
                 return redirect()->route('dashboard');
             }

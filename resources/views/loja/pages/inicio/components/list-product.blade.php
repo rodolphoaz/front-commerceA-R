@@ -226,7 +226,7 @@
             <div class="product-img">         
               <img class="img-fluid w-100" src="{{asset('img/product/galeria/infantil.jpeg')}}" alt="" />
               <div class="p_icon">
-                <a href="{{route ('Muginfantil.index')}}">
+                <a href='#'>
                   <i class="ti-eye"></i>
                 </a>
                 <a href="{{route('login')}}">
@@ -238,7 +238,7 @@
               </div>
             </div>
             <div class="product-btm">
-              <a href="{{route ('Muginfantil.index')}}" class="d-block">
+              <a href="#" class="d-block">
               <h4>Canecas com caricatura infantil </h4>
                     <h4>3x sem juros </h4>
                   </a>
