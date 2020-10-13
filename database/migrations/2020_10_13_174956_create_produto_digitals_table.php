@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSubCategoriaProdutosTable extends Migration
+class CreateProdutoDigitalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateSubCategoriaProdutosTable extends Migration
      */
     public function up()
     {
-        Schema::create('sub_categoria_produtos', function (Blueprint $table) {
+        Schema::create('produto_digitals', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->uuid('uuid');
-            $table->string('nome_subcategoria');
+            $table->integer('categoria_produto_id');
+            $table->integer('sub_categoria_produto_id');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateSubCategoriaProdutosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sub_categoria_produtos');
+        Schema::dropIfExists('produto_digitals');
     }
 }

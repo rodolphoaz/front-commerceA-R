@@ -42,7 +42,16 @@ Route::prefix('/')->group(function () {
 	Route::get('about', 'AboutController@index')->name('about.index');
 	Route::get('shopp', 'ProdutoController@show')->name('produto.show');
 });
-
+//rotas produto digital 
+Route::group(['prefix' => 'produto_digital' , 'as' => 'produto_digital.' ] , function() {
+	Route::get('', 'ProdutoDigitalController@index')->name('index');
+	Route::get('create', 'ProdutoDigitalController@create')->name('create');
+	Route::get('edit/{id?}', 'ProdutoDigitalController@edit')->name('edit');
+	Route::get('datatable','ProdutoDigitalController@DataTable')->name('data-table');
+	Route::post('save' , 'ProdutoDigitalController@save')->name('save');
+	Route::post('update' , 'ProdutoDigitalController@update')->name('update');
+	Route::post('delete' , 'ProdutoDigitalController@delete')->name('delete');
+});
 Route::prefix('RDAN')->middleware(['auth'])->group( function(){	
 	
 	Route::get('', function (){
@@ -67,6 +76,7 @@ Route::prefix('RDAN')->middleware(['auth'])->group( function(){
 		Route::post('delete' , 'CaricatureController@delete')->name('delete');
 	});
 
+	
 	//rotas tipo tag 
 	Route::group(['prefix' => 'tipo_tag' , 'as' => 'tipo-tag.' ] , function() {
 		Route::get('', 'TipoTagController@index')->name('index');
