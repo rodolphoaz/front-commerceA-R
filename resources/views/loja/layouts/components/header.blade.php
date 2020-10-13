@@ -61,7 +61,7 @@
           <div id='cssmenu'>
 <ul>
    <li><a href="{{route ('home')}}"><strong>Inicio</strong></a></li>
-   <li class='active has-sub'><a href="#"><strong>Loja A&R</strong></a>
+   <li class='active has-sub'><a href="{{route ('produto.show')}}"><strong>Loja A&R</strong></a>
       <ul>
          <li class='has-sub'><a href=''>Caricaturas Digitais</a>
             <ul>
