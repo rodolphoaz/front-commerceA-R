@@ -26,6 +26,7 @@ Route::prefix('/')->group(function () {
 	Route::get('product/{category}/{subcategory?}','ProductController@show')
 				->where(['category'=> '[a-z]+' , 'subcategory' => '[a-z]+'])
 				->name('product.show');
+
 			
 	Route::get('email','EmailController@index')->name('email');
 
@@ -63,6 +64,8 @@ Route::prefix('RDAN')->middleware(['auth'])->group( function(){
 		Route::post('update' , 'CaricatureController@update')->name('update');
 		Route::post('delete' , 'CaricatureController@delete')->name('delete');
 	});
+
+
 
 	//rotas itens_adicionais
 	Route::group(['prefix' => 'itens-adicionais' , 'as' => 'itens-adicionais.' ] , function() {
@@ -105,3 +108,71 @@ Route::prefix('cliente')->middleware(['auth'])->group( function () {
 	Route::get('amei' ,  'ProductLike@index')->name('like.index');
 	Route::post('amei',  'ProductLike@delete')->name('like.delete');
 });
+
+//routes  Categoria Produto
+
+Route::group(['prefix' => 'categoriaproduto' , 'as' => 'categoriaproduto.' ] , function() {
+	Route::get('', 'CategoriaProdutoController@index')->name('index');
+	Route::get('create', 'CategoriaProdutoController@create')->name('create');
+	Route::get('edit/{id?}', 'CategoriaProdutoController@edit')->name('edit');
+	Route::get('datatable','CategoriaProdutoController@DataTable')->name('data-table');
+	Route::post('save' , 'CategoriaProdutoController@save')->name('save');
+	Route::post('update' , 'CategoriaProdutoController@update')->name('update');
+	Route::post('delete' , 'CategoriaProdutoController@delete')->name('delete');
+});
+
+//routes  Contato usuario
+
+Route::group(['prefix' => 'contatousuario' , 'as' => 'contatousuario.' ] , function() {
+	Route::get('', 'ContatoUsuarioController@index')->name('index');
+	Route::get('create', 'ContatoUsuarioController@create')->name('create');
+	Route::get('edit/{id?}', 'ContatoUsuarioController@edit')->name('edit');
+	Route::get('datatable','ContatoUsuarioController@DataTable')->name('data-table');
+	Route::post('save' , 'ContatoUsuarioController@save')->name('save');
+	Route::post('update' , 'ContatoUsuarioController@update')->name('update');
+	Route::post('delete' , 'ContatoUsuarioController@delete')->name('delete');
+});
+
+
+//routes  Forma de pagamento
+
+Route::group(['prefix' => 'formapagamento' , 'as' => 'formapagamento.' ] , function() {
+	Route::get('', 'FormaPagamentoController@index')->name('index');
+	Route::get('create', 'FormaPagamentoController@create')->name('create');
+	Route::get('edit/{id?}', 'FormaPagamentoController@edit')->name('edit');
+	Route::get('datatable','FormaPagamentoController@DataTable')->name('data-table');
+	Route::post('save' , 'FormaPagamentoController@save')->name('save');
+	Route::post('update' , 'FormaPagamentoController@update')->name('update');
+	Route::post('delete' , 'FormaPagamentoController@delete')->name('delete');
+});
+
+//routes Galeria de produto
+
+Route::group(['prefix' => 'galeriaproduto' , 'as' => 'galeriaproduto.' ] , function() {
+	Route::get('', 'GaleriaProdutoController@index')->name('index');
+	Route::get('create', 'GaleriaProdutoController@create')->name('create');
+	Route::get('edit/{id?}', 'GaleriaProdutoController@edit')->name('edit');
+	Route::get('datatable','GaleriaProdutoController@DataTable')->name('data-table');
+	Route::post('save' , 'GaleriaProdutoController@save')->name('save');
+	Route::post('update' , 'GaleriaProdutoController@update')->name('update');
+	Route::post('delete' , 'GaleriaProdutoController@delete')->name('delete');
+});
+
+
+//routes produto
+
+Route::group(['prefix' => 'produto' , 'as' => 'produto.' ] , function() {
+	Route::get('', 'ProdutoController@index')->name('index');
+	Route::get('create', 'ProdutoController@create')->name('create');
+	Route::get('edit/{id?}', 'ProdutoController@edit')->name('edit');
+	Route::get('datatable','ProdutoController@DataTable')->name('data-table');
+	Route::post('save' , 'ProdutoController@save')->name('save');
+	Route::post('update' , 'ProdutoController@update')->name('update');
+	Route::post('delete' , 'ProdutoController@delete')->name('delete');
+});
+
+
+
+
+
+
