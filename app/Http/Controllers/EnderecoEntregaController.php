@@ -13,7 +13,7 @@ class EnderecoEntregaController extends Controller
      * @return \Illuminate\Http\Response
      */
     function index() {
-        return view('loja.pages.endereco_entrega.index');
+        return view('admin.pages.end_entr.index');
     }
 
     /**

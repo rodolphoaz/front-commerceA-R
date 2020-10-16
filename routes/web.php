@@ -42,76 +42,163 @@ Route::prefix('/')->group(function () {
 	Route::get('about', 'AboutController@index')->name('about.index');
 	Route::get('shopp', 'ProdutoController@show')->name('produto.show');
 });
-//rotas produto digital 
-Route::group(['prefix' => 'produto_digital' , 'as' => 'produto_digital.' ] , function() {
-	Route::get('', 'ProdutoDigitalController@index')->name('index');
-	Route::get('create', 'ProdutoDigitalController@create')->name('create');
-	Route::get('edit/{id?}', 'ProdutoDigitalController@edit')->name('edit');
-	Route::get('datatable','ProdutoDigitalController@DataTable')->name('data-table');
-	Route::post('save' , 'ProdutoDigitalController@save')->name('save');
-	Route::post('update' , 'ProdutoDigitalController@update')->name('update');
-	Route::post('delete' , 'ProdutoDigitalController@delete')->name('delete');
-});
+
 Route::prefix('RDAN')->middleware(['auth'])->group( function(){	
 	
 	Route::get('', function (){
 		return redirect()->route('dashboard');
 	});
 
-
-	Route::get('funcionario','EmployeeController@index')->name('employee.index');
-	
-	Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-	
-	Route::resource('user', 'UserController');
-
-	//rotas caricatura 
-	Route::group(['prefix' => 'caricatura' , 'as' => 'caricature.' ] , function() {
-		Route::get('', 'CaricatureController@index')->name('index');
-		Route::get('create', 'CaricatureController@create')->name('create');
-		Route::get('edit/{id?}', 'CaricatureController@edit')->name('edit');
-		Route::get('datatable','CaricatureController@DataTable')->name('data-table');
-		Route::post('save' , 'CaricatureController@save')->name('save');
-		Route::post('update' , 'CaricatureController@update')->name('update');
-		Route::post('delete' , 'CaricatureController@delete')->name('delete');
+	Route::group(['prfix' => 'lista pedidos', 'as' => 'pedidos.'] , function (){
+		Route::get('' , 'PedidoController@index')->name('index');
+		Route::post('update','PedidoController@update')->name('update');
+		Route::get('edit' , 'PedidoController@edit')->name('edit');
+		Route::get('datatable','PedidoController@DataTable')->name('data-table');
 	});
 
+	//routes  Categoria Produto
 	
-	//rotas tipo tag 
-	Route::group(['prefix' => 'tipo_tag' , 'as' => 'tipo-tag.' ] , function() {
-		Route::get('', 'TipoTagController@index')->name('index');
-		Route::get('create', 'TipoTagController@create')->name('create');
-		Route::get('edit/{id?}', 'TipoTagController@edit')->name('edit');
-		Route::get('datatable','TipoTagController@DataTable')->name('data-table');
-		Route::post('save' , 'TipoTagController@save')->name('save');
-		Route::post('update' , 'TipoTagController@update')->name('update');
-		Route::post('delete' , 'TipoTagController@delete')->name('delete');
+	Route::group(['prefix' => 'categoriaproduto' , 'as' => 'categoria_produto.' ] , function() {
+		Route::get('', 'CategoriaProdutoController@index')->name('index');
+		Route::get('create', 'CategoriaProdutoController@create')->name('create');
+		Route::get('edit/{id?}', 'CategoriaProdutoController@edit')->name('edit');
+		Route::get('datatable','CategoriaProdutoController@DataTable')->name('data-table');
+		Route::post('save' , 'CategoriaProdutoController@save')->name('save');
+		Route::post('update' , 'CategoriaProdutoController@update')->name('update');
+		Route::post('delete' , 'CategoriaProdutoController@delete')->name('delete');
 	});
-
-		//rotas telefone 
-		Route::group(['prefix' => 'telefone' , 'as' => 'telefone.' ] , function() {
-			Route::get('', 'TelefoneController@index')->name('index');
-			Route::get('create', 'TelefoneController@create')->name('create');
-			Route::get('edit/{id?}', 'TelefoneController@edit')->name('edit');
-			Route::get('datatable','TelefoneController@DataTable')->name('data-table');
-			Route::post('save' , 'TelefoneController@save')->name('save');
-			Route::post('update' , 'TelefoneController@update')->name('update');
-			Route::post('delete' , 'TelefoneController@delete')->name('delete');
+		//routes  Categoria Produto
+	
+		Route::group(['prefix' => 'endereco_cbr' , 'as' => 'endereco_cobranca.' ] , function() {
+			Route::get('', 'EnderecoCobrancaController@index')->name('index');
+			Route::get('create', 'EnderecoCobrancaController@create')->name('create');
+			Route::get('edit/{id?}', 'EnderecoCobrancaController@edit')->name('edit');
+			Route::get('datatable','EnderecoCobrancaController@DataTable')->name('data-table');
+			Route::post('save' , 'EnderecoCobrancaController@save')->name('save');
+			Route::post('update' , 'EnderecoCobrancaController@update')->name('update');
+			Route::post('delete' , 'EnderecoCobrancaController@delete')->name('delete');
+		});		//routes  Categoria Produto
+	
+		Route::group(['prefix' => 'endereco_entrega' , 'as' => 'endereco_entrega.' ] , function() {
+			Route::get('', 'EnderecoEntregaController@index')->name('index');
+			Route::get('create', 'EnderecoEntregaController@create')->name('create');
+			Route::get('edit/{id?}', 'EnderecoEntregaController@edit')->name('edit');
+			Route::get('datatable','EnderecoEntregaController@DataTable')->name('data-table');
+			Route::post('save' , 'EnderecoEntregaController@save')->name('save');
+			Route::post('update' , 'EnderecoEntregaController@update')->name('update');
+			Route::post('delete' , 'EnderecoEntregaController@delete')->name('delete');
 		});
-
-	//rotas Tipo Telefone 
-	Route::group(['prefix' => 'tipo_telefone' , 'as' => 'tipo-telefone.' ] , function() {
-		Route::get('', 'TipoTelefoneController@index')->name('index');
-		Route::get('create', 'TipoTelefoneController@create')->name('create');
-		Route::get('edit/{id?}', 'TipoTelefoneController@edit')->name('edit');
-		Route::get('datatable','TipoTelefoneController@DataTable')->name('data-table');
-		Route::post('save' , 'TipoTelefoneController@save')->name('save');
-		Route::post('update' , 'TipoTelefoneController@update')->name('update');
-		Route::post('delete' , 'TipoTelefoneController@delete')->name('delete');
+	//routes  Contato usuario
+	
+	Route::group(['prefix' => 'contatousuario' , 'as' => 'contatousuario.' ] , function() {
+		Route::get('', 'ContatoUsuarioController@index')->name('index');
+		Route::get('create', 'ContatoUsuarioController@create')->name('create');
+		Route::get('edit/{id?}', 'ContatoUsuarioController@edit')->name('edit');
+		Route::get('datatable','ContatoUsuarioController@DataTable')->name('data-table');
+		Route::post('save' , 'ContatoUsuarioController@save')->name('save');
+		Route::post('update' , 'ContatoUsuarioController@update')->name('update');
+		Route::post('delete' , 'ContatoUsuarioController@delete')->name('delete');
 	});
+	
+	
+	//routes  Forma de pagamento
+	
+	Route::group(['prefix' => 'formapagamento' , 'as' => 'formapagamento.' ] , function() {
+		Route::get('', 'FormaPagamentoController@index')->name('index');
+		Route::get('create', 'FormaPagamentoController@create')->name('create');
+		Route::get('edit/{id?}', 'FormaPagamentoController@edit')->name('edit');
+		Route::get('datatable','FormaPagamentoController@DataTable')->name('data-table');
+		Route::post('save' , 'FormaPagamentoController@save')->name('save');
+		Route::post('update' , 'FormaPagamentoController@update')->name('update');
+		Route::post('delete' , 'FormaPagamentoController@delete')->name('delete');
+	});
+	
+	//routes Galeria de produto
+	
+	Route::group(['prefix' => 'galeriaproduto' , 'as' => 'galeriaproduto.' ] , function() {
+		Route::get('', 'GaleriaProdutoController@index')->name('index');
+		Route::get('create', 'GaleriaProdutoController@create')->name('create');
+		Route::get('edit/{id?}', 'GaleriaProdutoController@edit')->name('edit');
+		Route::get('datatable','GaleriaProdutoController@DataTable')->name('data-table');
+		Route::post('save' , 'GaleriaProdutoController@save')->name('save');
+		Route::post('update' , 'GaleriaProdutoController@update')->name('update');
+		Route::post('delete' , 'GaleriaProdutoController@delete')->name('delete');
+	});
+	
+	
+	//routes produto
+	
+	Route::group(['prefix' => 'produto' , 'as' => 'produto.' ] , function() {
+		Route::get('', 'ProdutoController@index')->name('index');
+		Route::get('create', 'ProdutoController@create')->name('create');
+		Route::get('edit/{id?}', 'ProdutoController@edit')->name('edit');
+		Route::get('datatable','ProdutoController@DataTable')->name('data-table');
+		Route::post('save' , 'ProdutoController@save')->name('save');
+		Route::post('update' , 'ProdutoController@update')->name('update');
+		Route::post('delete' , 'ProdutoController@delete')->name('delete');
+	});
+		Route::get('funcionario','EmployeeController@index')->name('employee.index');
+		
+		Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+		
+		Route::resource('user', 'UserController');
+	
+		//rotas caricatura 
+		Route::group(['prefix' => 'caricatura' , 'as' => 'caricature.' ] , function() {
+			Route::get('', 'CaricatureController@index')->name('index');
+			Route::get('create', 'CaricatureController@create')->name('create');
+			Route::get('edit/{id?}', 'CaricatureController@edit')->name('edit');
+			Route::get('datatable','CaricatureController@DataTable')->name('data-table');
+			Route::post('save' , 'CaricatureController@save')->name('save');
+			Route::post('update' , 'CaricatureController@update')->name('update');
+			Route::post('delete' , 'CaricatureController@delete')->name('delete');
+		});
+	
+		//rotas produto digital 
+	Route::group(['prefix' => 'produto_digital' , 'as' => 'produto_digital.' ] , function() {
+		Route::get('', 'ProdutoDigitalController@index')->name('index');
+		Route::get('create', 'ProdutoDigitalController@create')->name('create');
+		Route::get('edit/{id?}', 'ProdutoDigitalController@edit')->name('edit');
+		Route::get('datatable','ProdutoDigitalController@DataTable')->name('data-table');
+		Route::post('save' , 'ProdutoDigitalController@save')->name('save');
+		Route::post('update' , 'ProdutoDigitalController@update')->name('update');
+		Route::post('delete' , 'ProdutoDigitalController@delete')->name('delete');
+	});
+		//rotas tipo tag 
+		Route::group(['prefix' => 'tipo_tag' , 'as' => 'tipo_tag.' ] , function() {
+			Route::get('', 'TipoTagController@index')->name('index');
+			Route::get('create', 'TipoTagController@create')->name('create');
+			Route::get('edit/{id?}', 'TipoTagController@edit')->name('edit');
+			Route::get('datatable','TipoTagController@DataTable')->name('data-table');
+			Route::post('save' , 'TipoTagController@save')->name('save');
+			Route::post('update' , 'TipoTagController@update')->name('update');
+			Route::post('delete' , 'TipoTagController@delete')->name('delete');
+		});
+	
+			//rotas telefone 
+			Route::group(['prefix' => 'telefone' , 'as' => 'telefone.' ] , function() {
+				Route::get('', 'TelefoneController@index')->name('index');
+				Route::get('create', 'TelefoneController@create')->name('create');
+				Route::get('edit/{id?}', 'TelefoneController@edit')->name('edit');
+				Route::get('datatable','TelefoneController@DataTable')->name('data-table');
+				Route::post('save' , 'TelefoneController@save')->name('save');
+				Route::post('update' , 'TelefoneController@update')->name('update');
+				Route::post('delete' , 'TelefoneController@delete')->name('delete');
+			});
+	
+		//rotas Tipo Telefone 
+		Route::group(['prefix' => 'tipo_telefone' , 'as' => 'tipo_telefone.' ] , function() {
+			Route::get('', 'TipoTelefoneController@index')->name('index');
+			Route::get('create', 'TipoTelefoneController@create')->name('create');
+			Route::get('edit/{id?}', 'TipoTelefoneController@edit')->name('edit');
+			Route::get('datatable','TipoTelefoneController@DataTable')->name('data-table');
+			Route::post('save' , 'TipoTelefoneController@save')->name('save');
+			Route::post('update' , 'TipoTelefoneController@update')->name('update');
+			Route::post('delete' , 'TipoTelefoneController@delete')->name('delete');
+		});	
 
 	//rotas Tipo pagamento 
-	Route::group(['prefix' => 'tipo_pagamento' , 'as' => 'tipo-pagamento.' ] , function() {
+	Route::group(['prefix' => 'tipo_pagamento' , 'as' => 'tipo_pagamento.' ] , function() {
 		Route::get('', 'TipoPagamentoController@index')->name('index');
 		Route::get('create', 'TipoPagamentoController@create')->name('create');
 		Route::get('edit/{id?}', 'TipoPagamentoController@edit')->name('edit');
@@ -122,14 +209,14 @@ Route::prefix('RDAN')->middleware(['auth'])->group( function(){
 	});
 
 		//rotas subCategoria produto
-		Route::group(['prefix' => 'subcategoria' , 'as' => 'subcategoria.' ] , function() {
-			Route::get('', 'SubCategoriaController@index')->name('index');
-			Route::get('create', 'SubCategoriaController@create')->name('create');
-			Route::get('edit/{id?}', 'SubCategoriaController@edit')->name('edit');
-			Route::get('datatable','SubCategoriaController@DataTable')->name('data-table');
-			Route::post('save' , 'SubCategoriaController@save')->name('save');
-			Route::post('update' , 'SubCategoriaController@update')->name('update');
-			Route::post('delete' , 'SubCategoriaController@delete')->name('delete');
+		Route::group(['prefix' => 'subcategoria' , 'as' => 'subcategoria_produto.' ] , function() {
+			Route::get('', 'SubCategoriaProdutoController@index')->name('index');
+			Route::get('create', 'SubCategoriaProdutoController@create')->name('create');
+			Route::get('edit/{id?}', 'SubCategoriaProdutoController@edit')->name('edit');
+			Route::get('datatable','SubCategoriaProdutoController@DataTable')->name('data-table');
+			Route::post('save' , 'SubCategoriaProdutoController@save')->name('save');
+			Route::post('update' , 'SubCategoriaProdutoController@update')->name('update');
+			Route::post('delete' , 'SubCategoriaProdutoController@delete')->name('delete');
 		});
 
 
@@ -174,71 +261,4 @@ Route::prefix('cliente')->middleware(['auth'])->group( function () {
 	Route::get('amei' ,  'ProductLike@index')->name('like.index');
 	Route::post('amei',  'ProductLike@delete')->name('like.delete');
 });
-
-//routes  Categoria Produto
-
-Route::group(['prefix' => 'categoriaproduto' , 'as' => 'categoriaproduto.' ] , function() {
-	Route::get('', 'CategoriaProdutoController@index')->name('index');
-	Route::get('create', 'CategoriaProdutoController@create')->name('create');
-	Route::get('edit/{id?}', 'CategoriaProdutoController@edit')->name('edit');
-	Route::get('datatable','CategoriaProdutoController@DataTable')->name('data-table');
-	Route::post('save' , 'CategoriaProdutoController@save')->name('save');
-	Route::post('update' , 'CategoriaProdutoController@update')->name('update');
-	Route::post('delete' , 'CategoriaProdutoController@delete')->name('delete');
-});
-
-//routes  Contato usuario
-
-Route::group(['prefix' => 'contatousuario' , 'as' => 'contatousuario.' ] , function() {
-	Route::get('', 'ContatoUsuarioController@index')->name('index');
-	Route::get('create', 'ContatoUsuarioController@create')->name('create');
-	Route::get('edit/{id?}', 'ContatoUsuarioController@edit')->name('edit');
-	Route::get('datatable','ContatoUsuarioController@DataTable')->name('data-table');
-	Route::post('save' , 'ContatoUsuarioController@save')->name('save');
-	Route::post('update' , 'ContatoUsuarioController@update')->name('update');
-	Route::post('delete' , 'ContatoUsuarioController@delete')->name('delete');
-});
-
-
-//routes  Forma de pagamento
-
-Route::group(['prefix' => 'formapagamento' , 'as' => 'formapagamento.' ] , function() {
-	Route::get('', 'FormaPagamentoController@index')->name('index');
-	Route::get('create', 'FormaPagamentoController@create')->name('create');
-	Route::get('edit/{id?}', 'FormaPagamentoController@edit')->name('edit');
-	Route::get('datatable','FormaPagamentoController@DataTable')->name('data-table');
-	Route::post('save' , 'FormaPagamentoController@save')->name('save');
-	Route::post('update' , 'FormaPagamentoController@update')->name('update');
-	Route::post('delete' , 'FormaPagamentoController@delete')->name('delete');
-});
-
-//routes Galeria de produto
-
-Route::group(['prefix' => 'galeriaproduto' , 'as' => 'galeriaproduto.' ] , function() {
-	Route::get('', 'GaleriaProdutoController@index')->name('index');
-	Route::get('create', 'GaleriaProdutoController@create')->name('create');
-	Route::get('edit/{id?}', 'GaleriaProdutoController@edit')->name('edit');
-	Route::get('datatable','GaleriaProdutoController@DataTable')->name('data-table');
-	Route::post('save' , 'GaleriaProdutoController@save')->name('save');
-	Route::post('update' , 'GaleriaProdutoController@update')->name('update');
-	Route::post('delete' , 'GaleriaProdutoController@delete')->name('delete');
-});
-
-
-//routes produto
-
-Route::group(['prefix' => 'produto' , 'as' => 'produto.' ] , function() {
-	Route::get('', 'ProdutoController@index')->name('index');
-	Route::get('create', 'ProdutoController@create')->name('create');
-	Route::get('edit/{id?}', 'ProdutoController@edit')->name('edit');
-	Route::get('datatable','ProdutoController@DataTable')->name('data-table');
-	Route::post('save' , 'ProdutoController@save')->name('save');
-	Route::post('update' , 'ProdutoController@update')->name('update');
-	Route::post('delete' , 'ProdutoController@delete')->name('delete');
-});
-
-
-
-
-
 

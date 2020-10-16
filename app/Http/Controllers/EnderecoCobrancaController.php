@@ -13,7 +13,7 @@ class EnderecoCobrancaController extends Controller
      * @return \Illuminate\Http\Response
      */
     function index() {
-        return view('loja.pages.endereco_cobranca.index');
+        return view('admin.pages.end_cobr.index');
     }
 
     /**

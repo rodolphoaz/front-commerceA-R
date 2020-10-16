@@ -14,7 +14,7 @@ class TipoTagController extends Controller
      */
     public function index()
     {
-        //
+        return  view('admin.pages.tipo_tag.index');
     }
 
     /**

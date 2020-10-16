@@ -13,7 +13,7 @@ class PedidoController extends Controller
      * @return \Illuminate\Http\Response
      */
     function index() {
-        return view('loja.pages.pedido.index');
+        return view('admin.pages.pedidos.index');
     }
 
     /**
