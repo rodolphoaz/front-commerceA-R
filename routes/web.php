@@ -40,7 +40,6 @@ Route::prefix('/')->group(function () {
 	Route::post('contact' , 'ContactController@store')->name('contact.store');
 
 	Route::get('about', 'AboutController@index')->name('about.index');
-	Route::get('shopp', 'ProdutoController@show')->name('produto.show');
 });
 
 Route::prefix('RDAN')->middleware(['auth'])->group( function(){	
@@ -261,4 +260,40 @@ Route::prefix('cliente')->middleware(['auth'])->group( function () {
 	Route::get('amei' ,  'ProductLike@index')->name('like.index');
 	Route::post('amei',  'ProductLike@delete')->name('like.delete');
 });
+
+//routes  
+
+Route::group(['prefix' => 'contatousuario' , 'as' => 'contatousuario.' ] , function() {
+	Route::get('', 'ContatoUsuarioController@index')->name('index');
+	Route::get('create', 'ContatoUsuarioController@create')->name('create');
+	Route::get('edit/{id?}', 'ContatoUsuarioController@edit')->name('edit');
+	Route::get('datatable','ContatoUsuarioController@DataTable')->name('data-table');
+	Route::post('save' , 'ContatoUsuarioController@save')->name('save');
+	Route::post('update' , 'ContatoUsuarioController@update')->name('update');
+	Route::post('delete' , 'ContatoUsuarioController@delete')->name('delete');
+});
+
+
+//routes  Forma de pagamento
+
+Route::group(['prefix' => 'formapagamento' , 'as' => 'formapagamento.' ] , function() {
+	Route::get('', 'FormaPagamentoController@index')->name('index');
+	Route::get('create', 'FormaPagamentoController@create')->name('create');
+	Route::get('edit/{id?}', 'FormaPagamentoController@edit')->name('edit');
+	Route::get('datatable','FormaPagamentoController@DataTable')->name('data-table');
+	Route::post('save' , 'FormaPagamentoController@save')->name('save');
+	Route::post('update' , 'FormaPagamentoController@update')->name('update');
+	Route::post('delete' , 'FormaPagamentoController@delete')->name('delete');
+});
+
+//routes produto
+
+Route::group(['prefix' => 'produto' , 'as' => 'produto.' ] , function() {
+	Route::get('', 'ProdutoController@show')->name('show');
+});
+
+
+
+
+
 

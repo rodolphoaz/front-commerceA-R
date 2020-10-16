@@ -5,9 +5,9 @@
         <div class="row">
           <div class="col-lg-7">
             <div class="float-left">
-           
-           <p><strong>🤖Fale com o Bob 021 97657-9430</strong></p>
-              <p><strong> Email: aercaricaturasonline03@gmail.com</strong></p>
+            <p><i class="fa fa-simplybuilt" aria-hidden="true"><strong> Fale com o Bob 021 97657-9430 </i></strong></p>
+         <p><i class="fa fa-envelope" aria-hidden="true"><strong> Email: aercaricaturasonline03@gmail.com</strong></i></p>
+             
             </div>
           </div>
           <div class="col-lg-5">
@@ -32,9 +32,9 @@
                 
                 @guest()
                 <li>
-                  <a href="{{route('login')}}">
-                  👤 Olá , Faça seu login ou cadastre-se   
-                  </a>
+                <i class="fa fa-user" aria-hidden="true"><a href="{{route('login')}}">Olá,Faça seu login ou cadastre-se   
+                  </a></i>
+                  
                 </li>
                 @endguest
                 
@@ -61,20 +61,21 @@
           <div id='cssmenu'>
 <ul>
    <li><a href="{{route ('home')}}"><strong>Inicio</strong></a></li>
-   <li class='active has-sub'><a href='{{route('produto.show')}}'><strong>Loja A&R</strong></a>
+   <li class='active has-sub'><a href="{{route ('produto.show')}}"><strong>Loja A&R</strong></a>
       <ul>
          <li class='has-sub'><a href=''>Caricaturas Digitais</a>
             <ul>
-            <li><a href=''>🧑🏻 Individual</a></li>
-            <li><a href=''>👩🏻‍🏫 Temáticas </a></li>
-            <li><a href=''>💑 Casal</a></li>
-            <li><a href=''>👧🏻 Infantil </a></li>
-            <li><a href=''>🤵🏻👰🏻 Noivos</a></li>
-            <li><a href=''>🎈  Aniversários</a></li>
-            <li><a href=''>🎓 Formatura</a></li>
-            <li><a href=''>👯🏻‍♀️ Eventos</a></li>
-            <li><a href=''>👨‍👩‍👧‍👦 Grupos</a></li>
-            <li><a href=''>🐾 Pet's</a></li>
+            
+            <li><a href=''><p>&#128102;&#127995; Individual</p></a></li>
+            <li><a href=''><p>&#129500;&#127995; Temáticas</p></a></li>
+            <li><a href=''><p>&#128145; Casal</p></a></li>
+            <li><a href=''><p>&#x1F9D2; Infantil</p></a></li>
+            <li><a href=''><p>&#x1F935;&#128112; Noivos</p></a></li>
+            <li><a href=''><p>&#x1F382; Aniversários</p></a></li>
+            <li><a href=''><p>&#x1F393; Formatura</p></a></li>
+            <li><a href=''><p>&#x1F46F; Eventos</p></a></li>
+            <li><a href=''><p>&#x1F46A;&#127995; Grupos</p></a></li>
+            <li><a href=''><p>&#x1F43E; Pet's</p></a></li>
             </ul>
 
           
