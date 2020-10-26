@@ -5,8 +5,8 @@
         <div class="row">
           <div class="col-lg-7">
             <div class="float-left">
-            <p><i class="fa fa-simplybuilt" aria-hidden="true"><strong> Fale com o Bob 021 97657-9430 </i></strong></p>
-         <p><i class="fa fa-envelope" aria-hidden="true"><strong> Email: aercaricaturasonline03@gmail.com</strong></i></p>
+            <p><img src="img/icontopo/bobwhats.png" alt="whatsappbob"/><strong> Fale com o Bob 021 97657-9430 </strong></p>
+         <p><strong> Email: aercaricaturasonline03@gmail.com</strong></p>
              
             </div>
           </div>
@@ -32,15 +32,15 @@
                 
                 @guest()
                 <li>
-                <i class="fa fa-user" aria-hidden="true"><a href="{{route('login')}}">Olá,Faça seu login ou cadastre-se   
-                  </a></i>
+                <a href="{{route('login')}}">Olá,Faça seu login ou cadastre-se   
+                  </a>
                   
                 </li>
                 @endguest
                 
                 <li>
                 <a href="{{route('contact')}}">
-                    Pedido Personalizados
+                <img src="img/icontopo/bobcall.png" alt="whatsappbob"/> Pedido Personalizados
                   </a>
                 </li>
               </ul>
@@ -54,7 +54,7 @@
         <nav class="navbar navbar-expand-lg navbar-light w-500">
           <!-- Brand and toggle get grouped for better mobile display -->
           <a class="navbar-brand logo_h" href="{{route ('home')}}">
-            <img src="img/logo.png" alt="aer caricaturas online"/>
+            <img src="img/logolinha.png" alt="aer caricaturas online"/>
           </a>
            
           <!-- menu  -->
@@ -66,16 +66,17 @@
          <li class='has-sub'><a href=''>Caricaturas Digitais</a>
             <ul>
             
-            <li><a href=''><p>&#128102;&#127995; Individual</p></a></li>
-            <li><a href=''><p>&#129500;&#127995; Temáticas</p></a></li>
-            <li><a href=''><p>&#128145; Casal</p></a></li>
-            <li><a href=''><p>&#x1F9D2; Infantil</p></a></li>
-            <li><a href=''><p>&#x1F935;&#128112; Noivos</p></a></li>
-            <li><a href=''><p>&#x1F382; Aniversários</p></a></li>
-            <li><a href=''><p>&#x1F393; Formatura</p></a></li>
-            <li><a href=''><p>&#x1F46F; Eventos</p></a></li>
-            <li><a href=''><p>&#x1F46A;&#127995; Grupos</p></a></li>
-            <li><a href=''><p>&#x1F43E; Pet's</p></a></li>
+            <li><a href=''><p>Individual</p></a></li>
+            <li><a href=''><p>Temáticas</p></a></li>
+            <li><a href=''><p>Casal</p></a></li>
+            <li><a href=''><p>Infantil</p></a></li>
+            <li><a href=''><p>Noivos</p></a></li>
+            <li><a href=''><p>Aniversários</p></a></li>
+            <li><a href=''><p>Formatura</p></a></li>
+            <li><a href=''><p>Eventos</p></a></li>
+            <li><a href=''><p>Profissões</p></a></li>
+            <li><a href=''><p>Grupos</p></a></li>
+            <li><a href=''><p>Pet's</p></a></li>
             </ul>
 
           

@@ -18,6 +18,7 @@
           </button>
       </div>
      @endif
+     
       <div class="col-8">
         <h4 class="contact-title text-left">Envie uma mensagem</h4>
       </div>
@@ -101,6 +102,7 @@
         <div class="media-body">
           <h3><a href="aercaricaturasonline03@gmail.com">aercaricaturasonline03@gmail.com</a></h3>
           <p> Mande um email para gente !</p>
+          <img src="img/abouticon/bobcall200.png" alt="bobcall"/>
         </div>
       </div>
     </div>
