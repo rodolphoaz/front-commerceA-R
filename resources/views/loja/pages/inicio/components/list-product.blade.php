@@ -157,7 +157,7 @@
         <div class="col-lg-12">
           <div class="main_title">
             <h2><span> Personalize sua Encomenda Online </span></h2>
-            <p>Escolha a categoria desejada e faça sua compra pelo site.</p>
+            <p>Escolha a categoria desejada e faça a sua personalização.</p>
           </div>
         </div>
       </div>
@@ -181,7 +181,7 @@
                     <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Personalizar Caricatura</a>
                 </div>
                 <div class="product-content">
-                <h5><strong>Caricaturas Temática</strong></h5>
+                <h5><strong>Caricaturas -  Profissão</strong></h5>
                     <h6>A partir de : </h6><h3> R$ 100,00 </h3>
                   </a>
                  
@@ -214,8 +214,8 @@
             <div class="product-grid5">
                 <div class="product-image5">
                     <a href="#">
-                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo11/images/img-5.jpg">
-                        <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo11/images/img-6.jpg">
+                        <img class="pic-1" src="{{asset('/img/product/new-product/enf001.png')}}">
+                        <img class="pic-2" src="{{asset('/img/product/new-product/enf002.png')}}">
                     </a>
                     <ul class="social">
                         <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
@@ -226,7 +226,7 @@
                 </div>
                
                 <div class="product-content">
-                <h5><strong>Caricaturas Temática</strong></h5>
+                <h5><strong>Caricaturas - Profissão</strong></h5>
                     <h6>A partir de : </h6><h3> R$ 100,00 </h3>
                   </a>
                  
@@ -237,8 +237,8 @@
             <div class="product-grid5">
                 <div class="product-image5">
                     <a href="#">
-                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo11/images/img-7.jpg">
-                        <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo11/images/img-8.jpg">
+                        <img class="pic-1" src="{{asset('/img/product/new-product/infantil001.png')}}">
+                        <img class="pic-2" src="{{asset('/img/product/new-product/infantil002.png')}}">
                     </a>
                     <ul class="social">
                         <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
@@ -249,7 +249,7 @@
                 </div>
                 <div class="product-content">
                
-                  <h5><strong>Caricaturas Temática</strong></h5>
+                  <h5><strong>Caricaturas - Busto - Temática</strong></h5>
                     <h6>A partir de : </h6><h4> R$ 100,00 </h4>
                   </a>
                  
