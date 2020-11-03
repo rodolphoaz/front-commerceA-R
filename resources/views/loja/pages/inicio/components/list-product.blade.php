@@ -22,11 +22,9 @@
 <h4 class="text"><strong>Caricaturas de DIA dos PAIS</strong></h4>
             <h6 class="text">Especial : Meu PAI é SHOW</h6>
             <h5>R$100.00</h5>
-           
+          
           </div>
         </div>
-
-           
         <div class="col-lg-6 mt-5 mt-lg-0">
           <div class="row">
             <div class="col-lg-6 col-md-6">
@@ -90,7 +88,7 @@
             <div class="col-lg-6 col-md-6">
               <div class="single-product">
                 <div class="product-img">  
-                  <img class="img-fluid w-100" src="{{asset('img/product/new-product/n2.png')}}" alt="" />
+                  <img class="img-fluid w-100" src="" alt="" />
                   <div class="p_icon">
                     <a href="#">
                       <i class="ti-eye"></i>
@@ -118,7 +116,7 @@
             <div class="col-lg-6 col-md-6">
               <div class="single-product">
                 <div class="product-img">     
-                  <img class="img-fluid w-100" src="{{asset('img/product/new-product/n4.png')}}" alt="" />
+                  <img class="img-fluid w-100" src="" alt="" />
                   <div class="p_icon">
                     <a href="#">
                       <i class="ti-eye"></i>
@@ -179,6 +177,7 @@
                         <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
                     </ul>
                     <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Personalizar Caricatura</a>
+                
                 </div>
                 <div class="product-content">
                 <h5><strong>Caricaturas -  Profissão</strong></h5>

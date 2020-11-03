@@ -1,0 +1,37 @@
+<div id='cssmenu'>
+<ul>
+   <li><a href="{{route ('home')}}"><strong>Inicio</strong></a></li>
+   <li class='active has-sub'><a href="{{route ('produto.show')}}"><strong>Loja A&R</strong></a>
+      <ul>
+         <li class='has-sub'><a href=''>Caricaturas Digitais</a>
+            <ul>
+            
+            <li><a href=''><p>Individual</p></a></li>
+            <li><a href=''><p>Temáticas</p></a></li>
+            <li><a href=''><p>Casal</p></a></li>
+            <li><a href=''><p>Infantil</p></a></li>
+            <li><a href=''><p>Noivos</p></a></li>
+            <li><a href=''><p>Aniversários</p></a></li>
+            <li><a href=''><p>Formatura</p></a></li>
+            <li><a href=''><p>Eventos</p></a></li>
+            <li><a href=''><p>Profissões</p></a></li>
+            <li><a href=''><p>Grupos</p></a></li>
+            <li><a href=''><p>Pet's</p></a></li>
+            </ul>
+
+          
+         </li>
+         <li class='has-sub'><a href=''>Mascotes 2D</a>
+            <ul>
+            <li><a href=''>Mascotes Pessoas</a></li>
+            <li><a href=''>Mascotes Veículos </a></li>
+            <li><a href=''>Mascotes Pet's  </a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   {{-- <li><a href="{{route('about.index')}}"><strong>loja A&R </strong></a></li> --}}
+   <li><a href="{{route('about.index')}}"><strong>Estúdio</strong></a></li>
+   <li><a href="{{route('contact')}}"><strong>Contatos</strong></a></li>
+</ul>
+</div>
