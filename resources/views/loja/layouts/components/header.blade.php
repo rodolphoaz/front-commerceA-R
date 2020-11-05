@@ -283,7 +283,7 @@ a.toggle-menu{
         <nav class="navbar navbar-expand-lg navbar-light w-500">
           <!-- Brand and toggle get grouped for better mobile display -->
           <a class="navbar-brand logo_h" href="{{route ('home')}}">
-            <img src="img/logolinha.png" alt="aer caricaturas online"/>
+            <img src="img/logolinhanatal.png" alt="aer caricaturas online natal"/>
           </a>
          
           <!-- menu  -->
@@ -351,7 +351,7 @@ a.toggle-menu{
 								<ul class="stander">
                   <li><a href=''>Individual</a></li>
                   <li><a href=''>Temáticas</a></li>
-                  <li><a href=''>Casal</a></li>
+                  <li><a href="{{route('casals.index')}}">Casal</a></li>
                   <li><a href=''>Infantil</a></li>
                   <li><a href=''>Noivos</a></li>
                   <li><a href=''>Aniversários</a></li>
