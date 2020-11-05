@@ -27,6 +27,12 @@ Route::prefix('/')->group(function () {
 				->where(['category'=> '[a-z]+' , 'subcategory' => '[a-z]+'])
 				->name('product.show');
 
+				Route::get('caricaturas_tematicas', 'Caricatura_tematicasController@index')->name('caricaturas_tematicas.index');
+
+				Route::get('caricaturas_tematicas/{category}/{subcategory?}','Caricatura_tematicasController@show')
+							->where(['category'=> '[a-z]+' , 'subcategory' => '[a-z]+'])
+							->name('Caricaturas_tematicas.show');
+			
 			
 	Route::get('email','EmailController@index')->name('email');
 

@@ -22,19 +22,27 @@
     <li data-target="#demo1" data-slide-to="0" class="active"></li>
     <li data-target="#demo1" data-slide-to="1"></li>
     <li data-target="#demo1" data-slide-to="2"></li>
+    <li data-target="#demo1" data-slide-to="3"></li>
+   
+
+
   </ul>
   
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{asset('/img/banner/banner-bg1.png')}}" alt="aer1" width="1100" height="500">
+      <img src="{{asset('/img/banner/bannerinicio.png')}}" alt="aer1" width="1000" height="500">
     </div>
     <div class="carousel-item">
-      <img src="{{asset('/img/banner/banner-bg1.png')}}" alt="aer2" width="1100" height="500">
+      <img src="{{asset('/img/banner/bannerbob.png')}}" alt="aer2" width="1100" height="500">
     </div>
     <div class="carousel-item">
-      <img src="{{asset('/img/banner/banner-bg1.png')}}" alt="aer3" width="1100" height="500">
+      <img src="{{asset('/img/banner/bannerencomenda.png')}}" alt="aer3" width="1100" height="500">
     </div>
+    <div class="carousel-item">
+      <img src="{{asset('/img/banner/bannerentrega.png')}}" alt="aer4" width="1100" height="500">
+    </div>
+   
   </div>
   
   <!-- Left and right controls -->

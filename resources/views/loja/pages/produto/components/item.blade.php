@@ -1,4 +1,6 @@
-<div class="row">
+item bladecom for 
+
+/* <div class="row">
     @for ($i=0; $i<10; $i++)
     <div class="col-lg-3 col-md-6">
       <div class="single-product">
@@ -21,11 +23,11 @@
             <h4>Latest men’s sneaker</h4>
           </a>
           <div class="mt-3">
+          
             <span class="mr-4">$25.00</span>
             <del>$35.00</del>
           </div>
         </div>
       </div>
     </div>
-    @endfor
-</div>
+    @endfor 
