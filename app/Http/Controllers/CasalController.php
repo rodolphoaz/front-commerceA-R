@@ -14,7 +14,7 @@ class CasalController extends Controller
      */
     public function index()
     {
-        return view('loja.pages.caricaturas.Mug.Casal');
+        return view('loja.pages.caricaturas.Mug.Casal.index');
     }
 
     /**
