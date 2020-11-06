@@ -1,9 +1,9 @@
-@extends('loja.layouts.app', ['title'=> 'Canecas Casal'])
+@extends('loja.layouts.app', ['title'=> 'caricaturas de  Casal'])
 @section('content')
 
     @include('loja.layouts.components.banner', [
-    'title' => 'Canecas com caricatura de Casal', 
-    'description'=> 'Caricatura digital estampada na caneca de porcelana Branca.'
+    'title' => 'Caricatura de Casal', 
+    'description'=> 'Caricatura digital .'
     ])
 
     @include('loja.pages.caricaturas.Mug.Casal.components.slide')
