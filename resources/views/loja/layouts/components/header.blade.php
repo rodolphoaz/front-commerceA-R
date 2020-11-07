@@ -294,7 +294,7 @@ a.toggle-menu{
 		<ul class="exo-menu">
 			<li><a class="active" href="{{route ('home')}}"><i class="fa fa-home"></i> Home</a></li>
 			
-			<li class="mega-drop-down"><a href="{{route ('produto.show')}}"><i class="fa fa-list"></i>Shopping A&R</a>
+			<li class="mega-drop-down"><a href=''><i class="fa fa-list"></i>Shopping A&R</a>
 				<div class="animated fadeIn mega-menu">
 					<div class="mega-menu-wrap">
 						<div class="row">
@@ -315,7 +315,7 @@ a.toggle-menu{
   <div class="carousel-inner" role="listbox">
     <!--First slide-->
     <div class="carousel-item active">
-      <img class="d-block w-40" src="{{asset('/img/product/new-product/enf001.png')}}"
+      <img class="d-block w-100" src="{{asset('/img/product/new-product/enf001.png')}}"
         alt="First slide">
     </div>
     <!--/First slide-->
@@ -327,7 +327,7 @@ a.toggle-menu{
     <!--/Second slide-->
     <!--Third slide-->
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{asset('/img/product/new-product/professoratem001.png')}}"
+      <img class="d-block w-100" src="{{asset('/img/product/new-product/infantil001.png')}}"
         alt="Third slide">
     </div>
     <!--/Third slide-->
@@ -342,6 +342,8 @@ a.toggle-menu{
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+  <a class="view-more btn btn-sm " href="{{route ('produto.show')}}"><i class="fa fa-shopping-cart"></i>veja nosso shopping</a>
+
   <!--/.Controls-->
 </div>
 </div>
@@ -349,31 +351,37 @@ a.toggle-menu{
 							<div class="col-md-3">
 									<h4 class="row mega-title">Caricaturas Digitais |</h4>
 								<ul class="stander">
-                  <li><a href=''>Individual</a></li>
-                  <li><a href=''>Temáticas</a></li>
-                  <li><a href="{{route('casals.index')}}">Casal</a></li>
-                  <li><a href=''>Infantil</a></li>
-                  <li><a href=''>Noivos</a></li>
-                  <li><a href=''>Aniversários</a></li>
-                  <li><a href=''>Formatura</a></li>
-                  <li><a href=''>Profissões</a></li>
-                  <li><a href=''>Pet's</a></li>
+                  <li><a href="{{route('caindividuals.index')}}">Individual</a></li>
+                  <li><a href="{{route('catematicas.index')}}">Temáticas</a></li>
+                  <li><a href="{{route('cacasals.index')}}">Casal</a></li>
+                  <li><a href="{{route('cainfantils.index')}}">Infantil</a></li>
+                  <li><a href="{{route('canoivos.index')}}">Noivos</a></li>
+                  <li><a href="{{route('caanivers.index')}}">Aniversários</a></li>
+                  <li><a href="{{route('caformaturas.index')}}">Formatura</a></li>
+                  <li><a href="{{route('caprofissoes.index')}}">Profissões</a></li>
+                  <li><a href="{{route('capets.index')}}">Pet's</a></li>
 								</ul>
+              
+											 
+								
               </div>
+            
+							
+             
               <div class="col-md-3">
                 <h4 class="row mega-title">Caricaturas ao vivo |</h4>
               <ul class="stander">
-                <li><a href=''>Eventos</a></li>
-                <li><a href=''>Grupos</a></li>
+                <li><a href="{{route('eventos.index')}}">Eventos</a></li>
+                <li><a href="{{route('grupos.index')}}">Grupos</a></li>
            
               </ul>
             </div>
             <div class="col-md-2">
               <h4 class="row mega-title">Mascote 2D |</h4>
             <ul class="stander">
-            <li><a href=''>Mascotes Pessoas</a></li>
-            <li><a href=''>Mascotes Veículos </a></li>
-            <li><a href=''>Mascotes Pet's  </a></li>
+            <li><a href="{{route('pessoas.index')}}">Mascotes Pessoas</a></li>
+            <li><a href="{{route('veiculos.index')}}">Mascotes Veículos </a></li>
+            <li><a href="{{route('animais.index')}}">Mascotes Pet's  </a></li>
             
             </ul>
             

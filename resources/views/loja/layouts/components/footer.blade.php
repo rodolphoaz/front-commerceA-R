@@ -10,19 +10,6 @@
 src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0&appId=1131541973545208&autoLogAppEvents=1" 
 nonce="LGVNyx41"></script> 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="fb-page" data-href="https://www.facebook.com/aercaricaturasonline" data-tabs="" data-width="" 
 data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
 data-show-facepile="true"><blockquote cite="https://www.facebook.com/aercaricaturasonline" class="fb-xfbml-parse-ignore">

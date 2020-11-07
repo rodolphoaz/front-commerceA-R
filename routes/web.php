@@ -28,14 +28,37 @@ Route::prefix('/')->group(function () {
 				->where(['category'=> '[a-z]+' , 'subcategory' => '[a-z]+'])
 				->name('product.show');
 
-				
+//Start rotas caricaturas digital  
 
-	
 	Route::resource('casals', CasalController::class);
+	Route::resource('caanivers', CaAniverController::class);
+	Route::resource('caformaturas', CaFormaturaController::class);
+	Route::resource('caindividuals', CaIndividualController::class);
+	Route::resource('cainfantils', CaInfantilController::class);
+	Route::resource('canoivos', CaNoivosController::class);
+	Route::resource('capets', CaPetsController::class);
+	Route::resource('caprofissoes', CaProfissoesController::class);
+	Route::resource('catematicas', CaTematicaController::class);
+	Route::resource('cacasals', CaCasalController::class);
 
 
+//End  rotas caricaturas digital 
+//start rotas caricaturas ao vivo 
 
-	
+Route::resource('eventos', EventosController::class);
+// preciso de um get .
+
+
+Route::resource('grupos', GruposController::class);
+
+//End rotas caricaturas ao vivo 
+//start rotas mascotes 2d 
+
+Route::resource('animais', Mas2dAnimaisController::class);
+Route::resource('pessoas', Mas2dPessoasController::class);
+Route::resource('veiculos', Mas2dVeiculosController::class);
+
+//end rotas 2d
 	
 	
 
