@@ -19,8 +19,10 @@ class CreatePedidosTable extends Migration
             $table->integer('user_id');
             $table->integer('endereco_cobranca_id');
             $table->integer('endereco_entrega_id');
+            $table->integer('produto_id');
             $table->float('total');
             $table->integer('forma_pagamento_id');
+            $table->integer('item_id')->nullable();
             $table->string('status')->default('pendente');
             $table->timestamps();
         });
