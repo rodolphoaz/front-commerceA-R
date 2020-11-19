@@ -1,4 +1,4 @@
-@extends('loja.layouts.app', ['title'=> 'About'])
+@extends('loja.layouts.app', ['title'=> 'Estúdio A&R'])
 @section('content')
 
     @include('loja.layouts.components.banner', [
