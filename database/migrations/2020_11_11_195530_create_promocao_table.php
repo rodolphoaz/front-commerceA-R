@@ -14,7 +14,7 @@ class CreatePromocaoTable extends Migration
     public function up()
     {
         Schema::create('promocao', function (Blueprint $table) {
-            $table->bigIncrements();
+            $table->bigIncrements('id');
             $table->uuid('uuid');
             $table->integer('produto_id');
             $table->float('porcentagem');
