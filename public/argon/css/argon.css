@@ -5323,7 +5323,7 @@ input[type='button'].btn-block
 
     border: 1px solid transparent;
     border-radius: .375rem; 
-    background-color: transparent;
+    background-color: #525f7f;
 }
 .navbar-toggler:hover,
 .navbar-toggler:focus
@@ -8026,12 +8026,12 @@ a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus
 {
-    background-color: #0a0c0d !important;
+    background-color: #f8fdff !important;
 }
 
 .bg-default
 {
-    background-color: #172b4d !important;
+    background-color: #ffffff !important;
 }
 
 a.bg-default:hover,
@@ -13122,12 +13122,12 @@ button.bg-darker:focus
     .pt-lg-5,
     .py-lg-5
     {
-        padding-top: 3rem !important;
+        padding-top: 0rem !important;
     }
     .pr-lg-5,
     .px-lg-5
     {
-        padding-right: 3rem !important;
+        padding-right: 2rem !important;
     }
     .pb-lg-5,
     .py-lg-5
@@ -13410,7 +13410,7 @@ button.bg-darker:focus
     .pt-lg-8,
     .py-lg-8
     {
-        padding-top: 8rem !important;
+        padding-top: 2rem !important;
     }
     .pr-lg-8,
     .px-lg-8
@@ -13439,7 +13439,7 @@ button.bg-darker:focus
     .pr-lg-9,
     .px-lg-9
     {
-        padding-right: 10rem !important;
+        padding-right: 6rem !important;
     }
     .pb-lg-9,
     .py-lg-9
@@ -15046,7 +15046,7 @@ button.bg-lighter:focus
 
 .bg-gradient-primary
 {
-    background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+    background: linear-gradient(87deg, #4385b1 0, #825ee4 100%) !important;
 }
 
 .bg-gradient-secondary
@@ -15402,7 +15402,7 @@ button.section-darker:focus
 
 .bg-gradient-primary
 {
-    background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+    background: linear-gradient(87deg, #f1f1f1 0, #6fa7e7 100%) !important;
 }
 
 .bg-gradient-secondary
@@ -16540,7 +16540,7 @@ a.text-gray-dark:focus
 
 .text-light
 {
-    color: #ced4da !important;
+    color: #1d1d1d !important;
 }
 
 a.text-light:hover,

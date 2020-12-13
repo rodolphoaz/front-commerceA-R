@@ -1,15 +1,17 @@
-@extends('admin.layouts.app', ['class' => 'bg-default', 'title' => 'Register'])
+@extends('admin.layouts.app', ['class' => 'bg-default', 'title' => 'Meu cadastro'])
 @section('content')
     @include('admin.layouts.headers.guest')
 
+   
     <div class="container pb-1" style="margin-top:-15%">
+   
         <!-- Table -->
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8">
                 <div class="card bg-secondary shadow border-0">
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">
-                            <small>{{ __('Sign up with credentials') }}</small>
+                            <small>{{ __('Bem vindo ao cadastro A&R ') }}</small>
                         </div>
                         <form role="form" method="POST" action="{{ route('register') }}">
                             @csrf
@@ -62,20 +64,20 @@
                                 </div>
                             </div>
                             <div class="text-muted font-italic">
-                                <small>{{ __('password strength') }}: <span class="text-success font-weight-700">{{ __('strong') }}strong</span></small>
+                                <small>{{ __('Força da senha') }}: <span class="text-success font-weight-700">{{ __('strong') }}strong</span></small>
                             </div>
                             <div class="row my-4">
                                 <div class="col-12">
                                     <div class="custom-control custom-control-alternative custom-checkbox">
                                         <input class="custom-control-input" id="customCheckRegister" type="checkbox">
                                         <label class="custom-control-label" for="customCheckRegister">
-                                            <span class="text-muted">{{ __('I agree with the') }} <a href="#!">{{ __('Privacy Policy') }}</a></span>
+                                            <span class="text-muted">{{ __('você concorda com a nossa ') }} <a href="#!">{{ __('política de privacidade') }}</a></span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary mt-4">{{ __('Create account') }}</button>
+                                <button type="submit" class="btn btn-primary mt-4">{{ __('Criar seu cadastro') }}</button>
                             </div>
                         </form>
                     </div>
