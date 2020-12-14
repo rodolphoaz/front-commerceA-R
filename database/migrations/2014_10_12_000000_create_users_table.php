@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('cpf'); //cpf
+            $table->string('cpf')->nullable(); //cpf
             $table->string('name'); //name
             $table->string('surname'); //sobrenome
             $table->integer('level_id')->default(1); //nivel 
