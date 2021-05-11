@@ -17,7 +17,7 @@
         "fs": "0.0.1-security",
         "jquery": "^3.2",
         "laravel-mix": "^5.0.7",
-        "lodash": "^4.17.20",
+        "lodash": "^4.17.21",
         "popper.js": "^1.12",
         "react": "^16.14.0",
         "react-dom": "^16.14.0",
